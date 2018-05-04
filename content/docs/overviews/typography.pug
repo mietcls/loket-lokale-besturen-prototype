@@ -1,0 +1,49 @@
+---
+title: Typography
+category: Overviews
+order: 1
+---
+
+- var contentClass = 'c-content'
+- var shortContent = 'Lorem ipsum dolor sit amet';
+- var longContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '.repeat(5).trim()
+- var samples = [];
+- samples.push({name: 'Content heading 1', size: '48px', code: '<h1 class="h1">' + shortContent + '</h1>', extraClass: contentClass})
+- samples.push({name: 'Content heading 2', size: '36px', code: '<h2 class="h2">' + shortContent + '</h2>', extraClass: contentClass})
+- samples.push({name: 'Content heading 3', size: '30px', code: '<h3 class="h3">' + shortContent + '</h3>', extraClass: contentClass})
+- samples.push({name: 'Content heading 4', size: '24px', code: '<h4 class="h4">' + shortContent + '</h4>', extraClass: contentClass})
+- samples.push({name: 'Content heading 5', size: '21px', code: '<h5 class="h5">' + shortContent + '</h5>', extraClass: contentClass})
+- samples.push({name: 'Content heading 6', size: '18px', code: '<h6 class="h6">' + shortContent + '</h6>', extraClass: contentClass})
+
+- samples.push({name: 'Content heading 1', size: '48px', code: '<h1 class="h1 sans-serif">' + shortContent + ' sans-serif</h1>', extraClass: contentClass})
+- samples.push({name: 'Content heading 2', size: '36px', code: '<h2 class="h2 sans-serif">' + shortContent + ' sans-serif</h2>', extraClass: contentClass})
+- samples.push({name: 'Content heading 3', size: '30px', code: '<h3 class="h3 sans-serif">' + shortContent + ' sans-serif</h3>', extraClass: contentClass})
+- samples.push({name: 'Content heading 4', size: '24px', code: '<h4 class="h4 sans-serif">' + shortContent + ' sans-serif</h4>', extraClass: contentClass})
+- samples.push({name: 'Content heading 5', size: '21px', code: '<h5 class="h5 sans-serif">' + shortContent + ' sans-serif</h5>', extraClass: contentClass})
+- samples.push({name: 'Content heading 6', size: '18px', code: '<h6 class="h6 sans-serif">' + shortContent + ' sans-serif</h6>', extraClass: contentClass})
+
+- samples.push({name: 'Text paragraph', size: '18px', code: '<p>' + longContent + '</p>', extraClass: contentClass})
+- samples.push({name: 'Text paragraph small', size: '16px', code: '<p class="small">' + longContent + '</p>', extraClass: contentClass})
+- samples.push({name: 'Text paragraph smaller', size: '14px', code: '<p class="smaller">' + longContent + '</p>', extraClass: contentClass})
+- samples.push({name: 'Text paragraph smallest', size: '13px', code: '<p class="smallest">' + longContent + '</p>', extraClass: contentClass})
+- samples.push({name: 'Content heading text', size: '18px', code: '<p><a>' + shortContent + '</a></p>', extraClass: contentClass})
+- samples.push({name: 'Content heading text', size: '18px', code: '<p><a class="link-dark">' + shortContent + '</a></p>', extraClass: contentClass})
+- samples.push({name: 'Uppercase', size: '18px', code: '<p class="uppercase">' + shortContent + '</p>', extraClass: contentClass})
+- samples.push({name: 'Uppercase text fade', size: '18px', code: '<p class="uppercase text-fade">' + shortContent + '</p>', extraClass: contentClass})
+- samples.push({name: 'Light text', size: '18px', code: '<p class="text-light">' + shortContent + '</p>', extraClass: contentClass})
+- samples.push({name: 'Max width', size: '18px', code: '<p class="text-cap-width">' + shortContent + '</p>', extraClass: contentClass})
+
+h2.br-documentation-header Typography
+
+p Below, you can find an overview of all the typographic elements used throughout the application.
+
+table.br-typography-overview
+    each sample in samples
+        tr
+            td
+                = sample.name
+                br
+                span.typography-sample-size= sample.size
+            td.br-typography-sample(class=sample.extraClass)
+                .br-typography-sample-content!= sample.code
+                pre.br-typography-sample-code= sample.code

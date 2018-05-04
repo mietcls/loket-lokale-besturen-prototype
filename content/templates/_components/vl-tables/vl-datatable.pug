@@ -1,0 +1,329 @@
+<div data-table>
+  <div class="data-table__actions data-table__actions--top">
+    <div class="grid">
+      <div class="col--6-12 col--9-12--xs">
+        <ul class="data-table__actions__list">
+          <li class="data-table__action">
+            <div class="popover popover--left js-popover">
+              <button class="data-table__action__toggle data-table__action__toggle--arrow js-popover__toggle">Downloaden</button>
+              <ul class="popover__content">
+                <li>
+                  <a class="popover__link" href="#">PDF document</a>
+                </li>
+                <li>
+                  <a class="popover__link" href="#">Excel document</a>
+                </li>
+                <li>
+                  <a class="popover__link" href="#">CSV file</a>
+                </li>
+                <li>
+                  <a class="popover__link" href="#">JSON file</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="data-table__action" data-table-action data-show="false" aria-hidden="true">
+            <div class="popover popover--left js-popover">
+              <button class="data-table__action__toggle data-table__action__toggle--arrow js-popover__toggle">Acties</button>
+              <ul class="popover__content">
+                <li>
+                  <a class="popover__link" href="#">Aanpassen</a>
+                </li>
+                <li>
+                  <a class="popover__link" href="#">Publiceren</a>
+                </li>
+                <li>
+                  <a class="popover__link" href="#">Verwijderen</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col--6-12 col--3-12--xs">
+        <ul class="data-table__actions__list data-table__actions__list--right">
+          <li class="data-table__action">
+            <button type="button" class="data-table__action__toggle data-table__action__toggle--contract-xs">
+              <i aria-hidden="true" class="vi vi-list vi-u-link"></i><span>Lijstweergave</span></button>
+            <!-- <a href="" class="data-table__action__toggle"><i aria-hidden="true" class="vi vi-diagram vi-u-link"></i>Hierarchische weergave</a> -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="u-table-overflow">
+    <table class="data-table">
+      <thead>
+      <tr class="data-table__header">
+        <th class="data-table__header-title" style="width: 4%;">
+          <label class="checkbox checkbox--empty" for="checkbox-check-all">
+            <input type="checkbox" id="checkbox-check-all" name="checkbox" class="checkbox__toggle" value="2" data-table-checkbox data-table-check-all>
+            <span></span> <span class="u-visually-hidden">Selecteer alle rijen</span> </label>
+        </th>
+        <th class="data-table__header-title" style="width: 10%;">
+          <a href="#" class="data-table__header-title--sortable data-table__header-title--sortable-active" title="sort">
+            Adres
+            <span class="u-visually-hidden">Aflopend sorteren</span>
+            <i class="data-table__header-title__sort-icon vi vi-u-link-after vi-long-arrow"></i>
+          </a>
+        </th>
+        <th class="data-table__header-title">
+          <a href="#" class="data-table__header-title--sortable data-table__header-title--sortable-active" title="sort">
+            Postcode
+            <span class="u-visually-hidden">Oplopend sorteren</span>
+            <i class="data-table__header-title__sort-icon vi vi-u-link-after vi-long-arrow vi-u-180deg">
+          </i></a>
+        </th>
+        <th class="data-table__header-title">
+          <a href="#" class="data-table__header-title--sortable data-table__header-title--sortable-active" title="sort">
+            Gemeente
+          </a>
+        </th>
+        <th class="data-table__header-title">
+          <a href="#" class="data-table__header-title--sortable data-table__header-title--sortable-active" title="sort">
+            Actief
+          </a>
+        </th>
+        <th class="data-table__header-title">
+          <a href="#" class="data-table__header-title--sortable data-table__header-title--sortable-active" title="sort">
+            Toggles
+          </a>
+        </th>
+        <th class="data-table__header-title">
+          <a href="#" class="data-table__header-title--sortable data-table__header-title--sortable-active" title="sort">
+            Acties
+            <span class="u-visually-hidden">Aflopend sorteren</span>
+            <i class="data-table__header-title__sort-icon vi vi-u-link-after vi-long-arrow"></i>
+          </a>
+        </th>
+        <th class="data-table__header-title">
+          <a href="#" class="data-table__header-title--sortable data-table__header-title--sortable-active" title="sort">
+            Entiteitsvorm
+            <span class="u-visually-hidden">Aflopend sorteren</span>
+            <i class="data-table__header-title__sort-icon vi vi-u-link-after vi-long-arrow"></i>
+          </a>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr data-table-selectable>
+        <td>
+          <label class="checkbox checkbox--empty">
+            <input type="checkbox" name="checkbox" class="checkbox__toggle" value="2" data-table-checkbox>
+            <span></span> <span class="u-visually-hidden">Selecteer rij</span> </label>
+        </td>
+        <td>OVO0000001</td>
+        <td>Vlaamse overheid</td>
+        <td>nvt</td>
+        <td>
+          <i aria-hidden="true" class="vi vi-u-badge vi-u-badge--positive vi-u-badge--xxsmall  vi-check"></i>
+          <span class="u-visually-hidden">Actief</span>
+        </td>
+        <td>
+          <div class="checkbox--switch__wrapper">
+            <input type="checkbox" class="checkbox--switch" name="toggle1" id="toggle1" value="">
+            <label class="checkbox--switch__label" for="toggle1"><span class="u-visually-hidden">Switch toggle</span></label>
+          </div>
+        </td>
+        <td>VO</td>
+        <td>nvt</td>
+      </tr>
+      <tr data-table-selectable>
+        <td>
+          <label class="checkbox checkbox--empty">
+            <input type="checkbox" name="checkbox" class="checkbox__toggle" value="2" data-table-checkbox>
+            <span></span> <span class="u-visually-hidden">Selecteer rij</span> </label>
+        </td>
+        <td>OVO0000001</td>
+        <td>Vlaamse overheid</td>
+        <td>nvt</td>
+        <td>
+          <i aria-hidden="true" class="vi vi-u-badge vi-u-badge--positive vi-u-badge--xxsmall  vi-check"></i>
+          <span class="u-visually-hidden">Actief</span>
+        </td>
+        <td>
+          <div class="checkbox--switch__wrapper">
+            <input type="checkbox" class="checkbox--switch" name="toggle4" id="toggle4" value="">
+            <label class="checkbox--switch__label" for="toggle4"><span class="u-visually-hidden">Switch toggle</span></label>
+          </div>
+        </td>
+        <td>VO</td>
+        <td>nvt</td>
+      </tr>
+      <tr data-table-selectable>
+        <td>
+          <label class="checkbox checkbox--empty">
+            <input type="checkbox" name="checkbox" class="checkbox__toggle" value="2" data-table-checkbox>
+            <span></span> <span class="u-visually-hidden">Selecteer rij</span> </label>
+        </td>
+        <td>OVO0000001</td>
+        <td>Vlaamse overheid</td>
+        <td>nvt</td>
+        <td>
+          <i aria-hidden="true" class="vi vi-u-badge vi-u-badge--positive vi-u-badge--xxsmall  vi-check"></i>
+          <span class="u-visually-hidden">Actief</span>
+        </td>
+        <td>
+          <div class="checkbox--switch__wrapper">
+            <input type="checkbox" class="checkbox--switch" name="toggle5" id="toggle5" value="" checked>
+            <label class="checkbox--switch__label" for="toggle5"><span class="u-visually-hidden">Switch toggle</span></label>
+          </div>
+        </td>
+        <td>VO</td>
+        <td>nvt</td>
+      </tr>
+      <tr data-table-selectable>
+        <td>
+          <label class="checkbox checkbox--empty">
+            <input type="checkbox" name="checkbox" class="checkbox__toggle" value="2" data-table-checkbox>
+            <span></span> <span class="u-visually-hidden">Selecteer rij</span> </label>
+        </td>
+        <td>OVO0000002</td>
+        <td>
+          <mark>Vlaams</mark>
+          e Regering
+          <div class="pill">Orgaan</div>
+        </td>
+        <td>nvt</td>
+        <td aria-label="Niet actief">
+          <i class="vi vi-u-badge vi-u-badge--negative vi-u-badge--xxsmall vi-cross" aria-hidden="true"></i>
+          <span class="u-visually-hidden">inactief</span>
+        </td>
+        <td>
+          <div class="checkbox--switch__wrapper">
+            <input type="checkbox" class="checkbox--switch" name="toggle6" id="toggle6" value="">
+            <label class="checkbox--switch__label" for="toggle6"><span class="u-visually-hidden">Switch toggle</span></label>
+          </div>
+        </td>
+        <td>VO</td>
+        <td>nvt</td>
+      </tr>
+      <tr data-table-selectable>
+        <td>
+          <label class="checkbox checkbox--empty">
+            <input type="checkbox" name="checkbox" class="checkbox__toggle" value="2" data-table-checkbox>
+            <span></span> <span class="u-visually-hidden">Selecteer rij</span> </label>
+        </td>
+        <td>OVO0000003</td>
+        <td>
+          <mark>Vlaams</mark>
+          e Parlement
+        </td>
+        <td>nvt</td>
+        <td aria-label="Niet actief"></td>
+        <td>
+          <div class="checkbox--switch__wrapper">
+            <input type="checkbox" class="checkbox--switch" name="toggle11" id="toggle11" value="">
+            <label class="checkbox--switch__label" for="toggle11"><span class="u-visually-hidden">Switch toggle</span></label>
+          </div>
+        </td>
+        <td>VO</td>
+        <td>nvt</td>
+      </tr>
+      <tr data-table-selectable>
+        <td>
+          <label class="checkbox checkbox--empty">
+            <input type="checkbox" name="checkbox" class="checkbox__toggle" value="2" data-table-checkbox>
+            <span></span> <span class="u-visually-hidden">Selecteer rij</span> </label>
+        </td>
+        <td>OVO0000004</td>
+        <td>
+          <mark>Vlaams</mark>
+          e Politiezones
+        </td>
+        <td>nvt</td>
+        <td aria-label="Niet actief"></td>
+        <td>
+          <div class="checkbox--switch__wrapper">
+            <input type="checkbox" class="checkbox--switch" name="toggle12" id="toggle12" value="">
+            <label class="checkbox--switch__label" for="toggle12"><span class="u-visually-hidden">Switch toggle</span></label>
+          </div>
+        </td>
+        <td>VO</td>
+        <td>nvt</td>
+      </tr>
+      <tr data-table-selectable>
+        <td>
+          <label class="checkbox checkbox--empty">
+            <input type="checkbox" name="checkbox" class="checkbox__toggle" value="2" data-table-checkbox>
+            <span></span> <span class="u-visually-hidden">Selecteer rij</span> </label>
+        </td>
+        <td>OVO0000005</td>
+        <td>Ministeries van de
+          <mark>Vlaams</mark>
+          e Gemeenschap
+        </td>
+        <td>nvt</td>
+        <td aria-label="Niet actief"></td>
+        <td>
+          <div class="checkbox--switch__wrapper">
+            <input type="checkbox" class="checkbox--switch" name="toggle13" id="toggle13" value="">
+            <label class="checkbox--switch__label" for="toggle13"><span class="u-visually-hidden">Switch toggle</span></label>
+          </div>
+        </td>
+        <td>VO</td>
+        <td>nvt</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="data-table__actions data-table__actions--bottom">
+    <div class="grid">
+      <div class="col--6-12 col--8-12--s col--1-1--xs">
+        <ul class="data-table__actions__list">
+          <li class="data-table__action">
+            <div class="popover popover--left js-popover">
+              <button class="data-table__action__toggle data-table__action__toggle--arrow js-popover__toggle">Downloaden</button>
+              <ul class="popover__content">
+                <li>
+                  <a class="popover__link" href="#">PDF document</a>
+                </li>
+                <li>
+                  <a class="popover__link" href="#">Excel document</a>
+                </li>
+                <li>
+                  <a class="popover__link" href="#">CSV file</a>
+                </li>
+                <li>
+                  <a class="popover__link" href="#">JSON file</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="data-table__action" data-table-action data-show="false" aria-hidden="true">
+            <div class="popover popover--left js-popover">
+              <button class="data-table__action__toggle data-table__action__toggle--arrow js-popover__toggle">Acties</button>
+              <ul class="popover__content">
+                <li>
+                  <a class="popover__link" href="#">Aanpassen</a>
+                </li>
+                <li>
+                  <a class="popover__link" href="#">Publiceren</a>
+                </li>
+                <li>
+                  <a class="popover__link" href="#">Verwijderen</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col--6-12 col--4-12--s col--1-1--xs">
+        <div class="pager">
+          <ul class="pager__list pager__list--right">
+            <li class="pager__element u-hidden-mobile">
+              <span class="u-visually-hidden">Rij </span><strong>11 - 20</strong> van 673
+            </li>
+            <li class="pager__element">
+              <a href=""><i class="vi vi-arrow vi-u-180deg vi-u-s" aria-hidden="true"></i> vorige<span class="u-visually-hidden"> 10 rijen</span></a>
+            </li>
+            <li class="pager__element">
+              <a href="">volgende
+                <span class="u-visually-hidden"> 10 rijen</span><i class="vi vi-arrow vi-u-s" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

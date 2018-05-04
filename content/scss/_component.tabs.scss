@@ -1,0 +1,50 @@
+/* ==========================================================================
+  tabs
+  Redefine tabs here.
+ ========================================================================== */
+
+/* Other sizes
+ ========================================================================== */
+
+.tabs__wrapper.tabs__wrapper--small {
+	margin-bottom: 0;
+
+	.tab__link {
+		font-weight: 400;
+		padding: 0 1rem 0.8rem 1rem;
+		font-size: 1.5rem;
+	}
+
+	.tab:not(:first-child) .tab__link:after {
+		top: 0.3rem;
+	}
+}
+
+.tab.tab--right {
+	position: absolute;
+	right: 0;
+	display: block;
+	bottom: 0;
+	top: auto;
+
+	&:last-child .tab__link:after {
+		content: normal;
+	}
+}
+
+/* fix for tabs on mobile */
+
+.tabs__wrapper.tabs__wrapper--small-space {
+	left: 0 !important;
+	padding: 0 2rem;
+
+	button.tabs__toggle {
+		width: 100%;
+		left: 0 !important;
+		border: 1px solid $blue-gray-light;
+	}
+
+	@include for-tablet-portrait-up {
+		padding: 0;
+	}
+}

@@ -1,0 +1,17 @@
+.sidebar__toggle-menu.delete-me-toggle-sidebar--slide.u-padding--tb--tiny.u-padding--rl--small.u-background--gray-lighter(type='button', title='Pas bestuur aan')
+          h2.h2.sidebar__toggle-value Menu
+
+nav.sidebar.sidebar--slide--wide.sidebar--slide.sidebar--slide--in(role='navigation')
+  .sidebar__header
+    .grid.grid--collapse
+      .col--10-12.u-padding--trl--tiny
+        h1.h3.sans-serif Menu
+      .col--2-12.u-padding--trl--tiny.u-align-right.delete-me-toggle-sidebar--slide
+        i.vi.vi-cross
+        span.u-visually-hidden sluit navigatie
+
+script.
+  $('.delete-me-toggle-sidebar--slide').on('click', function(e) {
+    $('.sidebar--slide').toggleClass("sidebar--slide--in");
+    e.preventDefault();
+  });

@@ -1,0 +1,44 @@
+p.u-spacer Form should display the first 10 of options, not just on type.
+.u-spacer--large
+  label.form__label.form__label--block(for='select-remote-custom') Form with smart search
+  .input-field-icon-container
+      .js-select
+          select#select-remote-custom.select(name='select-remote-custom', data-search-empty='Geen resultaten gevonden', data-id='')
+              option(value='', data-placeholder='') -- Search country --
+      .form__annotation
+          | De zoekfunctionaliteit wordt, als demo, gesimuleerd met een voorgedefinieerde JSON string. De resultaten zijn dus niet in lijn met de ingegeven zoekterm. Bij meer dan 5 karakters wordt de "geen resultaten" optie gesimuleerd.
+script.
+    window.onload = function() {
+         var select = document.getElementById('select-remote-custom');
+         vl.select.dress(select, {
+           callbackFn: customFunction,
+         });
+
+         function customFunction(select, params) {
+           var searchStr = params.searchStr;
+           var jsonData = [
+              {type: 'option', label: 'Bahamas', value: 'BS'},
+              {type: 'option', label: 'Bahrain', value: 'BH'},
+              {type: 'option', label: 'Bangladesh', value: 'BD'},
+              {type: 'option', label: 'Barbados', value: 'BB'},
+              {type: 'option', label: 'Belarus', value: 'BY'},
+              {type: 'option', label: 'Belgium', value: 'BE'},
+              {type: 'option', label: 'Belize', value: 'BZ'},
+              {type: 'option', label: 'Benin', value: 'BJ'},
+              {type: 'option', label: 'Bermuda', value: 'BM'},
+              {type: 'option', label: 'Bhutan', value: 'BT'},
+              {type: 'option', label: 'Bolivia', value: 'BO'},
+              {type: 'option', label: 'Bosnia and Herzegovina', value: 'BA'},
+              {type: 'option', label: 'Botswana', value: 'BW'},
+              {type: 'option', label: 'Bouvet Island', value: 'BV'},
+              {type: 'option', label: 'Brazil', value: 'BR'},
+              {type: 'option', label: 'British Indian Ocean Territory', value: 'IO'}
+           ];
+
+             if (searchStr.length > 5) {
+               params.callbackFn(false);
+             } else {
+               params.callbackFn(jsonData);
+             }
+           }
+         };

@@ -1,0 +1,55 @@
+extends _layouts/master
+
+block append pageVariables
+    - var htmlClass = config.ui && config.ui.dark ? 'br-prototype-nav--dark br-styleguide--dark' : ''
+
+include ../../core/templates/mixins/render-page-tree
+
+block body
+
+    .page
+      #main.main-content(itemprop='mainContentOfPage', role='main', tabindex='-1')
+        section.region
+          .layout.layout--wide
+            .grid.grid--align-space-between
+                .col--3-12
+
+                    +renderPageTree
+
+                .col--8-12
+
+                    h1.h1 ABB prototype guide for
+                        strong Loket.
+
+                    h2.h2 Overview of all prototypes:
+
+                    ul.list-bullet.u-spacer--round
+                        li
+                            a(href="http://lblod.miet.be", target="_blank") Gelinkt notuleren
+                                span.text-fade http://lblod.miet.be
+                        li
+                            a(href="http://loket.miet.be", target="_blank") Loket
+                                span.text-fade http://loket.miet.be
+                        li
+                            a(href="http://mandaten.miet.be", target="_blank") Publieke mandatendatabank (here)
+                                span.text-fade http://mandaten.miet.be
+                        li
+                            a(href="http://publieke-besluiten.miet.be", target="_blank") Publieke besluiten
+                                span.text-fade http://publieke-besluiten.miet.be
+                        li
+                            a(href="http://besluiten.miet.be", target="_blank") Besluiten ABB
+                                span.text-fade http://besluiten.miet.be
+                        li
+                            a(href="http://webuniversum.miet.be", target="_blank") Webuniversum CSS alterations
+                                span.text-fade http://webuniversum.miet.be
+
+                    p This guide was created to provide a set of guidelines on how what the application should look like visually, to improve consistency across applications, to provide reusable code and to uncover maintenance issues.
+                    br
+
+                    p It also contains clickable prototypes for various pages &amp; scenarios, which will be used to perform user testing. These pages will be implemented in the real application after iteration and user testing.
+                    br
+
+                    p
+                        | Use
+                        span.u-marker ctrl + m
+                        |  to open and close the menu.

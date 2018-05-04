@@ -1,0 +1,182 @@
+---
+title: Icons custom
+category: Overviews
+order: 3
+---
+
+include ../../../core/templates/mixins/icon-overview
+
+h2.br-documentation-header Icons
+
+.br-content
+
+.u-table-overflow
+    table.data-table.data-table--matrix
+        thead
+            tr
+                th Icon
+                th Name
+                th Class
+        tbody
+            tr
+                th
+                    i.fa.fa-code(aria-hidden='true')
+                td
+                    | code
+                td
+                    | fa fa-code
+            tr
+                th
+                    i.fa.fa-table(aria-hidden='true')
+                td
+                    | table
+                td
+                    | fa fa-table
+            tr
+                th
+                    i.fa.fa-link(aria-hidden='true')
+                td
+                    | link
+                td
+                    | fa fa-link
+            tr
+                th
+                    i.fa.fa-dedent(aria-hidden='true')
+                td
+                    | dedent
+                td
+                    | fa fa-dedent
+            tr
+                th
+                    i.fa.fa-indent(aria-hidden='true')
+                td
+                    | indent
+                td
+                    | fa fa-indent
+            tr
+                th
+                    i.fa.fa-list-ul(aria-hidden='true')
+                td
+                    | unordered list
+                td
+                    | fa fa-list-ul
+            tr
+                th
+                    i.fa.fa-list-ol(aria-hidden='true')
+                td
+                    | ordered list
+                td
+                    | fa fa-list-ol
+            tr
+                th
+                    i.fa.fa-rotate-right(aria-hidden='true')
+                td
+                    | rotate right
+                td
+                    | fa fa-rotate-right
+            tr
+                th
+                    i.fa.fa-rotate-left(aria-hidden='true')
+                td
+                    | rotate left
+                td
+                    | fa fa-rotate-left
+            tr
+                th
+                    i.fa.fa-paste(aria-hidden='true')
+                td
+                    | paste
+                td
+                    | fa fa-paste
+            tr
+                th
+                    i.fa.fa-copy(aria-hidden='true')
+                td
+                    | copy
+                td
+                    | fa fa-copy
+            tr
+                th
+                    i.fa.fa-scissors(aria-hidden='true')
+                td
+                    | scissors
+                td
+                    | fa fa-scissors
+            tr
+                th
+                    i.fa.fa-star(aria-hidden='true')
+                td
+                    | star
+                td
+                    | fa fa-star
+            tr
+                th
+                    i.fa.fa-star-o(aria-hidden='true')
+                td
+                    | star open
+                td
+                    | fa fa-star-o
+            tr
+                th
+                    i.fa.fa-eye(aria-hidden='true')
+                td
+                    | eye
+                td
+                    | fa fa-eye
+            tr
+                th
+                    i.fa.fa-eye-slash(aria-hidden='true')
+                td
+                    | eye slashed
+                td
+                    | fa fa-eye-slash
+            tr
+                th
+                    i.fa.fa-male(aria-hidden='true')
+                td
+                    | male
+                td
+                    | fa fa-male
+            tr
+                th
+                    i.fa.fa-female(aria-hidden='true')
+                td
+                    | female
+                td
+                    | fa fa-female
+            tr
+                th
+                    i.fa.fa-user(aria-hidden='true')
+                td
+                    | user
+                td
+                    | fa fa-user
+            tr
+                th
+                    i.fa.fa-sliders(aria-hidden='true')
+                td
+                    | sliders
+                td
+                    | fa fa-sliders
+
+
+//- if config.icons.hasSvgIcons
+//-     h3 SVG icons
+
+//-     p
+//-         | The SVG icon system is based on directly embedding SVG files into the markup. Within Bedrock, we use Jade to render these SVG's instead of
+//-         | having to inline them. You can either inline them, or build a solution that does it for you.
+
+//-     p
+//-         | The SVG content should be contained in a <code>.svg-icon</code> div that also get an icon-specific class based on its
+//-         | name (for example: <code>.svg-icon.svg-icon-add</code>. This allows us to style and colorize specific icons.
+
+//-     #icon-docs
+//-         +iconsOverview('svg', 'SVG icons')
+
+//- if config.icons.generateIconFont
+//-     h3 Icon font
+//-     p
+//-         | The icon font system creates an icon font based on SVG images in the <code>content/icon-font-source/</code> directory.
+
+//-     +iconsOverview('icon-font', 'Icon font')

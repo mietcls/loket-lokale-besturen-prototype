@@ -1,0 +1,28 @@
+form(action='', data-validate-form='')
+  // component
+  .form__row.u-spacer
+    label.form__label.form__label--block(for='field-1') Naam:
+    input#field-1.input-field.input-field--block(name='test-validation', data-required='true', data-error-class='input-field--error', data-error-message='Dit veld is ongeldig', data-error-placeholder='test-validation-error', type='text', placeholder='')
+    .form__error(data-error-id='test-validation-error')
+  .form__row
+    label.form__label.form__label--block(for='field-2') Email:
+    input#field-2.input-field.input-field--block(name='email-validation', data-required='true', data-validation-type='email', data-error-class='input-field--error', data-error-message='Dit is geen geldig e-mailadres', data-error-placeholder='email-validation-error', type='email', placeholder='Email')
+    .form__error(data-error-id='email-validation-error')
+  .form__row
+    label.form__label.form__label--block(for='field-3') IBAN Nummer:
+    input#field-3.input-field.input-field--block(name='iban-validation', data-required='true', data-validation-type='iban', data-error-class='input-field--error', data-error-message='Dit is geen geldig IBAN nummer', data-error-placeholder='iban-validation-error', type='text', placeholder='IBAN number')
+    .form__error(data-error-id='iban-validation-error')
+  .form__row
+    label.form__label.form__label--block(for='field-4') Geboortedatum:
+    .datepicker
+      input#field-4.input-field(name='date-validation', data-required='true', data-validation-type='date', data-error-class='input-field--error', data-error-message='Dit is geen geldige datum', data-error-placeholder='date-validation-error', type='text', placeholder='dd.mm.jjjj', data-datepicker='', data-datepicker-min='01-01-2016', data-datepicker-max='01-01-2017')
+    .form__error(data-error-id='date-validation-error')
+  .form__row
+    label.form__label.form__label--block(for='field-5') Telefoonnummer:
+    input.input-field.input-field--block(name='phone-validation', data-required='true', data-validation-type='phone', data-error-class='input-field--error', data-error-message='Dit is geen geldig telefoonnummer', data-error-placeholder='phone-validation-error', type='text', placeholder='')
+    .form__error(data-error-id='phone-validation-error')
+  .form__row
+    label.form__label.form__label--block(for='field-6') Rijksregisternummer:
+    input#field-6.input-field.input-field--block(name='rrn-validation', data-required='true', data-validation-type='rrn', data-error-class='input-field--error', data-error-message='Dit is geen geldig rijksregisternummer', data-error-placeholder='rrn-validation-error', type='text', placeholder='11.22.33-444.55')
+    .form__error(data-error-id='rrn-validation-error')
+  // end component

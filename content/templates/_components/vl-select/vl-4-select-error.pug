@@ -1,0 +1,15 @@
+form(action='')
+  div
+    label.form__label(for='select') Optie
+  select.select.select--error(name='select')
+    option(value='') -- Selecteer een optie --
+    optgroup(label='Eerste groep met opties')
+      option(value='1') Optie 1
+      option(value='2') Optie 2
+    optgroup(label='Andere groep met opties')
+      option(value='6') Optie 3
+      option(value='7') Optie 4
+      option(value='8') Optie 5
+      option(value='11') Optie 6
+  .form__error
+    | Gelieve een optie te selecteren

@@ -1,0 +1,120 @@
+extends /templates/_layouts/master
+
+block body
+	.container
+		.temporary-header
+			.grid
+				.col--9-12.col--1-1--s
+					a.temporary-header__logo(href="/loket/loket-toezicht.html")
+					.temporary-header__vlaanderen Vlaanderen
+					.temporary-header__name.u-hidden-mobile
+						p loket.lokaalbestuur.vlaanderen.be
+				.col--3-12.u-align-right.u-hidden-mobile
+					.temporary-header__info
+						p Demo omgeving
+
+		.container-flex--contain
+
+			.toaster.u-hidden
+				.alert.alert--tiny.alert--success
+					.grid
+						.col--10-12
+							.alert__icon(aria-hidden='true')
+							.alert__content
+								.alert__title Wijzigingen opgeslagen.
+								.alert__message
+									p Uw wijzigingen werden opgeslagen.
+						.col--2-12.u-align--right
+							a.link--icon--close.delete-me-close-toaster
+								span.u-visually-hidden Venster sluiten
+
+			.toaster.u-hidden
+				.alert.alert--tiny.alert--warning
+					.grid
+						.col--10-12
+							.alert__icon(aria-hidden='true')
+							.alert__content
+								.alert__title Alert met succes indicatie
+								.alert__message
+									p Er liep iets fout met het opslaan. Probeer het later opnieuw.
+						.col--2-12.u-align--right
+							a.link--icon--close.delete-me-close-toaster
+								span.u-visually-hidden Venster sluiten
+
+			.toaster.u-hidden
+				.alert.alert--tiny.alert--error
+					.grid
+						.col--10-12
+							.alert__icon(aria-hidden='true')
+							.alert__content
+								.alert__title Uw wijzigingen werden niet opgeslagen.
+						.col--2-12.u-align--right
+							a.link--icon--close.delete-me-close-toaster
+								span.u-visually-hidden Venster sluiten
+
+			.toaster.u-hidden
+				.alert.alert--tiny
+					.grid
+						.col--10-12
+							.alert__icon(aria-hidden='true')
+							.alert__content
+								.alert__title Concept verwijderd.
+						.col--2-12.u-align--right
+							a.link--icon--close.delete-me-close-toaster
+								span.u-visually-hidden Venster sluiten
+
+			block loketoverview
+
+
+
+		// - modal for closing
+
+		.modal-overlay.modal-overlay-save.u-hidden
+			.modal-dialog
+				h2.modal-dialog__title Wil u de aangebrachte wijzigingen bewaren?
+				.modal-dialog__content.u-spacer De wijzigingen zullen verloren gaan als u niet op bewaren klikt.
+				.modal-dialog__buttons
+					a.button.modal-dialog__button.delete-me-toggle-modal-save.delete-me-toggle-save-toasters Bewaar
+					a.button.button--narrow.button--alt.modal-dialog__button.delete-me-toggle-modal-save Annuleer
+					a.modal-dialog__button.delete-me-toggle-modal-save
+						i.vi.vi-cross.vi-u-link
+						| Verwerp wijzigingen
+
+		// - modal for closing
+
+		.modal-overlay.modal-overlay-delete-concept.u-hidden
+			.modal-dialog
+				h2.modal-dialog__title Bent u zeker dat u het concept wil verwijderen?
+				.modal-dialog__content.u-spacer Deze actie is onomkeerbaar.
+				.modal-dialog__buttons
+					a.button.modal-dialog__button.delete-me-toggle-modal-delete-concept.delete-me-toggle-save-toasters Verwijder
+					a.button.button--narrow.button--alt.modal-dialog__button.delete-me-toggle-modal-delete-concept Annuleer
+
+	script.
+		$('.delete-me-toggle-sidebar--slide').on('click', function(e) {
+			$('.sidebar--slide').toggleClass("sidebar--slide--in");
+			e.preventDefault();
+		});
+
+		$(function(){
+			$('.delete-me-toggle-save-toasters').on("click", function () {
+				$('.toaster').removeClass("u-hidden");
+				setTimeout(addClass, 5000);
+			});
+
+			function addClass() {
+				$('.toaster').addClass("u-hidden");
+			}
+		});
+
+		$('.delete-me-close-toaster').on('click', function(e) {
+			$('.toaster').addClass("u-hidden");
+		});
+
+		$(".delete-me-toggle-modal-save").click(function(){
+			$(".modal-overlay-save").toggleClass("u-hidden");
+		});
+
+		$(".delete-me-toggle-modal-delete-concept").click(function(){
+			$(".modal-overlay-delete-concept").toggleClass("u-hidden");
+		});

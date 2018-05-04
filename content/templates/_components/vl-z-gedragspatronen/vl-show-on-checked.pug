@@ -1,0 +1,31 @@
+.grid.grid--is-stacked
+  .col--1-1
+    .u-spacer
+      h3.h3 Checkbox met "show on checked" functionaliteit
+      label.checkbox.checkbox--block.u-spacer
+        input.checkbox__toggle(checked='', type='checkbox', name='checkbox', data-show-checked='true', data-show-checked-target='showmoretarget', value='1')
+        span
+        | Selecteer deze checkbox
+    .js-show-checked.u-bg-block(data-show-checked-trigger='showmoretarget')
+      .h4 Deze inhoud wordt getoond wanneer de checkbox is geselecteerd
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsum repellendus, officia dolores consectetur. Error at officiis sequi iure earum.
+  .col--1-1
+    h3.h3 Radio button met "show on checked" functionaliteit
+    .u-spacer
+      label.radio.radio--block
+        input.radio__toggle(checked='', type='radio', name='radio', value='2')
+        span
+        |  Radio button
+      label.radio.radio--block
+        input.radio__toggle(type='radio', name='radio', value='3')
+        span
+        |  Radio button
+      label.radio.radio--block
+        input.radio__toggle(type='radio', name='radio', data-show-checked-target='showmoretarget2', data-show-checked='true', value='4')
+        span
+        | Radio button die extra inhoud toont
+    .js-show-checked.u-bg-block(data-show-checked-trigger='showmoretarget2')
+      .h4 Deze inhoud wordt getoond wanneer de gelinkte radio button is geselecteerd
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsum repellendus, officia dolores consectetur. Error at officiis sequi iure earum.

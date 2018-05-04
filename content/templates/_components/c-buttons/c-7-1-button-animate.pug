@@ -1,0 +1,27 @@
+.button-group
+  button.button.button--save.button--tiny button tiny save animation
+  button.button.button--save.button--secondary.button--tiny button tiny secondary save animation
+  button.button.button--save.button--alt.button--tiny button tiny alt save animation
+  button.button.button--save.button--alt.button--alt--blue.button--tiny button tiny alt blue save animation
+  button.button.button--save.button--alt.button--alt--fancy.button--tiny button tiny alt fancy save animation
+  button.button.button--save.button--dark.button--tiny button tiny dark save animation
+
+br
+br
+
+.button-group
+  a.button.button--save.button--tiny button tiny save animation
+  a.button.button--save.button--small button small save animation
+  a.button.button--save button normal save animation
+  a.button.button--save.button--large button large save animation
+  a.button.button--save.button--x-large button x-large save animation
+  a.button.button--save.button--huge button huge save animation
+
+script.
+  $('.button--save').on('click', function(e) {
+    $('.button--save').addClass("saved");
+
+    setTimeout(function() {
+        $('.button--save').removeClass('saved');
+    },1000);
+  });

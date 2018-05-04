@@ -1,0 +1,64 @@
+label.pill.pill--concept Concept
+label.pill.pill--agenda Agenda
+label.pill.pill--goedkeuren Goed te keuren
+
+br
+br
+
+label.pill.pill--gray-light Concept
+
+label.pill.pill--gray-dark Goedgekeurd
+
+label.pill.pill--primary-blue Notulen publiek
+
+label.pill.pill--primary-yellow Agenda publiek
+
+label.pill.pill--gray Gray
+
+label.pill.pill--red Alert
+
+label.pill.pill--orange Warning
+
+label.pill.pill--green Positive
+
+br
+br
+
+.pill.pill--white.pill--closable
+    span Alfons Froidmont
+    a.pill__close(href='#', data-value='6') verwijder optie
+.pill.pill--white.pill--closable
+    span Koen Beulen
+    a.pill__close(href='#', data-value='5') verwijder optie
+.pill.pill--white
+    span Schepen
+
+br
+br
+br
+
+.form__row
+    .form__label
+        label Voorbeeld input pill
+    .form__input
+        .temporary-select__wrapper.temporary-select__wrapper--block.u-spacer--bottom--tiny
+            .js-select__input.js-select__input--small.js-select__input--multi.toggle-search-pill(data-focus='')
+                .pill.pill--closable
+                    span Example
+                    a.pill__close(href='#', data-value='6') verwijder optie
+            .select__search-results.search-results-pill.u-hidden
+                .select__list-wrapper(role='listbox')
+                    section.select__list.select__list--checkboxes(data-records='')
+                        .select__item
+                            button.select__cta.select__cta--active(type='button', data-index='5', data-value='EXA', data-label='Example', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+                                a.select__cta__title Example
+                        .select__item
+                            button.select__cta(type='button', data-index='5', data-value='AEXA', data-label='Another example', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+                                a.select__cta__title Another example
+
+
+script.
+    $('.toggle-search-pill').on('click', function(e) {
+        $('.search-results-pill').toggleClass("u-hidden");
+        e.preventDefault();
+    });

@@ -1,0 +1,131 @@
+/* ==========================================================================
+  br-prototype-nav
+   ========================================================================== */
+
+/* Variables
+   ========================================================================== */
+
+$br-prototype-nav-width: 250px;
+
+/* Sidebar
+   ========================================================================== */
+
+// We are supposing this is true within all projects
+html.br-styleguide,
+.br-styleguide body {
+  margin: 0;
+}
+
+html.br-prototype-nav-is-open {
+  position: relative;
+  left: $br-prototype-nav-width;
+  width: calc(100% - #{$br-prototype-nav-width});
+}
+
+.br-prototype-nav {
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  line-height: 1.5;
+  z-index: 2000;
+  transform: translateX(-100%);
+  width: $br-prototype-nav-width;
+  overflow: hidden;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+
+  .br-prototype-nav-inner {
+    padding: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  &.br-prototype-nav-open {
+    transform: translateX(0);
+    box-shadow: 2px 0 5px rgba(#000, 0.3);
+  }
+}
+
+.br-prototype-nav-text {
+  margin: 0;
+  padding: 0 0 6px;
+  color: rgba(#000,0.5);
+  .br-prototype-nav--dark & {
+    color: rgba(#FFF,0.5);
+  }
+}
+
+/* Headings (both on index page and in sidebar)
+   ========================================================================== */
+
+.br-prototype-nav-main-heading {
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 0 6px;
+}
+
+.br-prototype-nav-sub-heading {
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 0 6px;
+}
+
+/* Dark Bedrock UI variant
+   ========================================================================== */
+
+.br-prototype-nav--dark {
+  background-color: $br-background-dark;
+  color: $br-color-text-dark;
+
+  .br-prototype-nav-main-heading {
+    color: $br-color-headings-dark;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .br-tree-dir-state-count {
+    text-align: center;
+    background-color: #555;
+    color: #FFF;
+  }
+}
+
+/* Index page
+   ========================================================================== */
+
+.br-prototype-nav-index {
+  padding: 20px;
+}
+
+.br-prototype-nav-index-cols {
+  column-count: 3;
+  li {
+    break-inside: avoid;
+  }
+}
+
+/* Page states
+   ========================================================================== */
+
+.br-prototype-page-states {
+  background: rgba(#FFF,0.05);
+  box-shadow: 2px 0 5px rgba(#000, 0.3);
+  margin-top: auto;
+  padding: 20px;
+}
+
+.br-tree-dir-state-count {
+  float: right;
+  padding: 0 4px;
+  border-radius: 3px;
+  background-color: #eee;
+  font-size: 12px;
+}

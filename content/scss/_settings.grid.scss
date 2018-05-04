@@ -1,0 +1,64 @@
+/* ==========================================================================
+  Style the layout of the grid here
+ ========================================================================== */
+
+.grid > * {
+    transition: all 200ms;
+}
+
+/* Equal height
+ ========================================================================== */
+
+.grid.grid--equal-height {
+
+    > [class^="col--"] {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        .grid--equal-height__item {
+            flex: 1;
+        }
+    }
+}
+
+
+/* Collapse
+ ========================================================================== */
+
+.grid.grid--collapse {
+    > * {
+      padding-left: 0 !important;
+
+    	@include for-tablet-portrait-up {
+    	}
+
+      // TODO: figure this out
+    }
+}
+
+.grid.grid--collapse {
+  margin: 0 !important;
+
+  > div[class^="col--"] {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+// TODO: rearrange and put in styleguide
+
+.grid div[class^="col--"].js-drawer-bound,
+.grid.grid--equal-height div[class^="col--"].js-drawer-bound {
+	display: none;
+}
+
+.grid div[class^="col--"].js-drawer-bound.js-drawer--visible,
+.grid.grid--equal-height div[class^="col--"].js-drawer-bound.js-drawer--visible {
+	display: block;
+
+	.drawer {
+		display: block;
+	    margin-top: 2.5rem;
+	}
+}

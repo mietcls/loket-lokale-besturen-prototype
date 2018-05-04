@@ -1,0 +1,19 @@
+/* ==========================================================================
+  lists
+  Style the lists here.
+ ========================================================================== */
+
+.inline-list li {
+	display: inline-block;
+	padding-right: 1.5rem;
+	margin-right: 0.8rem;
+	vertical-align: top;
+}
+
+.inline-list.inline-list--bordered li {
+	border-right: 1px solid $blue-gray-light;
+
+	&:last-child {
+		border-right: none;
+	}
+}

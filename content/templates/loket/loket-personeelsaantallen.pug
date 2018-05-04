@@ -1,0 +1,128 @@
+extends /templates/_templates/header-loket
+
+block loketoverview
+	nav.sidebar.sidebar--slide--wide.sidebar--slide.sidebar--slide--in(role='navigation')
+		.sidebar__header
+			.grid.grid--collapse
+				.col--10-12.u-padding--trl--tiny
+					h1.h3.sans-serif Menu
+				.col--2-12.u-padding--trl--tiny.u-align-right.delete-me-toggle-sidebar--slide
+					i.vi.vi-cross
+					span.u-visually-hidden sluit navigatie
+
+		.sidebar__content
+			ul.side-navigation__group
+				//- li.side-navigation__item
+					a(href="/loket/loket-inbox.html") Inbox
+				li.side-navigation__item
+					a(href="/loket/loket-toezicht.html") Toezicht
+				li.side-navigation__item
+					a(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
+				li.side-navigation__item
+					a(href="/loket/loket-bbcdr.html") BBC DR
+				li.side-navigation__item
+					a(href="/loket/loket-organenbeheer.html") Organenbeheer
+				li.side-navigation__item
+					a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
+				li.side-navigation__item
+					a.active(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
+				li.side-navigation__item
+					a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
+
+		.sidebar__footer
+			button.button.button--block.button--alt Persoonlijke gegevens
+	.grid.grid--collapse
+		.col--2-12.col--3-12--m.u-hidden--s
+			.container-flex--contain
+				.sidebar
+					.sidebar__content
+						nav.side-navigation
+							.side-navigation__content
+								ul.side-navigation__group
+									// li.side-navigation__item
+										a.message(href="/loket/loket-inbox.html") Inbox
+									li.side-navigation__item
+										a(href="/loket/loket-toezicht.html") Toezicht
+									li.side-navigation__item
+										a(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
+									li.side-navigation__item
+										a(href="/loket/loket-bbcdr.html") BBC DR
+									li.side-navigation__item
+										a(href="/loket/loket-organenbeheer.html") Organenbeheer
+									li.side-navigation__item
+										a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
+									li.side-navigation__item
+										a.active(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
+									li.side-navigation__item
+										a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
+
+					.sidebar__footer
+						button.button.button--block.button--alt Persoonlijke gegevens
+
+
+		// TODO: LOGGING
+		.col--10-12.col--9-12--m.col--1-1--s.mandate-edit-table.u-border--light--right
+			.container-flex--contain
+				.sidebar__toggle-menu.delete-me-toggle-sidebar--slide.u-visible-mobile.u-padding--tb--tiny.u-padding--rl--small.u-background--gray-lighter(type='button', title='Pas bestuur aan')
+					h2.h2.sidebar__toggle-value Menu
+				.u-border--light--bottom
+					.grid.u-padding--round--small.mandate-edit-table__header
+						.col--12-12.u-spacer--bottom
+
+							h1.h3.u-spacer--none IN PROGRESS NOT FINISHED Personeelsaantallen Gemeente Hasselt
+
+						.col--6-12
+							.input-field-icon-container--right
+								input#input-field.input-field.input-field--block(type='text', placeholder='Mandataris, fractie, of mandaat', style="min-width: 35rem;")
+								i.input-field__icon.vi.vi-magnifier(aria-hidden='true')
+						.col--6-12.u-align-right
+							a.button.button--narrow Voeg toe
+
+
+
+				.data-table__scroll
+						table.data-table
+							thead
+								tr.data-table__header
+									th.data-table__header-title
+										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+											| Naam
+											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
+
+							tbody
+								tr(datat-table-selectable, class="mandate-edit-data-active")
+									td Joost Geert
+
+		.col--4-12.u-hidden.mandate-edit-detail.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3 Titel
+					.col--3-12.u-align-right.delete-me-toggle-modal-save
+						a.link--icon--close(href='')
+							span.u-visually-hidden Venster sluiten
+
+			.container-flex--scroll.u-padding--rl--small
+
+				.u-spacer--tb--small
+					.grid
+						.col--6-12
+							.description-data__label Rijksregisternummer
+							.description-data__value 87041323178
+						.col--6-12
+							.description-data__label Geslacht
+							.description-data__value Man
+						.col--6-12
+							.description-data__label Geboortedatum
+							.description-data__value 13-04-1987
+						.col--6-12
+							.description-data__label Roepnaam
+							.description-data__value Johnny
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt Verwerp wijzigingen
+				a.button.button--narrow Bewaar
+
+	script.
+
+

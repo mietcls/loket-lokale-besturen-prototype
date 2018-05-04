@@ -1,0 +1,61 @@
+/* Expanded/collapsed states for directories
+   Only in side navigation
+   ========================================================================== */
+
+.br-prototype-nav {
+
+  .br-bordered-list ul {
+    padding: 0 0 0 18px;
+  }
+
+  .br-tree-dir {
+
+    .br-tree-dir-title {
+      cursor: default;
+      font-weight: 400;
+
+      &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        display: inline-block;
+        text-align: center;
+
+        // CSS triangle
+        border: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #999;
+
+        margin-left: 2px;
+        margin-right: 4px;
+
+        position: relative;
+        top: -3px;
+      }
+    }
+  }
+
+  .br-tree-dir--is-collapsed {
+    * {
+      display: none;
+    }
+
+    > .br-tree-dir-title {
+      display: block;
+
+      &:before {
+        // CSS triangle
+        border: 0;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 4px solid #999;
+
+        margin-left: 3.5px;
+        margin-right: 6.5px;
+        top: 0;
+      }
+    }
+  }
+
+}

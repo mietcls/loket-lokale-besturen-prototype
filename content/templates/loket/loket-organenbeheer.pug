@@ -1,0 +1,447 @@
+extends /templates/_templates/header-loket
+
+block loketoverview
+	nav.sidebar.sidebar--slide--wide.sidebar--slide.sidebar--slide--in(role='navigation')
+		.sidebar__header
+			.grid.grid--collapse
+				.col--10-12.u-padding--trl--tiny
+					h1.h3.sans-serif Menu
+				.col--2-12.u-padding--trl--tiny.u-align-right.delete-me-toggle-sidebar--slide
+					i.vi.vi-cross
+					span.u-visually-hidden sluit navigatie
+
+		.sidebar__content
+			ul.side-navigation__group
+				//- li.side-navigation__item
+					a(href="/loket/loket-inbox.html") Inbox
+				li.side-navigation__item
+					a(href="/loket/loket-toezicht.html") Toezicht
+				li.side-navigation__item
+					a(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
+				li.side-navigation__item
+					a(href="/loket/loket-bbcdr.html") BBC DR
+				li.side-navigation__item
+					a.active(href="/loket/loket-organenbeheer.html") Organenbeheer
+				li.side-navigation__item
+					a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
+				li.side-navigation__item
+					a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
+				li.side-navigation__item
+					a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
+
+		.sidebar__footer
+			button.button.button--block.button--alt Persoonlijke gegevens
+	.grid.grid--collapse
+		.col--2-12.col--3-12--m.u-hidden--s
+			.container-flex--contain
+				.sidebar
+					.sidebar__content
+						nav.side-navigation
+							.side-navigation__content
+								ul.side-navigation__group
+									// li.side-navigation__item
+										a.message(href="/loket/loket-inbox.html") Inbox
+									li.side-navigation__item
+										a(href="/loket/loket-toezicht.html") Toezicht
+									li.side-navigation__item
+										a(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
+									li.side-navigation__item
+										a(href="/loket/loket-bbcdr.html") BBC DR
+									li.side-navigation__item
+										a.active(href="/loket/loket-organenbeheer.html") Organenbeheer
+									li.side-navigation__item
+										a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
+									li.side-navigation__item
+										a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
+									li.side-navigation__item
+										a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
+
+					.sidebar__footer
+						button.button.button--block.button--alt Persoonlijke gegevens
+
+
+		// TODO: LOGGING
+		.col--10-12.col--9-12--m.col--1-1--s.delete-me-orgaan-table.u-border--light--right
+			.container-flex--contain
+				.sidebar__toggle-menu.delete-me-toggle-sidebar--slide.u-visible-mobile.u-padding--tb--tiny.u-padding--rl--small.u-background--gray-lighter(type='button', title='Pas bestuur aan')
+					h2.h2.sidebar__toggle-value Menu
+				.u-border--light--bottom
+					.grid.u-padding--round--small.mandate-edit-table__header
+						.col--12-12.u-spacer--bottom
+							h1.h3.u-spacer--none IN PROGRESS NOT FINISHED Organenbeheer Gemeente Hasselt
+
+						.col--6-12
+							.input-field-icon-container--right
+								input#input-field.input-field.input-field--block(type='text', placeholder='Mandataris, fractie, of mandaat', style="min-width: 35rem;")
+								i.input-field__icon.vi.vi-magnifier(aria-hidden='true')
+						.col--6-12.u-align-right
+							a.button.button--narrow.delete-me-toggle-nieuw Voeg orgaan toe
+
+
+
+				.data-table__scroll
+						table.data-table
+							thead
+								tr.data-table__header
+									th
+									th.data-table__header-title
+										a.data-table__header-title--sortable(href='#', title='sort')
+											| Bestuurseenheid
+											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
+									th.data-table__header-title
+										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+											| Orgaan
+											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
+									th.data-table__header-title.delete-me-switch-hide-data
+										a.data-table__header-title--sortable(href='#', title='sort')
+											|  Gewijzigd door
+											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+									th.data-table__header-title.delete-me-switch-hide-data
+										a.data-table__header-title--sortable(href='#', title='sort')
+											|  Bewerkt op
+											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+									th
+
+							tbody
+								tr
+									td
+										.js-accordion
+											// toggle
+											a.toggle.toggle--arrow-down.js-accordion__toggle
+												i.toggle__icon(aria-hidden='true')
+												span.u-visually-hidden Toon documenten
+									td Gemeentebestuur
+									td College
+									td.delete-me-switch-hide-data.u-visible--desktop-up Barbara Put
+									td.u-visible--desktop-up.delete-me-switch-hide-data 28-03-2018
+									td
+										a.delete-me-toggle-bewerk Bewerk
+								tr.tr-expand.u-hidden
+									td(colspan="10")
+										section.contact-card
+											header.u-padding--trl--small
+												h1.contact-card__title Contactgegevens
+											.contact-card__content-wrapper
+												.contact-card__content
+													.contact-card__data
+														dl
+															dt.contact-card__data__title Adres
+															dd.contact-card__data__content
+																div(itemprop='address', itemscope='', itemtype='http://schema.org/PostalAddress', data-lat='50.8626661', data-lng='4.3591373')
+																	div
+																		span(itemprop='streetAddress') Groenplein 1
+																	div
+																		span(itemprop='postalCode') 3500
+																		span(itemprop='addressLocality') Hasselt
+																	div
+																		span(itemprop='addressCountry') België
+															dt.contact-card__data__title Telefoon
+															dd.contact-card__data__content(itemprop='telephone')
+																a(href='tel:+32 11 23 90 11')
+																	| 011 23 90 11
+															dt.contact-card__data__title Fax
+															dd.contact-card__data__content(itemprop='faxNumber') 011 22 57 42
+															dt.contact-card__data__title E-mail
+															dd.contact-card__data__content
+																ul
+																	li
+																		a(href='mailto:stadsbestuur@hasselt.be', itemprop='email') stadsbestuur@hasselt.be
+															dt.contact-card__data__title Website
+															dd.contact-card__data__content
+																ul
+																	li
+																		a(href='http://www.hasselt.be/', itemprop='url') http://www.hasselt.be/
+													.contact-card__map(itemscope='', itemprop='hasMap', itemtype='http://schema.org/Map')
+														.map.js-googlemaps-bound.js-lazyload-bound.map--loaded.js-lazyloaded(data-lazyload='true')
+															noscript
+																| <div class="map__static-card">
+																| <a href="https://maps.google.com?q=Koning%20Albert%20II-laan%2035%2C1030%20Brussel" target="_blank">
+																| <img itemprop="image" target="_blank" src="https://maps.google.com/maps/api/staticmap?center=50.8626661%2C4.3591373&amp;zoom=15&amp;sensor=false&amp;markers=50.8626661%2C4.3591373&amp;scale=1&amp;key=AIzaSyCrXvq-_E69REM-zFK0P90jyYBg5t7Ao4E&amp;size=399x226&amp;style=feature%3Aadministrative%7Celement%3Aall%7Cvisbility%3Aoff&amp;style=feature%3Aadministrative%7Celement%3Alabels.text.fill%7Cvisibility%3Aon%7Ccolor%3A%23444444&amp;style=feature%3Alandscape%7Celement%3Aall%7Cvisibility%3Aon%7Ccolor%3A%23ebecef&amp;style=feature%3Apoi%7Celement%3Aall%7Cvisibility%3Aoff&amp;style=feature%3Apoi.park%7Celement%3Aall%7Cvisibility%3Aon%7Ccolor%3A%23c4da7b&amp;style=feature%3Aroad%7Celement%3Aall%7Csaturation%3A-100%7Clightness%3A50%7Cvisibility%3Asimplified%7Cgamma%3A1&amp;style=feature%3Aroad%7Celement%3Ageometry%7Cvisibility%3Aoff&amp;style=feature%3Aroad%7Celement%3Alabels%7Cvisibility%3Aoff&amp;style=feature%3Aroad%7Celement%3Alabels.text%7Cgamma%3A0.54&amp;style=feature%3Aroad.highway%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.highway%7Celement%3Ageometry%7Cvisibility%3Asimplified%7Ccolor%3A%23cbd2da&amp;style=feature%3Aroad.highway.controlled_access%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.highway.controlled_access%7Celement%3Alabels.icon%7Cgamma%3A0.58&amp;style=feature%3Aroad.arterial%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.arterial%7Celement%3Ageometry.fill%7Cvisibility%3Aon&amp;style=feature%3Aroad.arterial%7Celement%3Ageometry.stroke%7Cvisibility%3Aon%7Ccolor%3A%23cbd2da&amp;style=feature%3Aroad.arterial%7Celement%3Alabels.text.stroke%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.arterial%7Celement%3Alabels.icon%7Cvisibility%3Aoff&amp;style=feature%3Aroad.local%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.local%7Celement%3Ageometry.fill%7Cvisibility%3Aon&amp;style=feature%3Aroad.local%7Celement%3Ageometry.stroke%7Cvisibility%3Aon%7Cgamma%3A7.17%7Ccolor%3A%23cbd2da&amp;style=feature%3Atransit%7Celement%3Aall%7Cvisibility%3Aoff&amp;style=feature%3Awater%7Celement%3Aall%7Ccolor%3A%23bfdfe9%7Cvisibility%3Asimplified"
+																| alt="">
+																| </a>
+																| </div>
+															.map__interactive-card.js-interactive-card(data-lat='50.8626661', data-lng='4.3591373', style='overflow: hidden;')
+																div(style='height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);')
+																	.gm-err-container
+																		.gm-err-content
+																			.gm-err-icon
+																				img(src='http://maps.gstatic.com/mapfiles/api-3/images/icon_error.png', draggable='false', style='-webkit-user-select: none;')
+																			.gm-err-title Oops! Something went wrong.
+																			.gm-err-message
+																				| This page didn't load Google Maps correctly. See the JavaScript console for technical details.
+															a.map__enlarge(href='https://maps.google.com?q=Koning%20Albert%20II-laan%2035%2C1030%20Brussel', target='_blank')
+																span.u-hidden-text View in google maps
+
+								tr
+									td
+										.js-accordion
+											// toggle
+											a.toggle.toggle--arrow-down.js-accordion__toggle
+												i.toggle__icon(aria-hidden='true')
+												span.u-visually-hidden Toon documenten
+									td Gemeentebestuur
+									td Gemeenteraad
+									td.delete-me-switch-hide-data.u-visible--desktop-up Barbara Put
+									td.u-visible--desktop-up.delete-me-switch-hide-data 28-03-2018
+									td
+										a.delete-me-toggle-bewerk Bewerk
+								tr.tr-expand.u-hidden
+									td(colspan="10")
+										section.contact-card
+											header.u-padding--trl--small
+												h1.contact-card__title Contactgegevens
+											.contact-card__content-wrapper
+												.contact-card__content
+													.contact-card__data
+														dl
+															dt.contact-card__data__title Adres
+															dd.contact-card__data__content
+																div(itemprop='address', itemscope='', itemtype='http://schema.org/PostalAddress', data-lat='50.8626661', data-lng='4.3591373')
+																	div
+																		span(itemprop='streetAddress') Groenplein 1
+																	div
+																		span(itemprop='postalCode') 3500
+																		span(itemprop='addressLocality') Hasselt
+																	div
+																		span(itemprop='addressCountry') België
+															dt.contact-card__data__title Telefoon
+															dd.contact-card__data__content(itemprop='telephone')
+																a(href='tel:+32 11 23 90 11')
+																	| 011 23 90 11
+															dt.contact-card__data__title Fax
+															dd.contact-card__data__content(itemprop='faxNumber') 011 22 57 42
+															dt.contact-card__data__title E-mail
+															dd.contact-card__data__content
+																ul
+																	li
+																		a(href='mailto:stadsbestuur@hasselt.be', itemprop='email') stadsbestuur@hasselt.be
+															dt.contact-card__data__title Website
+															dd.contact-card__data__content
+																ul
+																	li
+																		a(href='http://www.hasselt.be/', itemprop='url') http://www.hasselt.be/
+													.contact-card__map(itemscope='', itemprop='hasMap', itemtype='http://schema.org/Map')
+														.map.js-googlemaps-bound.js-lazyload-bound.map--loaded.js-lazyloaded(data-lazyload='true')
+															noscript
+																| <div class="map__static-card">
+																| <a href="https://maps.google.com?q=Koning%20Albert%20II-laan%2035%2C1030%20Brussel" target="_blank">
+																| <img itemprop="image" target="_blank" src="https://maps.google.com/maps/api/staticmap?center=50.8626661%2C4.3591373&amp;zoom=15&amp;sensor=false&amp;markers=50.8626661%2C4.3591373&amp;scale=1&amp;key=AIzaSyCrXvq-_E69REM-zFK0P90jyYBg5t7Ao4E&amp;size=399x226&amp;style=feature%3Aadministrative%7Celement%3Aall%7Cvisbility%3Aoff&amp;style=feature%3Aadministrative%7Celement%3Alabels.text.fill%7Cvisibility%3Aon%7Ccolor%3A%23444444&amp;style=feature%3Alandscape%7Celement%3Aall%7Cvisibility%3Aon%7Ccolor%3A%23ebecef&amp;style=feature%3Apoi%7Celement%3Aall%7Cvisibility%3Aoff&amp;style=feature%3Apoi.park%7Celement%3Aall%7Cvisibility%3Aon%7Ccolor%3A%23c4da7b&amp;style=feature%3Aroad%7Celement%3Aall%7Csaturation%3A-100%7Clightness%3A50%7Cvisibility%3Asimplified%7Cgamma%3A1&amp;style=feature%3Aroad%7Celement%3Ageometry%7Cvisibility%3Aoff&amp;style=feature%3Aroad%7Celement%3Alabels%7Cvisibility%3Aoff&amp;style=feature%3Aroad%7Celement%3Alabels.text%7Cgamma%3A0.54&amp;style=feature%3Aroad.highway%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.highway%7Celement%3Ageometry%7Cvisibility%3Asimplified%7Ccolor%3A%23cbd2da&amp;style=feature%3Aroad.highway.controlled_access%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.highway.controlled_access%7Celement%3Alabels.icon%7Cgamma%3A0.58&amp;style=feature%3Aroad.arterial%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.arterial%7Celement%3Ageometry.fill%7Cvisibility%3Aon&amp;style=feature%3Aroad.arterial%7Celement%3Ageometry.stroke%7Cvisibility%3Aon%7Ccolor%3A%23cbd2da&amp;style=feature%3Aroad.arterial%7Celement%3Alabels.text.stroke%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.arterial%7Celement%3Alabels.icon%7Cvisibility%3Aoff&amp;style=feature%3Aroad.local%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.local%7Celement%3Ageometry.fill%7Cvisibility%3Aon&amp;style=feature%3Aroad.local%7Celement%3Ageometry.stroke%7Cvisibility%3Aon%7Cgamma%3A7.17%7Ccolor%3A%23cbd2da&amp;style=feature%3Atransit%7Celement%3Aall%7Cvisibility%3Aoff&amp;style=feature%3Awater%7Celement%3Aall%7Ccolor%3A%23bfdfe9%7Cvisibility%3Asimplified"
+																| alt="">
+																| </a>
+																| </div>
+															.map__interactive-card.js-interactive-card(data-lat='50.8626661', data-lng='4.3591373', style='overflow: hidden;')
+																div(style='height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);')
+																	.gm-err-container
+																		.gm-err-content
+																			.gm-err-icon
+																				img(src='http://maps.gstatic.com/mapfiles/api-3/images/icon_error.png', draggable='false', style='-webkit-user-select: none;')
+																			.gm-err-title Oops! Something went wrong.
+																			.gm-err-message
+																				| This page didn't load Google Maps correctly. See the JavaScript console for technical details.
+															a.map__enlarge(href='https://maps.google.com?q=Koning%20Albert%20II-laan%2035%2C1030%20Brussel', target='_blank')
+																span.u-hidden-text View in google maps
+
+								tr
+									td
+										.js-accordion
+											// toggle
+											a.toggle.toggle--arrow-down.js-accordion__toggle
+												i.toggle__icon(aria-hidden='true')
+												span.u-visually-hidden Toon documenten
+									td OCMW
+									td OCMW
+									td.delete-me-switch-hide-data.u-visible--desktop-up Barbara Put
+									td.u-visible--desktop-up.delete-me-switch-hide-data 28-03-2018
+									td
+										a.delete-me-toggle-bewerk Bewerk
+								tr.tr-expand.u-hidden
+									td(colspan="10")
+										section.contact-card
+											header.u-padding--trl--small
+												h1.contact-card__title Contactgegevens
+											.contact-card__content-wrapper
+												.contact-card__content
+													.contact-card__data
+														dl
+															dt.contact-card__data__title Adres
+															dd.contact-card__data__content
+																div(itemprop='address', itemscope='', itemtype='http://schema.org/PostalAddress', data-lat='50.8626661', data-lng='4.3591373')
+																	div
+																		span(itemprop='streetAddress') Groenplein 1
+																	div
+																		span(itemprop='postalCode') 3500
+																		span(itemprop='addressLocality') Hasselt
+																	div
+																		span(itemprop='addressCountry') België
+															dt.contact-card__data__title Telefoon
+															dd.contact-card__data__content(itemprop='telephone')
+																a(href='tel:+32 11 23 90 11')
+																	| 011 23 90 11
+															dt.contact-card__data__title Fax
+															dd.contact-card__data__content(itemprop='faxNumber') 011 22 57 42
+															dt.contact-card__data__title E-mail
+															dd.contact-card__data__content
+																ul
+																	li
+																		a(href='mailto:stadsbestuur@hasselt.be', itemprop='email') stadsbestuur@hasselt.be
+															dt.contact-card__data__title Website
+															dd.contact-card__data__content
+																ul
+																	li
+																		a(href='http://www.hasselt.be/', itemprop='url') http://www.hasselt.be/
+													.contact-card__map(itemscope='', itemprop='hasMap', itemtype='http://schema.org/Map')
+														.map.js-googlemaps-bound.js-lazyload-bound.map--loaded.js-lazyloaded(data-lazyload='true')
+															noscript
+																| <div class="map__static-card">
+																| <a href="https://maps.google.com?q=Koning%20Albert%20II-laan%2035%2C1030%20Brussel" target="_blank">
+																| <img itemprop="image" target="_blank" src="https://maps.google.com/maps/api/staticmap?center=50.8626661%2C4.3591373&amp;zoom=15&amp;sensor=false&amp;markers=50.8626661%2C4.3591373&amp;scale=1&amp;key=AIzaSyCrXvq-_E69REM-zFK0P90jyYBg5t7Ao4E&amp;size=399x226&amp;style=feature%3Aadministrative%7Celement%3Aall%7Cvisbility%3Aoff&amp;style=feature%3Aadministrative%7Celement%3Alabels.text.fill%7Cvisibility%3Aon%7Ccolor%3A%23444444&amp;style=feature%3Alandscape%7Celement%3Aall%7Cvisibility%3Aon%7Ccolor%3A%23ebecef&amp;style=feature%3Apoi%7Celement%3Aall%7Cvisibility%3Aoff&amp;style=feature%3Apoi.park%7Celement%3Aall%7Cvisibility%3Aon%7Ccolor%3A%23c4da7b&amp;style=feature%3Aroad%7Celement%3Aall%7Csaturation%3A-100%7Clightness%3A50%7Cvisibility%3Asimplified%7Cgamma%3A1&amp;style=feature%3Aroad%7Celement%3Ageometry%7Cvisibility%3Aoff&amp;style=feature%3Aroad%7Celement%3Alabels%7Cvisibility%3Aoff&amp;style=feature%3Aroad%7Celement%3Alabels.text%7Cgamma%3A0.54&amp;style=feature%3Aroad.highway%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.highway%7Celement%3Ageometry%7Cvisibility%3Asimplified%7Ccolor%3A%23cbd2da&amp;style=feature%3Aroad.highway.controlled_access%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.highway.controlled_access%7Celement%3Alabels.icon%7Cgamma%3A0.58&amp;style=feature%3Aroad.arterial%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.arterial%7Celement%3Ageometry.fill%7Cvisibility%3Aon&amp;style=feature%3Aroad.arterial%7Celement%3Ageometry.stroke%7Cvisibility%3Aon%7Ccolor%3A%23cbd2da&amp;style=feature%3Aroad.arterial%7Celement%3Alabels.text.stroke%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.arterial%7Celement%3Alabels.icon%7Cvisibility%3Aoff&amp;style=feature%3Aroad.local%7Celement%3Aall%7Cvisibility%3Asimplified&amp;style=feature%3Aroad.local%7Celement%3Ageometry.fill%7Cvisibility%3Aon&amp;style=feature%3Aroad.local%7Celement%3Ageometry.stroke%7Cvisibility%3Aon%7Cgamma%3A7.17%7Ccolor%3A%23cbd2da&amp;style=feature%3Atransit%7Celement%3Aall%7Cvisibility%3Aoff&amp;style=feature%3Awater%7Celement%3Aall%7Ccolor%3A%23bfdfe9%7Cvisibility%3Asimplified"
+																| alt="">
+																| </a>
+																| </div>
+															.map__interactive-card.js-interactive-card(data-lat='50.8626661', data-lng='4.3591373', style='overflow: hidden;')
+																div(style='height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);')
+																	.gm-err-container
+																		.gm-err-content
+																			.gm-err-icon
+																				img(src='http://maps.gstatic.com/mapfiles/api-3/images/icon_error.png', draggable='false', style='-webkit-user-select: none;')
+																			.gm-err-title Oops! Something went wrong.
+																			.gm-err-message
+																				| This page didn't load Google Maps correctly. See the JavaScript console for technical details.
+															a.map__enlarge(href='https://maps.google.com?q=Koning%20Albert%20II-laan%2035%2C1030%20Brussel', target='_blank')
+																span.u-hidden-text View in google maps
+
+
+		.col--4-12.u-hidden.delete-me-orgaan-bewerk.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3 Bewerk orgaan
+					.col--3-12.u-align-right.delete-me-toggle-modal-save.delete-me-toggle-bewerk
+						a.link--icon--close(href='')
+							span.u-visually-hidden Venster sluiten
+
+				.u-spacer--bottom--small
+					.grid
+						.col--6-12
+							.description-data__label Gewijzigd door
+							.description-data__value Barbara Put
+						.col--6-12
+							.description-data__label Bewerkt op
+							.description-data__value 28-03-2018
+
+			.container-flex--scroll.u-padding--round--small
+				h4.h6.sans-serif.u-spacer--bottom--tiny Adres
+
+				.u-spacer
+					.grid
+						.col--6-12
+							label.form__label(for='orgaan-straatnaam') Straatnaam
+							input#orgaan-straatnaam.input-field.input-field--block.u-spacer--bottom--tiny(name='orgaan-straatnaam', placeholder='Groenplein', value="Groenplein")
+
+						.col--3-12
+							label.form__label(for='orgaan-straatnummer') Nummer
+							input#orgaan-straatnummer.input-field.input-field--block.u-spacer--bottom--tiny(name='orgaan-straatnummer', placeholder='1', value="1")
+
+						.col--3-12
+							label.form__label(for='orgaan-straatbus') Bus
+							input#orgaan-straatbus.input-field.input-field--block.u-spacer--bottom--tiny(name='orgaan-straatbus', placeholder='A', value="A")
+
+						.col--6-12
+							label.form__label(for='orgaan-postcode') Postcode
+							input#orgaan-postcode.input-field.input-field--block.u-spacer--bottom--tiny(name='orgaan-postcode', placeholder='3500', value="3500")
+
+						.col--6-12
+							label.form__label(for='orgaan-gemeente') Gemeente
+							input#orgaan-gemeente.input-field.input-field--block.u-spacer--bottom--tiny(name='orgaan-gemeente', placeholder='Hasselt', value="Hasselt")
+
+				h4.h6.sans-serif.u-spacer--bottom--tiny Contactgegevens
+
+				label.form__label(for='orgaan-telefoon') Telefoonnummer
+				input#orgaan-telefoon.input-field.input-field--min-content.u-spacer--bottom--tiny(name='orgaan-telefoon', placeholder='+32 11 23 90 11', value="+32 11 23 90 11")
+
+				label.form__label(for='orgaan-fax') Fax
+				input#orgaan-fax.input-field.input-field--min-content.u-spacer--bottom--tiny(name='orgaan-fax', placeholder='011 22 57 42', value="011 22 57 42")
+
+				label.form__label(for='orgaan-mail') Mailadres
+				input#orgaan-mail.input-field.input-field--min-content.u-spacer--bottom--tiny(name='orgaan-mail', placeholder='stadsbestuur@hasselt.be', value="stadsbestuur@hasselt.be")
+
+				label.form__label(for='orgaan-website') Website
+				input#orgaan-website.input-field.input-field--min-content.u-spacer--bottom--tiny(name='orgaan-website', placeholder='www.hasselt.be', value="www.hasselt.be")
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-bewerk Sluit
+				a.button.button--narrow.button--alt.delete-me-toggle-bewerk Annuleer
+				a.button.button--narrow.delete-me-toggle-bewerk Voeg toe
+
+
+		.col--4-12.u-hidden.delete-me-orgaan-nieuw.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3 Voeg nieuw orgaan&nbsp;toe
+					.col--3-12.u-align-right.delete-me-toggle-modal-save.delete-me-toggle-nieuw
+						a.link--icon--close(href='')
+							span.u-visually-hidden Venster sluiten
+
+			.container-flex--scroll.u-padding--round--small
+
+				h4.h6.sans-serif.u-spacer--bottom--tiny Adres
+
+				.u-spacer
+					.grid
+						.col--6-12
+							label.form__label(for='orgaan-straatnaam') Straatnaam
+							input#orgaan-straatnaam.input-field.input-field--block.u-spacer--bottom--tiny(name='orgaan-straatnaam', placeholder='Groenplein')
+
+						.col--3-12
+							label.form__label(for='orgaan-straatnummer') Nummer
+							input#orgaan-straatnummer.input-field.input-field--block.u-spacer--bottom--tiny(name='orgaan-straatnummer', placeholder='1')
+
+						.col--3-12
+							label.form__label(for='orgaan-straatbus') Bus
+							input#orgaan-straatbus.input-field.input-field--block.u-spacer--bottom--tiny(name='orgaan-straatbus', placeholder='A')
+						.col--6-12
+							label.form__label(for='orgaan-postcode') Postcode
+							input#orgaan-postcode.input-field.input-field--block.u-spacer--bottom--tiny(name='orgaan-postcode', placeholder='3500')
+
+						.col--6-12
+							label.form__label(for='orgaan-gemeente') Gemeente
+							input#orgaan-gemeente.input-field.input-field--block.u-spacer--bottom--tiny(name='orgaan-gemeente', placeholder='Hasselt')
+
+				h4.h6.sans-serif.u-spacer--bottom--tiny Contactgegevens
+
+				label.form__label(for='orgaan-telefoon') Telefoonnummer
+				input#orgaan-telefoon.input-field.input-field--min-content.u-spacer--bottom--tiny(name='orgaan-telefoon', placeholder='+32 11 23 90 11')
+
+				label.form__label(for='orgaan-fax') Fax
+				input#orgaan-fax.input-field.input-field--min-content.u-spacer--bottom--tiny(name='orgaan-fax', placeholder='011 22 57 42')
+
+				label.form__label(for='orgaan-mail') Mailadres
+				input#orgaan-mail.input-field.input-field--min-content.u-spacer--bottom--tiny(name='orgaan-mail', placeholder='stadsbestuur@hasselt.be')
+
+				label.form__label(for='orgaan-website') Website
+				input#orgaan-website.input-field.input-field--min-content.u-spacer--bottom--tiny(name='orgaan-website', placeholder='www.hasselt.be')
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-nieuw Sluit
+				a.button.button--narrow.button--alt.delete-me-toggle-nieuw Verwerp wijzigingen
+				a.button.button--narrow.delete-me-toggle-nieuw Bewaar
+
+	script.
+		$('.js-accordion').on('click', function(e) {
+			$(this).parents("tr").next().toggleClass("u-hidden");
+		});
+
+		$('.delete-me-toggle-bewerk').on('click', function(e) {
+			$('.delete-me-orgaan-bewerk').toggleClass("u-hidden");
+			$('.delete-me-orgaan-table').toggleClass("col--10-12").toggleClass("col--9-12--m").toggleClass("col--6-12").toggleClass("u-visible--tablet-landscape-up");
+			$('.delete-me-switch-hide-data').toggleClass("u-hidden");
+		});
+
+		$('.delete-me-toggle-nieuw').on('click', function(e) {
+			$('.delete-me-orgaan-nieuw').toggleClass("u-hidden");
+			$('.delete-me-orgaan-table').toggleClass("col--10-12").toggleClass("col--9-12--m").toggleClass("col--6-12").toggleClass("u-visible--tablet-landscape-up");
+			$('.delete-me-switch-hide-data').toggleClass("u-hidden");
+		});
+
+

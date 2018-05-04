@@ -1,0 +1,27 @@
+.grid
+  form.form.col--4-6.col--1-1--s(action='')
+    dl.properties
+      dt.properties__label.properties__label--has-input Naam:
+      dd.properties__data
+        //- begin dynamic label component
+        .dynamic-label.js-dynamic-label
+          .dynamic-label__label
+            button.dynamic-label__toggle.dynamic-label__toggle--alt.js-dynamic-label__toggle(type='button', title='Bewerk')
+              span.js-dynamic-label__value Mark Vansevenants
+              span.u-visually-hidden Bewerk
+              i.vi.vi-edit
+          .dynamic-label__input
+            input.input-field.input-field--block.js-dynamic-label__field(type='text')
+        //- end component
+      dt.properties__label.properties__label--has-input Adres:
+      dd.properties__data
+        //- begin dynamic label component
+        .dynamic-label.js-dynamic-label
+          .dynamic-label__label
+            button.dynamic-label__toggle.dynamic-label__toggle--alt.js-dynamic-label__toggle(type='button', title='Bewerk')
+              span.js-dynamic-label__value Veldstraat 138B, 9000 Gent
+              span.u-visually-hidden Bewerk
+              i.vi.vi-edit
+          .dynamic-label__input
+            input.input-field.input-field--block.js-dynamic-label__field(type='text')
+        //- end component

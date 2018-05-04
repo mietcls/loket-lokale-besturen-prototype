@@ -1,0 +1,756 @@
+extends /templates/_templates/header-loket
+
+block loketoverview
+	nav.sidebar.sidebar--slide--wide.sidebar--slide.sidebar--slide--in(role='navigation')
+		.sidebar__header
+			.grid.grid--collapse
+				.col--10-12.u-padding--trl--tiny
+					h1.h3.sans-serif Menu
+				.col--2-12.u-padding--trl--tiny.u-align-right.delete-me-toggle-sidebar--slide
+					i.vi.vi-cross
+					span.u-visually-hidden sluit navigatie
+
+		.sidebar__content
+			ul.side-navigation__group
+				//- li.side-navigation__item
+					a(href="/loket/loket-inbox.html") Inbox
+				li.side-navigation__item
+					a(href="/loket/loket-toezicht.html") Toezicht
+				li.side-navigation__item
+					a(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
+				li.side-navigation__item
+					a.active(href="/loket/loket-bbcdr.html") BBC DR
+				li.side-navigation__item
+					a(href="/loket/loket-organenbeheer.html") Organenbeheer
+				li.side-navigation__item
+					a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
+				li.side-navigation__item
+					a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
+				li.side-navigation__item
+					a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
+
+		.sidebar__footer
+			button.button.button--block.button--alt Persoonlijke gegevens
+	.grid.grid--collapse
+		.col--2-12.col--3-12--m.u-hidden--s
+			.container-flex--contain
+				.sidebar
+					.sidebar__content
+						nav.side-navigation
+							.side-navigation__content
+								ul.side-navigation__group
+									//- li.side-navigation__item
+										a.message(href="/loket/loket-inbox.html") Inbox
+									li.side-navigation__item
+										a(href="/loket/loket-toezicht.html") Toezicht
+									li.side-navigation__item
+										a(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
+									li.side-navigation__item
+										a.active(href="/loket/loket-bbcdr.html") BBC DR
+									li.side-navigation__item
+										a(href="/loket/loket-organenbeheer.html") Organenbeheer
+									li.side-navigation__item
+										a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
+									li.side-navigation__item
+										a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
+									li.side-navigation__item
+										a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
+
+					.sidebar__footer
+						button.button.button--block.button--alt Persoonlijke gegevens
+
+		// TODO: LOGGING
+		.col--10-12.col--9-12--m.col--12-12--s.delete-me-bbc-table.u-border--light--right
+			.container-flex--contain
+				.sidebar__toggle-menu.delete-me-toggle-sidebar--slide.u-visible-mobile.u-padding--tb--tiny.u-padding--rl--small.u-background--gray-lighter(type='button', title='Pas bestuur aan')
+					h2.h2.sidebar__toggle-value Menu
+				.u-border--light--bottom
+					.grid.u-padding--round--small.mandate-edit-table__header
+						.col--12-12.u-spacer--bottom
+							h1.h3.u-spacer--none BBC DR Gemeente Hasselt
+
+							p Één rapport kreeg een
+								span.pill.pill--primary-yellow opmerking
+								|  en vereist actie.
+							//- p Beleids- en beheerscyclus: digitale rapportering
+						.col--6-12
+							.input-field-icon-container--right
+								input#input-field.input-field.input-field--block(type='text', placeholder='Zoek op bijlage, auteur, datum of status', style="min-width: 40rem;")
+								i.input-field__icon.vi.vi-magnifier(aria-hidden='true')
+						.col--6-12.u-align-right
+							a.button.button--narrow.delete-me-toggle-new Maak nieuw rapport
+
+				.data-table__scroll
+						table.data-table
+							//- .data-table--zebra
+							thead
+								tr.data-table__header
+									//- th.data-table__header-title
+										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+											| Orgaan
+											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+									th.data-table__header-title
+										a.data-table__header-title--sortable(href='#', title='sort')
+											| Rapport
+											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+									//- th.data-table__header-title.delete-me-switch-hide-data
+									th.data-table__header-title.delete-me-switch-hide-data.u-visible--tablet-landscape-up
+										a.data-table__header-title--sortable(href='#', title='sort')
+											|  Gewijzigd door
+											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+									th.data-table__header-title.delete-me-switch-hide-data
+										a.data-table__header-title--sortable(href='#', title='sort')
+											|  Bewerkt op
+											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+									th.data-table__header-title
+										a.data-table__header-title--sortable(href='#', title='sort')
+											| Status
+											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
+									th
+							tbody
+								tr
+									//(data-table-selectable, class="mandate-edit-data-active")
+									//- td Gemeenteraad
+									td
+										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+											.document-miniature__type
+												span.document-miniature__type__text XBRL
+											.document-miniature__content
+												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+												.document-miniature__metadata XBRL - 1.4 MB
+										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+											.document-miniature__type
+												span.document-miniature__type__text XML
+											.document-miniature__content
+												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+												.document-miniature__metadata XML - 1.4 MB
+									td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
+									td.delete-me-switch-hide-data 28-03-2018
+										//- span.text-fade 13:40
+									td
+										label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+									td
+										a.delete-me-toggle-concept Bekijk
+
+								tr
+									//- (data-table-selectable, class="mandate-edit-data-active")
+									//- td College
+									td
+										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+											.document-miniature__type
+												span.document-miniature__type__text XBRL
+											.document-miniature__content
+												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+												.document-miniature__metadata XBRL - 1.4 MB
+										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+											.document-miniature__type
+												span.document-miniature__type__text XML
+											.document-miniature__content
+												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen Eindbudget 2017 Inclusief Interne Kredietaanpassingen Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+												.document-miniature__metadata XML - 1.4 MB
+									//- td.delete-me-switch-hide-data
+									td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
+									td.delete-me-switch-hide-data 28-03-2018
+										//- span.text-fade 13:40
+									td
+										//label.pill.pill--primary-blue.pill--clickable Verstuurd naar
+											br
+											| Vlaamse overheid
+										label.pill.pill--primary-blue.pill--clickable(data-toggle='tooltip', title='Wacht op goedkeuring door Vlaamse Overheid', data-content='Wacht op goedkeuring door Vlaamse Overheid', data-placement='left', data-timer='25') Verstuurd
+									td
+										a.delete-me-toggle-sent Bekijk
+
+								tr
+									//- (data-table-selectable, class="mandate-edit-data-active")
+									//- td Burgemeester
+									td
+										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+											.document-miniature__type
+												span.document-miniature__type__text XBRL
+											.document-miniature__content
+												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+												.document-miniature__metadata XBRL - 1.4 MB
+										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+											.document-miniature__type
+												span.document-miniature__type__text XML
+											.document-miniature__content
+												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+												.document-miniature__metadata XML - 1.4 MB
+									//- td.delete-me-switch-hide-data
+									td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
+									td.delete-me-switch-hide-data 28-03-2018
+										//- span.text-fade 13:40
+									td
+										label.u-spacer--tiny.pill.pill--primary-yellow.pill--clickable(data-toggle='tooltip', title='Vereist aanpassing', data-content='Vereist aanpassing', data-placement='left', data-timer='25') Opmerking
+										//- a.link--icon(href="/loket/loket-toezicht.html")
+											i.vi.vi-arrow
+											| Bekijk&nbsp;bericht
+										//label.u-spacer--tiny.pill.pill--red Teruggestuurd door
+											br
+											| Vlaamse overheid
+									td
+										a.delete-me-toggle-message Bekijk
+
+								tr
+									//- (data-table-selectable, class="mandate-edit-data-active")
+									//- td OCMW
+									td
+										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+											.document-miniature__type
+												span.document-miniature__type__text XBRL
+											.document-miniature__content
+												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+												.document-miniature__metadata XBRL - 1.4 MB
+										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+											.document-miniature__type
+												span.document-miniature__type__text XML
+											.document-miniature__content
+												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+												.document-miniature__metadata XML - 1.4 MB
+									//- td.delete-me-switch-hide-data
+									td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
+									td.delete-me-switch-hide-data 28-03-2018
+										//- span.text-fade 13:40
+									td
+										//- label.pill.pill--green Goedgekeurd door
+											br
+											| Vlaamse overheid
+										label.pill.pill--gray-dark.pill--clickable(data-toggle='tooltip', title='Opdracht voltooid', data-content='Opdracht voltooid', data-placement='left', data-timer='25') Goedgekeurd
+									td
+										a.delete-me-toggle-approved Bekijk
+
+								tr
+									//(data-table-selectable, class="mandate-edit-data-active")
+									//- td Gemeenteraad
+									td
+										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+											.document-miniature__type
+												span.document-miniature__type__text XBRL
+											.document-miniature__content
+												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+												.document-miniature__metadata XBRL - 1.4 MB
+										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+											.document-miniature__type
+												span.document-miniature__type__text XML
+											.document-miniature__content
+												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+												.document-miniature__metadata XML - 1.4 MB
+									td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
+									td.delete-me-switch-hide-data 28-03-2018
+										//- span.text-fade 13:40
+									td
+										label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+									td
+										a.delete-me-toggle-concept Bekijk
+
+		.delete-me-bbc-new.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3.u-spacer--tiny Maak nieuw rapport
+						label.pill.pill--gray-light.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+					.col--3-12.u-align-right.delete-me-toggle-new.delete-me-toggle-modal-save
+						a.link--icon--close(href='')
+							span.u-visually-hidden Venster sluiten
+
+
+			.container-flex--scroll.u-padding--round--small
+				//- .form__row
+				//- 	.form__label
+				//- 		label(for='titel') Titel
+				//- 	.form__input
+				//- 		input#titel.toggle-mandate-new-info.input-field.input-field--block.u-spacer--tiny(name='titel', placeholder='Titel', data-pattern='iban')
+
+
+				//.form__row.u-spacer--tiny
+					.form__label
+						label(form="orgaan").form__label Orgaan
+					.form__input
+						select#orgaan.select.select--block(name='select')
+							option(value='', disabled, selected, hidden) Selecteer een orgaan
+							option(value='Gemeenteraad') Gemeenteraad
+							option(value='College') College
+							option(value='Burgemeester') Burgemeester
+							option(value='OCMW') OCMW
+
+				.form__row
+					.form__label
+						label(for='bestanden') Upload één XML en één XBRLfile
+					.form__input.shame-mock-remove-multiple
+						// .shame-mock-remove-multiple staat er om dat je maar twee bestanden mag uploaden. Je kan enkel xml of xbrl uploaden
+						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
+							.upload__element
+								input.upload__element__input(type='file', id='files1[1]', name='files1[1]', data-upload-multiple-caption='{count} files selected', multiple='', data-upload-error-message-filesize='Het bestand mag max :maxFsz zijn.', data-upload-max-size='20000000', accept='.xml, .xbrl')
+								label.upload__element__label(for='files1[1]')
+									i.vi.vi-paperclip
+									span XML en XBRL uploaden
+									small Sleep de bestanden naar hier om toe te voegen
+
+							.alert.alert--warning.u-hidden
+								.alert__icon(aria-hidden='true')
+								.alert__content
+									.alert__title Upload de juiste bestanden om uw rapport te versturen.
+				//- .form__row
+				//- 	.form__label
+				//- 		label(for='bestanden') Upload één XBRL file
+				//- 	.form__input.shame-mock-remove-multiple
+				//- 		// .shame-mock-remove-multiple zit er bij om dat je maar één bestand mag uploaden. Het zal ook lijken alsof het niet werkt omdat je enkel xbrl mag uploaden.
+				//- 		.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat het XML bestand hier los om op te laden', data-upload-allow-drop='')
+				//- 			.upload__element
+				//- 				input.upload__element__input(type='file', id='files1[0]', name='files1[0]', data-upload-multiple-caption='{count} files selected', multiple='', data-upload-error-message-filesize='Het bestand mag max :maxFsz zijn.', data-upload-max-size='20000000', accept='.xbrl')
+				//- 				label.upload__element__label(for='files1[0]')
+				//- 					i.vi.vi-paperclip
+				//- 					span XBRL uploaden
+				//- 					small Sleep de bestanden naar hier om toe te voegen
+
+				//.form__row
+					.form__label
+						label(for='document') Kies status
+					.form__input
+						.button-group__inline.u-spacer--tiny.u-clearfix
+							button.button.button--active.button--narrow.button--alt
+								| In voorbeiding
+							button.button.button--narrow.button--alt
+								| Ter controle
+							button.button.button--narrow.button--alt
+								| Te valideren
+
+				//- .form__row.js-accordion
+				//- 	.form__label
+				//- 		a.toggle--arrow-down.js-accordion__toggle
+				//- 			i.toggle__icon
+				//- 			| Voeg een boodschap toe (optioneel)
+
+				//- 	.form__input
+				//- 		.accordion__content
+				//- 			textarea#boodschap.textarea.textarea--block.component(name='boodschap', cols='40', rows='4', placeholder='Geef een korte boodschap mee')
+
+				//.form__row
+					.form__label
+						label(for='document') Voeg een boodschap toe (optioneel)
+
+					.form__input
+						textarea#boodschap.textarea.textarea--block.component(name='boodschap', cols='40', rows='4', placeholder='Schrijf je boodschap')
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-new Annuleer
+				a.button.button--narrow.button--alt.delete-me-toggle-save-toasters Bewaar als concept
+				//- a.button.button--narrow.button--disabled.delete-me-toggle-new Verstuur naar Vl. Overheid
+
+				a.button.button--disabled.delete-me-toggle-new.u-spacer--tiny Verstuur
+					span.button__info.button__info--below naar Vlaamse Overheid
+				// disabled until two files have been uploaded
+				// todo: modal that explains what following action does
+
+		.delete-me-bbc-concept.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3 Bekijk rapport
+					.col--3-12.u-align-right.delete-me-toggle-concept.delete-me-toggle-modal-save
+						a.link--icon--close(href='')
+							span.u-visually-hidden Venster sluiten
+
+
+				.grid.u-spacer--small
+					.col--4-12
+						.description-data__label Gewijzigd door
+						.description-data__value Barbara Put
+
+					.col--4-12
+						.description-data__label Bewerkt op
+						.description-data__value 28-03-2018
+
+					.col--4-12
+						label.pill.pill--gray-light.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+
+					.col--12-12
+						a.link--dark.smaller Bekijk alle aanpassingen
+
+			.container-flex--scroll.u-padding--round--small
+
+				//- .alert.alert--small
+				//- 	p Het rapport werd nog niet verzonden naar de Vlaamse Overheid.
+
+				// .form__row.u-spacer--tiny
+					.form__label
+						label(form="orgaan").form__label Orgaan
+					.form__input
+						select#orgaan.select.select--block(name='select')
+							option(value='', disabled, hidden) Selecteer een orgaan
+							option(value='Gemeenteraad', selected) Gemeenteraad
+							option(value='College') College
+							option(value='Burgemeester') Burgemeester
+							option(value='OCMW') OCMW
+
+				.form__row
+					.form__label
+						label(for='bestanden') Upload één XML en één XBRLfile
+					.form__input.shame-mock-remove-multiple
+						// .shame-mock-remove-multiple staat er om dat je maar twee bestanden mag uploaden. Je kan enkel xml of xbrl uploaden
+						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files2[4]')
+								a.upload__files__close.link--icon--close
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.xml')
+										p.upload__file__name
+											| filename.xml
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+							.upload__element
+								input.upload__element__input(type='file', id='files2[2]', name='files2[2]', data-upload-multiple-caption='{count} files selected', multiple='', data-upload-error-message-filesize='Het bestand mag max :maxFsz zijn.', data-upload-max-size='20000000', accept='.xml, .xbrl')
+								label.upload__element__label(for='files2[2]')
+									i.vi.vi-paperclip
+									span XML en XBRL uploaden
+									small Sleep de bestanden naar hier om toe te voegen
+
+							.alert.alert--warning.u-hidden
+								.alert__icon(aria-hidden='true')
+								.alert__content
+									.alert__title Upload de juiste bestanden om uw rapport te versturen.
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				//- a.modal-dialog__button.delete-me-toggle-concept.u-spacer--right--tiny
+					i.vi.vi-cross.vi-u-link
+					| Sluit
+				a.button.button--narrow.button--alt.delete-me-toggle-concept Sluit
+				//- a.button.button--narrow.button--disabled.delete-me-toggle-new Verstuur naar Vl. Overheid
+
+				a.button.button--narrow.button--alt.button--alt--warning.delete-me-toggle-concept.delete-me-toggle-modal-delete-concept Verwijder
+				a.button.button--narrow.button--alt.delete-me-toggle-save-toasters Bewaar
+				a.button.button--disabled.delete-me-toggle-concept.u-spacer--tiny Verstuur
+					span.button__info.button__info--below naar Vlaamse Overheid
+				// disabled until two files have been uploaded
+
+
+
+		.delete-me-bbc-message.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3 Bekijk rapport
+					.col--3-12.u-align-right.delete-me-toggle-message.delete-me-toggle-modal-save
+						a.link--icon--close(href='')
+							span.u-visually-hidden Venster sluiten
+
+
+				.grid.u-spacer--small
+					.col--4-12
+						.description-data__label Gewijzigd door
+						.description-data__value Barbara Put
+
+					.col--4-12
+						.description-data__label Bewerkt op
+						.description-data__value 28-03-2018
+
+					.col--4-12
+						label.pill.pill--primary-yellow.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Vereist aanpassing', data-content='Vereist aanpassing', data-placement='left', data-timer='25') Opmerking
+
+					.col--12-12
+						a.link--dark.smaller Bekijk alle aanpassingen
+
+			.container-flex--scroll.u-padding--round--small
+
+				//- .alert.alert--warning
+					p Er werd een opmerking over uw rapport gestuurd.
+						a.link--icon(href="/loket/loket-toezicht.html")
+							i.vi.vi-arrow
+							| Bekijk&nbsp;bericht
+
+				.alert.alert--cta.alert--warning
+					.alert__content
+						.alert__title.u-spacer--small Bericht: XML bestand corrupt
+						.alert__message
+							//p.u-spacer--small Beste,
+							p.u-spacer--small Het XML bestand dat u verstuurde is corrupt. Gelieve dat bestand te vervangen.
+							//p Met vriendeljke groet
+								br
+								| Naam Achternaam
+
+						.alert__actions
+							a.button.button--alt.button--small.u-spacer--tiny(href="/loket/loket-toezicht.html") Beantwoord bericht
+							p of maak een
+								a.delete-me-toggle-message.delete-me-toggle-new nieuw rapport
+
+
+				// .form__row.u-spacer--tiny
+					.form__label
+						label(form="orgaan").form__label Orgaan
+					.form__input
+						select#orgaan.select.select--block(name='select')
+							option(value='', disabled, hidden) Selecteer een orgaan
+							option(value='Gemeenteraad', selected) Gemeenteraad
+							option(value='College') College
+							option(value='Burgemeester') Burgemeester
+							option(value='OCMW') OCMW
+
+				.form__row
+					.form__label
+						label(for='bestanden') Upload één XML en één XBRLfile
+					.form__input.shame-mock-remove-multiple
+						// .shame-mock-remove-multiple staat er om dat je maar twee bestanden mag uploaden. Je kan enkel xml of xbrl uploaden
+						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files3[3]')
+								//a.upload__files__close.link--icon--close
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.xml')
+										p.upload__file__name
+											| filename.xml
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files3[4]')
+								//a.upload__files__close.link--icon--close(href='')
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.xml')
+										p.upload__file__name
+											| filename.xbrl
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+							.upload__element
+								input.upload__element__input(type='file', id='files2[2]', name='files2[2]', data-upload-multiple-caption='{count} files selected', multiple='', data-upload-error-message-filesize='Het bestand mag max :maxFsz zijn.', data-upload-max-size='20000000', accept='.xml, .xbrl')
+								label.upload__element__label(for='files2[2]')
+									i.vi.vi-paperclip
+									span XML en XBRL uploaden
+									small Sleep de bestanden naar hier om toe te voegen
+
+							.alert.alert--warning.u-hidden
+								.alert__icon(aria-hidden='true')
+								.alert__content
+									.alert__title Upload de juiste bestanden om uw rapport te versturen.
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-message Sluit
+				a.button.delete-me-toggle-message.delete-me-toggle-new.u-spacer--tiny Maak nieuw rapport
+
+
+		.delete-me-bbc-sent.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3 Bekijk verstuurd rapport
+					.col--3-12.u-align-right.delete-me-toggle-sent
+						a.link--icon--close(href='')
+							span.u-visually-hidden Venster sluiten
+
+
+				.grid.u-spacer--small
+					.col--4-12
+						.description-data__label Gewijzigd door
+						.description-data__value Barbara Put
+
+					.col--4-12
+						.description-data__label Bewerkt op
+						.description-data__value 28-03-2018
+
+					.col--4-12
+						label.pill.pill--primary-blue.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Doorgestuurd naar Vlaamse Overheid ter goedkeuring', data-content='Doorgestuurd naar Vlaamse Overheid ter goedkeuring', data-placement='left', data-timer='25') Verstuurd
+
+					.col--12-12
+						a.link--dark.smaller Bekijk alle aanpassingen
+
+			.container-flex--scroll.u-padding--round--small
+
+				//.alert.alert--small
+					p Dit rapport staat in de wachtrij om goedgekeurd te worden door de Vlaamse Overheid.
+					// U kan nog aanpassingen doorvoeren tot deze goedgekeurd wordt.
+
+				//.form__row.u-spacer--tiny
+					//- .form__label
+					//- 	label(form="orgaan").form__label Orgaan
+					//- .form__input
+					//- 	select#orgaan.select.select--block(name='select')
+					//- 		option(value='', disabled, hidden) Selecteer een orgaan
+					//- 		option(value='Gemeenteraad', selected) Gemeenteraad
+					//- 		option(value='College') College
+					//- 		option(value='Burgemeester') Burgemeester
+					//- 		option(value='OCMW') OCMW
+
+					.description-data__label Orgaan
+					.description-data__value Gemeenteraad
+
+				.form__row
+					.form__label
+						label(for='bestanden') Upload één XML en één XBRLfile
+					.form__input.shame-mock-remove-multiple
+						// .shame-mock-remove-multiple staat er om dat je maar twee bestanden mag uploaden. Je kan enkel xml of xbrl uploaden
+						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files3[3]')
+								//- a.upload__files__close.link--icon--close
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.xml')
+										p.upload__file__name
+											| filename.xml
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files3[4]')
+								//- a.upload__files__close.link--icon--close
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.xml')
+										p.upload__file__name
+											| filename.xml
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+							.upload__element
+								input.upload__element__input(type='file', id='files3[3]', name='files3[3, 4]', data-upload-multiple-caption='{count} files selected', multiple='', data-upload-error-message-filesize='Het bestand mag max :maxFsz zijn.', data-upload-max-size='20000000', accept='.xml, .xbrl')
+								label.upload__element__label(for='files3[3]')
+									i.vi.vi-paperclip
+									span XML en XBRL uploaden
+									small Sleep de bestanden naar hier om toe te voegen
+
+
+
+			//- .u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-message Annuleer
+				//- a.button.button--narrow.button--alt Bewaar
+
+				a.button.button--disabled.delete-me-toggle-message.u-spacer--tiny Verstuur aanpassingen
+					span.button__info.button__info--below Rapport wordt opnieuw verstuurd
+				// disabled until two files have been uploaded
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-new Sluit
+
+		.delete-me-bbc-approved.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3 Bekijk goedgekeurd rapport
+					.col--3-12.u-align-right.delete-me-toggle-approved
+						a.link--icon--close(href='')
+							span.u-visually-hidden Venster sluiten
+
+
+				.grid.u-spacer--small
+					.col--4-12
+						.description-data__label Gewijzigd door
+						.description-data__value Barbara Put
+
+					.col--4-12
+						.description-data__label Bewerkt op
+						.description-data__value 28-03-2018
+
+					.col--4-12
+						label.pill.pill--gray-dark.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Opdracht voltooid', data-content='Opdracht voltooid', data-placement='left', data-timer='25') Goedgekeurd
+
+					.col--12-12
+						a.link--dark.smaller Bekijk alle aanpassingen
+
+			.container-flex--scroll.u-padding--round--small
+
+				//.form__row.u-spacer--tiny
+					//- .form__label
+					//- 	label(form="orgaan").form__label Orgaan
+					//- .form__input
+					//- 	select#orgaan.select.select--block(name='select')
+					//- 		option(value='', disabled, hidden) Selecteer een orgaan
+					//- 		option(value='Gemeenteraad', selected) Gemeenteraad
+					//- 		option(value='College') College
+					//- 		option(value='Burgemeester') Burgemeester
+					//- 		option(value='OCMW') OCMW
+
+					.description-data__label Orgaan
+					.description-data__value Gemeenteraad
+
+				.form__row
+					.form__label
+						label(for='bestanden') Upload één XML en één XBRLfile
+					.form__input.shame-mock-remove-multiple
+						// .shame-mock-remove-multiple staat er om dat je maar twee bestanden mag uploaden. Je kan enkel xml of xbrl uploaden
+						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files3[3]')
+								//a.upload__files__close.link--icon--close
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.xml')
+										p.upload__file__name
+											| filename.xml
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files3[4]')
+								//a.upload__files__close.link--icon--close
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.xml')
+										p.upload__file__name
+											| filename.xml
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+							.upload__element
+								input.upload__element__input(type='file', id='files3[3]', name='files3[3, 4]', data-upload-multiple-caption='{count} files selected', multiple='', data-upload-error-message-filesize='Het bestand mag max :maxFsz zijn.', data-upload-max-size='20000000', accept='.xml, .xbrl')
+								label.upload__element__label(for='files3[3]')
+									i.vi.vi-paperclip
+									span XML en XBRL uploaden
+									small Sleep de bestanden naar hier om toe te voegen
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-new Sluit venster
+				a.button.delete-me-toggle-message.delete-me-toggle-new.u-spacer--tiny Maak nieuw rapport
+
+	script.
+		$('.delete-me-toggle-new').on('click', function(e) {
+			$('.delete-me-bbc-new').toggleClass("u-hidden");
+			$('.delete-me-bbc-table').toggleClass("col--10-12").toggleClass("col--9-12--m").toggleClass("col--6-12").toggleClass("u-visible--tablet-landscape-up");
+			$('.delete-me-switch-hide-data').toggleClass("u-hidden");
+			$('.switch-text-overflow-ellipsis').toggleClass("text-overflow-ellipsis--40").toggleClass("text-overflow-ellipsis");
+			e.preventDefault();
+		});
+
+		$('.delete-me-toggle-concept, .delete-me-toggle-sent, .delete-me-toggle-message, .delete-me-toggle-approved').on('click', function(e) {
+			$('.delete-me-switch-hide-data').toggleClass("u-hidden");
+			$('tr.data-table__row-active').removeClass("data-table__row-active");
+			$(this).parents("tr").toggleClass("data-table__row-active");
+			$('.delete-me-bbc-table').toggleClass("col--10-12").toggleClass("col--9-12--m").toggleClass("col--6-12").toggleClass("u-visible--tablet-landscape-up");
+		});
+
+		$('.delete-me-toggle-concept').on('click', function(e) {
+			$('.delete-me-bbc-concept').toggleClass("u-hidden");
+		});
+
+		$('.delete-me-toggle-sent').on('click', function(e) {
+			$('.delete-me-bbc-sent').toggleClass("u-hidden");
+		});
+
+		$('.delete-me-toggle-message').on('click', function(e) {
+			$('.delete-me-bbc-message').toggleClass("u-hidden");
+		});
+
+		$('.delete-me-toggle-approved').on('click', function(e) {
+			$('.delete-me-bbc-approved').toggleClass("u-hidden");
+		});

@@ -1,0 +1,27 @@
+/* ==========================================================================
+  Shame
+  Try out new and dirty stuff here.
+ ========================================================================== */
+
+/* Styleguide
+ ========================================================================== */
+
+.br-sample-content {
+  overflow: auto !important;
+}
+
+// TODO: arrange and put in styleguide
+
+.shame-mock-remove-multiple {
+	.upload__files--has-files + .upload__files--has-files + .upload__element,
+	.upload__files--has-files + .upload__files--has-files + .upload__overlay + .upload__files + .upload__element,
+	.upload__files--has-files + .upload__overlay + .upload__files + .upload__files--has-files + .upload__element,
+	.upload__overlay + .upload__files + .upload__files--has-files + .upload__files--has-files + .upload__element {
+		display: none;
+	}
+
+	.upload__files--has-files + .upload__files--has-files + .upload__overlay + .upload__files + .upload__element + .alert,
+	.upload__files--has-files + .upload__overlay + .upload__files + .upload__files--has-files + .upload__element + .alert {
+		display: block !important;
+	}
+}

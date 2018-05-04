@@ -1,0 +1,48 @@
+/* ==========================================================================
+  br-content
+  Meant to style areas with basic typography
+  Be careful to only apply to content areas, as a separate div
+   ========================================================================== */
+
+.br-content {
+  line-height: 1.5;
+
+  p {
+    padding: 0 0 12px;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    padding: 0 0 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0 0 10px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 0 10px;
+  }
+
+  h4 {
+    padding: 0 0 10px;
+    font-weight: 700;
+  }
+
+  ul, ol {
+    padding: 0 0 10px 20px;
+  }
+
+  code {
+    font-family: monospace;
+  }
+
+}

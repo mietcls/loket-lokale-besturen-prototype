@@ -1,0 +1,20 @@
+/* ==========================================================================
+  Popover
+  Define alternative popover here.
+ ========================================================================== */
+
+/* popover
+ ========================================================================== */
+
+.popover.popover--left .popover__content {
+  right: 0 !important;
+  left: auto !important;
+}
+
+.popover.popover--left.popover--mobile--left .popover__content {
+
+	@include for-phone-only {
+	  left: 1rem !important;
+	  right: auto !important;
+	}
+}

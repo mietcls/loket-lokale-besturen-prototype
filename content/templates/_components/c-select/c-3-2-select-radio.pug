@@ -1,0 +1,57 @@
+.temporary-select__wrapper.u-spacer--bottom--tiny(data-content='', aria-labelledby='', data-show='true', aria-hidden='false')
+    .input-field-icon-container--right
+        input.toggle-search-bestuursperiode.input-field.input-field--small(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescriptionselecterken', aria-haspopup='listbox"', placeholder='Zoek fractie', value="Bestuursperiode: 2013 — 2018", autofocus, onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
+        i.input-field__icon.vi.vi-arrow.vi-u-90deg(aria-hidden='true')
+        span#selectFormInputDescriptionselecterken.u-visually-hidden
+            | U bevindt zich in de zoekfunctie van een dropdown menu in een formulier. Navigeer door de opties met ctrl + alt + pijltjes en selecteer met enter. Gebruik escape om de dropdown te sluiten.
+
+    .select__search-results.search-results-bestuursperiode.u-hidden
+        .select__list-wrapper(role='listbox')
+            section.select__list.select__list--radios(data-records='')
+                .select__item
+                    button.select__cta.select__cta--active(type='button', data-index='5', data-value='ANT', data-label='Antwerpen', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+                        a.select__cta__title 2013 &mdash; 2018
+                .select__item
+                    button.select__cta(type='button', data-index='5', data-value='ANT', data-label='Antwerpen', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+                        a.select__cta__title 2019 &mdash; 2024
+                .select__item.select__item--disabled
+                    p.text-fade
+                        small Oudere informatie niet beschikbaar
+br
+br
+br
+br
+br
+
+.temporary-select__wrapper.temporary-select__wrapper--block.u-spacer--bottom--tiny(data-content='', aria-labelledby='', data-show='true', aria-hidden='false')
+    .input-field-icon-container--right.input-field-icon-container--block
+        input.toggle-search-bestuursperiode.input-field.input-field--small.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescriptionselecterken', aria-haspopup='listbox"', placeholder='Zoek fractie', value="Bestuursperiode: 2013 — 2018", autofocus, onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
+        i.input-field__icon.vi.vi-arrow.vi-u-90deg(aria-hidden='true')
+        span#selectFormInputDescriptionselecterken.u-visually-hidden
+            | U bevindt zich in de zoekfunctie van een dropdown menu in een formulier. Navigeer door de opties met ctrl + alt + pijltjes en selecteer met enter. Gebruik escape om de dropdown te sluiten.
+
+    .select__search-results.search-results-bestuursperiode.u-hidden
+        .select__list-wrapper(role='listbox')
+            section.select__list.select__list--radios(data-records='')
+                .select__item
+                    button.select__cta.select__cta--active(type='button', data-index='5', data-value='ANT', data-label='Antwerpen', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+                        a.select__cta__title 2013 &mdash; 2018
+                .select__item
+                    button.select__cta(type='button', data-index='5', data-value='ANT', data-label='Antwerpen', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+                        a.select__cta__title 2019 &mdash; 2024
+                .select__item.select__item--disabled
+                    p.text-fade
+                        small Oudere informatie niet beschikbaar
+
+br
+br
+br
+br
+br
+
+
+script.
+    $('.toggle-search-bestuursperiode').on('click', function(e) {
+        $('.search-results-bestuursperiode').toggleClass("u-hidden");
+        e.preventDefault();
+    });

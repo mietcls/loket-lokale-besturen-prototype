@@ -1,0 +1,65 @@
+label.form__label(for='select') Optie
+select#select-demo.select.select--large(name='select')
+    option(value='') -- Selecteer een optie --
+    optgroup(label='Eerste groep met opties')
+        option(value='1') Optie 1
+        option(value='2') Optie 2
+    optgroup(label='Andere groep met opties')
+        option(value='6') Optie 3
+        option(value='7') Optie 4
+        option(value='8') Optie 5
+        option(value='11') Optie 6
+
+br
+br
+
+label.form__label(for='select') Optie
+select.select.select--large.select--block(name='select')
+    option(value='') -- Selecteer een optie --
+    optgroup(label='Eerste groep met opties')
+        option(value='1') Optie 1
+        option(value='2') Optie 2
+    optgroup(label='Andere groep met opties')
+        option(value='6') Optie 3
+        option(value='7') Optie 4
+        option(value='8') Optie 5
+        option(value='11') Optie 6
+
+br
+br
+
+label.label--subtle Select element large
+.js-select.js-select.u-spacer--bottom--tiny.js-select--large
+    select#select-element-large.select.select--large.select--block(name='select-element-large', data-search-empty='Geen resultaten gevonden', data-id='')
+        option(value='', data-placeholder='') Select element large
+
+br
+br
+br
+
+script.
+    window.onload = function() {
+        var selectElement = document.getElementById('select-element-large');
+        vl.select.dress(selectElement, {
+            callbackFn: customFunction,
+        });
+
+        function customFunction(selectElement, params) {
+            var searchStr = params.searchStr;
+            var jsonData = [
+                {type: 'option', label: 'N-VA', value: 'N-VA'},
+                //- {type: 'option', label: 'Groen', value: 'GRO'},
+                {type: 'option', label: 'GROEI met Open Vld', value: 'VLD'},
+                {type: 'option', label: 'Vlaams Belang', value: 'VB'},
+                //- {type: 'option', label: 'SPA', value: 'SPA'},
+                {type: 'option', label: 'CD&amp;V', value: 'CD&amp;V'},
+                {type: 'option', label: 'HELEMAAL HASSELT', value: 'HELEMAAL HASSELT'}
+            ];
+
+                if (searchStr.length > 5) {
+                    params.callbackFn(false);
+                } else {
+                    params.callbackFn(jsonData);
+                }
+            }
+        };

@@ -1,0 +1,15 @@
+/* ==========================================================================
+  content card
+  Style the content card here.
+ ========================================================================== */
+
+.contact-card--white {
+	background-color: $white;
+
+	.contact-card__content,
+	.content-header__actions {
+		background-color: $white;
+	}
+}
+
+// TODO: put in styleguide

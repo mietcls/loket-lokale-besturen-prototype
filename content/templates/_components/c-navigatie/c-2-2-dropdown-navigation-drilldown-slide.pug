@@ -1,0 +1,121 @@
+nav.dropdown-navigation.u-spacer--tiny.toggle-sidebar--slide
+  h2.h2.dropdown-navigation__title Bestuur: Gemeenteraad Hasselt
+  .dropdown-navigation__wrapper.js-popover
+    button.dropdown-navigation__toggle Open navigatie
+
+nav.sidebar.sidebar--slide.sidebar--slide--in(role='navigation')
+  .drilldown(data-drilldown='', data-search-ph='Zoek gemeente', data-search-no-results='Geen resultaten gevonden')
+    .drilldown__wrapper
+      // START column 1
+      .drilldown__column(data-drilldown-depth='1')
+        .drilldown__list-wrapper
+          .grid.grid--collapse
+            .col--9-12.u-padding--trl--tiny
+              h1.h3.u-spacer--none Kies een bestuur
+            .col--3-12.u-padding--trl--tiny.u-align-right.toggle-sidebar--slide
+              i.vi.vi-cross
+          .drilldown__subcolumn__search.u-border-top(aria-hidden='true')
+            .input-field-icon-container--right
+              input.drilldown__subcolumn__search__input.input-field.input-field--block(type='text', aria-label='Zoek bestuur', placeholder='Zoek bestuur', data-input='', autofocus)
+              i.input-field__icon.vi.vi-magnifier(aria-hidden='true')
+
+          ul.drilldown__list
+            li.drilldown__item
+              a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Bekijk alle besturen
+            li.drilldown__item
+              a.drilldown__item__cta(href='#', itemprop='url', data-drilldown-cta='') Antwerpen
+              // START subcolumn 2
+              section.drilldown__subcolumn(data-drilldown-depth='2')
+                .drilldown__subcolumn__header
+                  h1.h4.drilldown__subcolumn__title Antwerpen
+                .drilldown__list-wrapper
+                  ul.drilldown__list
+                    li.drilldown__item
+                      a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Bekijk provincieraad Antwerpen
+                    li.drilldown__item
+                      //- a.drilldown__item__cta(href='#', itemprop='url', data-drilldown-cta='') District
+                      a.drilldown__item__cta(href='#', itemprop='url', data-drilldown-cta='') Gemeente
+                      // START subcolumn 3
+                      section.drilldown__subcolumn(data-drilldown-depth='2')
+                        .drilldown__subcolumn__header
+                          //- h1.h4.drilldown__subcolumn__title District naam
+                          h1.h4.drilldown__subcolumn__title Gemeente naam
+                        .drilldown__list-wrapper
+                          ul.drilldown__list
+                            //- li.drilldown__item
+                            //-   a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Bekijk districtraad
+                            li.drilldown__item
+                              span.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Bekijk OCMW gemeente
+                            li.drilldown__item
+                              span.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Bekijk gemeenteraad gemeente
+                            li.drilldown__item
+                              span.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Bekijk college gemeente
+
+                            //- li.drilldown__item
+                            //-   a.drilldown__item__cta(href='#', itemprop='url', data-drilldown-cta='') Gemeente
+                            li.drilldown__item
+                              a.drilldown__item__cta(href='#', itemprop='url', data-drilldown-cta='') District naam
+                              // START subcolumn 4
+                              section.drilldown__subcolumn(data-drilldown-depth='3', data-search='false')
+                                .drilldown__subcolumn__header
+                                  //- h1.h4.drilldown__subcolumn__title Gemeente
+                                  h1.h4.drilldown__subcolumn__title District
+                                .drilldown__list-wrapper
+                                  ul.drilldown__list
+                                    //- li.drilldown__item
+                                    //-   span.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') OCMW
+                                    //- li.drilldown__item
+                                    //-   span.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Gemeenteraad
+                                    //- li.drilldown__item
+                                    //-   span.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') College
+                                    li.drilldown__item
+                                      span.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Bekijk districtsraad
+                                    li.drilldown__item
+                                      span.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Bekijk districtscollege
+                            //- li.drilldown__item
+                            //-   a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Gemeente
+                            //- li.drilldown__item
+                            //-   a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Gemeente
+                            //- li.drilldown__item
+                            //-   a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Gemeente
+                            li.drilldown__item
+                              a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') District
+                            li.drilldown__item
+                              a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') District
+                            li.drilldown__item
+                              a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') District
+                    //- li.drilldown__item
+                    //-   a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') District
+                    //- li.drilldown__item
+                    //-   a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') District
+                    //- li.drilldown__item
+                    //-   a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') District
+                    li.drilldown__item
+                      a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Gemeente
+                    li.drilldown__item
+                      a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Gemeente
+                    li.drilldown__item
+                      a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Gemeente
+            li.drilldown__item
+              a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Limburg
+            li.drilldown__item
+              a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Oost-Vlaanderen
+            li.drilldown__item
+              a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') West-Vlaanderen
+            li.drilldown__item
+              a.drilldown__item__cta.drilldown__item__cta--end(href='#', itemprop='url', data-drilldown-cta='') Limburg
+
+
+br
+br
+br
+br
+br
+br
+br
+
+script.
+  $('.toggle-sidebar--slide').on('click', function(e) {
+    $('.sidebar--slide').toggleClass("sidebar--slide--in");
+    e.preventDefault();
+  });

@@ -1,0 +1,25 @@
+p These blocks have been made equal height with JavaScript. <a href="/styleguide/c-utilities.html">View a solution with CSS</a>.
+br
+ul.grid.grid--is-stacked.js-equal-height-container
+    li.col--4-12.col--6-12--m.col--12-12--xs
+        // apply .js-equal-height class to make the height exactly equal to other elements with this class within the containing element
+        a.doormat.js-equal-height(href='#')
+            h2.doormat__title(data-clamp='2')
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore,
+                | iste.
+            .doormat__text
+                | Lorem ipsum dolor sit amet,
+                span
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem culpa repellendus sequi quod consectetur tenetur rerum inventore itaque possimus optio totam fuga distinctio alias, ea dicta cum qui doloremque sint!
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vitae, molestias delectus et, saepe quaerat, voluptas iste numquam, fuga sequi suscipit facilis totam quasi. Expedita quaerat deserunt reiciendis eum iusto?
+    li.col--4-12.col--6-12--m.col--12-12--xs
+        a.doormat.doormat.js-equal-height(href='#')
+            h2.doormat__title(data-clamp='2')
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore,
+                | iste.
+            .doormat__text
+                ul.bullet-list.bullet-list--tag
+                    li.bullet-list__item
+                        | Huurwoning renoveren
+                    li.bullet-list__item
+                        | Min. 9 jaar verhuren aan sociaal verhuurkantoor
