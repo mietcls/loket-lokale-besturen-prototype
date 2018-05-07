@@ -89,15 +89,15 @@ block loketoverview
 										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
 											| Orgaan
 											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.data-table__header-title
+									th.data-table__header-title.u-visible--desktop-up.delete-me-switch-hide-data
 										a.data-table__header-title--sortable(href='#', title='sort')
 											| Documenttype
 											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.data-table__header-title
+									th.data-table__header-title.delete-me-switch-hide-data
 										a.data-table__header-title--sortable(href='#', title='sort')
 											| Type besluit
 											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.delete-me-switch-hide-data.data-table__header-title.u-visible--desktop-up
+									th.data-table__header-title
 										a.data-table__header-title--sortable(href='#', title='sort')
 											| Titel
 											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
@@ -105,11 +105,11 @@ block loketoverview
 										a.data-table__header-title--sortable(href='#', title='sort')
 											| Documenten
 											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.data-table__header-title.delete-me-switch-hide-data.u-visible--desktop-up
+									// th.data-table__header-title.delete-me-switch-hide-data.u-visible--desktop-up
 										a.data-table__header-title--sortable(href='#', title='sort')
 											|  Gewijzigd door
 											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.data-table__header-title.delete-me-switch-hide-data.u-visible--desktop-up
+									// th.data-table__header-title.delete-me-switch-hide-data.u-visible--desktop-up
 										a.data-table__header-title--sortable(href='#', title='sort')
 											|  Bewerkt op
 											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
@@ -128,17 +128,15 @@ block loketoverview
 												span.u-visually-hidden Toon documenten
 
 									td Gemeenteraad
-									td Inzendingsplichtig besluit
-									td Meerjarenplan
-									td.delete-me-switch-hide-data.u-visible--desktop-up Meerjarenplanwijziging 2014-2018
-									td.delete-me-switch-hide-data.u-visible--desktop-up Barbara Put
-									td.u-visible--desktop-up.delete-me-switch-hide-data 28-03-2018
+									td.delete-me-switch-hide-data.u-visible--desktop-up Inzendingsplichtig besluit
+									td.delete-me-switch-hide-data Meerjarenplan
+									td Meerjarenplanwijziging 2014-2018
 									td
 										label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
 									td
 										a.delete-me-toggle-concept Bekijk
 								tr.tr-expand.u-hidden
-									td(colspan="10")
+									td(colspan="6")
 										.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
 											.document-miniature__type
 												span.document-miniature__type__text XBRL
@@ -151,6 +149,9 @@ block loketoverview
 											.document-miniature__content
 												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
 												.document-miniature__metadata XML - 1.4 MB
+									td Gewijzigd door Barbara Put
+									td Bewerkt op 28-03-2018
+
 
 								tr
 									td
@@ -161,17 +162,15 @@ block loketoverview
 												span.u-visually-hidden Toon documenten
 
 									td College
-									td Besluitenlijst
-									td Besluitenlijst
-									td.delete-me-switch-hide-data.u-visible--desktop-up Besluitenlijst Gemeenteraad 23-04-2018
-									td.delete-me-switch-hide-data.u-visible--desktop-up Barbara Put
-									td.u-visible--desktop-up.delete-me-switch-hide-data 28-03-2018
+									td.delete-me-switch-hide-data.u-visible--desktop-up Besluitenlijst
+									td.delete-me-switch-hide-data Besluitenlijst
+									td Besluitenlijst Gemeenteraad 23-04-2018
 									td
 										label.pill.pill--primary-blue.pill--clickable(data-toggle='tooltip', title='Wacht op goedkeuring door Vlaamse Overheid', data-content='Wacht op goedkeuring door Vlaamse Overheid', data-placement='left', data-timer='25') Verstuurd
 													td
 														a.delete-me-toggle-sent Bekijk
 								tr.tr-expand.u-hidden
-									td(colspan="10")
+									td(colspan="6")
 										.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
 											.document-miniature__type
 												span.document-miniature__type__text XBRL
@@ -184,6 +183,9 @@ block loketoverview
 											.document-miniature__content
 												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
 												.document-miniature__metadata XML - 1.4 MB
+									td Gewijzigd door Barbara Put
+									td Bewerkt op 28-03-2018
+
 
 								tr
 									td
@@ -194,17 +196,15 @@ block loketoverview
 												span.u-visually-hidden Toon documenten
 
 									td Burgemeester
-									td Inzendingsplichtig besluit
-									td Meerjarenplan
-									td.delete-me-switch-hide-data.u-visible--desktop-up Meerjarenplanwijziging 2014-2018
-									td.delete-me-switch-hide-data.u-visible--desktop-up Barbara Put
-									td.u-visible--desktop-up.delete-me-switch-hide-data 28-03-2018
+									td.delete-me-switch-hide-data.u-visible--desktop-up Inzendingsplichtig besluit
+									td.delete-me-switch-hide-data Meerjarenplan
+									td Meerjarenplanwijziging 2014-2018
 									td
 										label.u-spacer--tiny.pill.pill--primary-yellow.pill--clickable(data-toggle='tooltip', title='Vereist aanpassing', data-content='Vereist aanpassing', data-placement='left', data-timer='25') Opmerking
 									td
 										a.delete-me-toggle-message Bekijk
 								tr.tr-expand.u-hidden
-									td(colspan="10")
+									td(colspan="6")
 										.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
 											.document-miniature__type
 												span.document-miniature__type__text XBRL
@@ -217,6 +217,9 @@ block loketoverview
 											.document-miniature__content
 												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
 												.document-miniature__metadata XML - 1.4 MB
+									td Gewijzigd door Barbara Put
+									td Bewerkt op 28-03-2018
+
 
 								tr
 									td
@@ -227,17 +230,15 @@ block loketoverview
 												span.u-visually-hidden Toon documenten
 
 									td OCMW
-									td Besluitenlijst
-									td Besluitenlijst
-									td.delete-me-switch-hide-data.u-visible--desktop-up Besluitenlijst Gemeenteraad 23-04-2018
-									td.delete-me-switch-hide-data.u-visible--desktop-up Barbara Put
-									td.u-visible--desktop-up.delete-me-switch-hide-data 28-03-2018
+									td.delete-me-switch-hide-data.u-visible--desktop-up Besluitenlijst
+									td.delete-me-switch-hide-data Besluitenlijst
+									td Besluitenlijst Gemeenteraad 23-04-2018
 									td
 										label.pill.pill--gray-dark.pill--clickable(data-toggle='tooltip', title='Opdracht voltooid', data-content='Opdracht voltooid', data-placement='left', data-timer='25') Goedgekeurd
 									td
 										a.delete-me-toggle-approved Bekijk
 								tr.tr-expand.u-hidden
-									td(colspan="10")
+									td(colspan="6")
 										.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
 											.document-miniature__type
 												span.document-miniature__type__text XBRL
@@ -250,6 +251,9 @@ block loketoverview
 											.document-miniature__content
 												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
 												.document-miniature__metadata XML - 1.4 MB
+									td Gewijzigd door Barbara Put
+									td Bewerkt op 28-03-2018
+
 
 								tr
 									td
@@ -260,18 +264,16 @@ block loketoverview
 												span.u-visually-hidden Toon documenten
 
 									td Gemeenteraad
-									td Inzendingsplichtig besluit
-									td Meerjarenplan
-									td.delete-me-switch-hide-data.u-visible--desktop-up Meerjarenplanwijziging 2014-2018
-									td.delete-me-switch-hide-data.u-visible--desktop-up Barbara Put
-									td.u-visible--desktop-up.delete-me-switch-hide-data 28-03-2018
+									td.delete-me-switch-hide-data.u-visible--desktop-up Inzendingsplichtig besluit
+									td.delete-me-switch-hide-data Meerjarenplan
+									td Meerjarenplanwijziging 2014-2018
 									td
 										label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
 									td
 										a.delete-me-toggle-concept Bekijk
 
 								tr.tr-expand.u-hidden
-									td(colspan="10")
+									td(colspan="6")
 										.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
 											.document-miniature__type
 												span.document-miniature__type__text XBRL
@@ -284,6 +286,9 @@ block loketoverview
 											.document-miniature__content
 												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
 												.document-miniature__metadata XML - 1.4 MB
+									td Gewijzigd door Barbara Put
+									td Bewerkt op 28-03-2018
+
 
 		.delete-me-melding-new.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
 			.u-padding--trl--small.u-border--light--bottom
