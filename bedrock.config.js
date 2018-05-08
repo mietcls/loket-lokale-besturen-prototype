@@ -1,14 +1,4 @@
 module.exports = {
-  styleguide: {
-    snippetLanguage: 'html',
-    colors: './content/scss/_settings.colors.scss',
-    categoryOrder: [
-      'Style guide',
-      'Patterns',
-      'Overviews',
-      'Components',
-    ]
-  },
   ui: {
     dark: false
   },
