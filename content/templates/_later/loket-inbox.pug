@@ -20,11 +20,11 @@ block loketoverview
 					a(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
 				li.side-navigation__item
 					a(href="/loket/loket-bbcdr.html") BBC DR
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-organenbeheer.html") Organenbeheer
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
 				li.side-navigation__item
 					a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
@@ -66,8 +66,8 @@ block loketoverview
 					h2.h2.sidebar__toggle-value Menu
 				.u-border--light--bottom
 					.grid.u-padding--round--small.mandate-edit-table__header
-						.col--12-12.u-spacer--bottom
-							h1.h3.u-spacer--none IN PROGRESS NOT FINISHED Toezicht Gemeente Hasselt
+						.col--12-12
+							h1.h3 IN PROGRESS NOT FINISHED Toezicht Gemeente Hasselt
 
 						.col--12-12
 							ul.inline-list.inline-list--bordered.u-spacer--bottom--small
@@ -85,89 +85,105 @@ block loketoverview
 						.col--6-12.u-align-right
 							a.button.button--narrow.delete-me-toggle-new Stel nieuw bericht op
 
-				.data-table__scroll
-						table.data-table
-							thead
-								tr.data-table__header
-									//th.data-table__header-title
-										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
-											| Bestuur
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
-									th.data-table__header-title
-										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
-											| Documenttype
-											// betere naam?
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
-									th.data-table__header-title
-										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
-											| Type besluit
-									th.data-table__header-title.delete-me-switch-hide-data
-										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
-											| Documenten
-									th.data-table__header-title
-										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
-											|  Titel
-									th.data-table__header-title.delete-me-switch-hide-data
-										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
-											|  Status
-									th.data-table__header-title.delete-me-switch-hide-data
-										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
-											|  Afzender
-									th.data-table__header-title
-										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
-											|  Datum
-							tbody
-								tr(datat-table-selectable, class="mandate-edit-data-active")
-									// td Bestuur
-									td Inzendplichtig besluit
-									td Besluit van de gemeenteraad houdende de principiële beslissing tot samenvoeging
-									td.delete-me-switch-hide-data
-										a
-											vi.vi.vi-news
-											| Document name
-										| ,
-										a
-											vi.vi.vi-document
-											| Document name
-									td Budget 2017, budgetwijziging 2017/2 en jaarrekening 2017
-									td
-										label.pill.pill--gray Voorbereiding
-									td.delete-me-switch-hide-data Pieter Van Hastel
-									td.delete-me-switch-hide-data 01-01-2017
-								tr(datat-table-selectable, class="mandate-edit-data-active")
-									// td Bestuur
-									td Inzendplichtig besluit
-									td Budget
-									td.delete-me-switch-hide-data
-										a
-											vi.vi.vi-news
-											| Document name
-										| ,
-										a
-											vi.vi.vi-document
-											| Document name
-									td Budget 2017, budgetwijziging 2017/2 en jaarrekening 2017
-									td
-										label.pill.pill--primary-blue Naar toezicht
-									td.delete-me-switch-hide-data Pieter Van Hastel
-									td.delete-me-switch-hide-data 01-01-2017
-								tr(datat-table-selectable, class="mandate-edit-data-active")
-									// td Bestuur
-									td Inzendplichtig besluit
-									td Jaarrekening
-									td.delete-me-switch-hide-data
-										a
-											vi.vi.vi-news
-											| Document name
-										| ,
-										a
-											vi.vi.vi-document
-											| Document name
-									td Budget 2017, budgetwijziging 2017/2 en jaarrekening 2017 met een iets langere naam
-									td
-										label.pill.pill--primary-blue Naar toezicht
-									td.delete-me-switch-hide-data Pieter Van Hastel
-									td.delete-me-switch-hide-data 01-01-2017
+				.container-flex--scroll
+					table.data-table.data-table--nowrap
+						thead
+							tr.data-table__header
+								//th.data-table__header-title
+									a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+										| Bestuur
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
+								th.data-table__header-title
+									a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+										| Documenttype
+										// betere naam?
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
+								th.data-table__header-title
+									a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+										| Type besluit
+								th.data-table__header-title.delete-me-switch-hide-data
+									a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+										| Documenten
+								th.data-table__header-title
+									a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+										|  Titel
+								th.data-table__header-title.delete-me-switch-hide-data
+									a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+										|  Status
+								th.data-table__header-title.delete-me-switch-hide-data
+									a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+										|  Afzender
+								th.data-table__header-title
+									a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+										|  Datum
+						tbody
+							tr(datat-table-selectable, class="mandate-edit-data-active")
+								// td Bestuur
+								td Inzendplichtig besluit
+								td Besluit van de gemeenteraad houdende de principiële beslissing tot samenvoeging
+								td.delete-me-switch-hide-data
+									a
+										vi.vi.vi-news
+										| Document name
+									| ,
+									a
+										vi.vi.vi-document
+										| Document name
+								td Budget 2017, budgetwijziging 2017/2 en jaarrekening 2017
+								td
+									label.pill.pill--gray Voorbereiding
+								td.delete-me-switch-hide-data Pieter Van Hastel
+								td.delete-me-switch-hide-data 01-01-2017
+							tr(datat-table-selectable, class="mandate-edit-data-active")
+								// td Bestuur
+								td Inzendplichtig besluit
+								td Budget
+								td.delete-me-switch-hide-data
+									a
+										vi.vi.vi-news
+										| Document name
+									| ,
+									a
+										vi.vi.vi-document
+										| Document name
+								td Budget 2017, budgetwijziging 2017/2 en jaarrekening 2017
+								td
+									label.pill.pill--primary-blue Naar toezicht
+								td.delete-me-switch-hide-data Pieter Van Hastel
+								td.delete-me-switch-hide-data 01-01-2017
+							tr(datat-table-selectable, class="mandate-edit-data-active")
+								// td Bestuur
+								td Inzendplichtig besluit
+								td Jaarrekening
+								td.delete-me-switch-hide-data
+									a
+										vi.vi.vi-news
+										| Document name
+									| ,
+									a
+										vi.vi.vi-document
+										| Document name
+								td Budget 2017, budgetwijziging 2017/2 en jaarrekening 2017 met een iets langere naam
+								td
+									label.pill.pill--primary-blue Naar toezicht
+								td.delete-me-switch-hide-data Pieter Van Hastel
+								td.delete-me-switch-hide-data 01-01-2017
+
+				.pager.u-padding--round--tiny.u-border--light--top
+					ul.pager__list.pager__list-right
+						li.pager__element
+							span.u-visually-hidden Rij
+							strong 11 - 20
+							|  van 673
+						li.pager__element
+							a(href='')
+								i.vi.vi-arrow.vi-u-180deg.vi-u-s(aria-hidden='true')
+								|  vorige
+								span.u-visually-hidden  10 rijen
+						li.pager__element
+							a(href='') volgende
+								span.u-visually-hidden  10 rijen
+								i.vi.vi-arrow.vi-u-s(aria-hidden='true')
 
 		.delete-me-bbc-new.col--4-12.u-hidden.container-flex--contain
 			.u-padding--trl--small.u-border--light--bottom

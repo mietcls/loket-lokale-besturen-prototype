@@ -1,0 +1,1444 @@
+extends /templates/_templates/header-loket
+
+block loketoverview
+	nav.sidebar.sidebar--slide--wide.sidebar--slide.sidebar--slide--in(role='navigation')
+		.sidebar__header
+			.grid.grid--collapse
+				.col--10-12.u-padding--trl--tiny
+					h1.sans-serif Menu
+				.col--2-12.u-padding--trl--tiny.u-align-right.delete-me-toggle-sidebar--slide
+					i.vi.vi-cross
+					span.u-visually-hidden sluit navigatie
+
+		.sidebar__content
+			ul.side-navigation__group
+				//- li.side-navigation__item
+					a(href="/loket/loket-inbox.html") Inbox
+				li.side-navigation__item
+					a.active(href="/loket/loket-toezicht.html") Toezicht
+				li.side-navigation__item
+					a(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
+				li.side-navigation__item
+					a(href="/loket/loket-bbcdr.html") BBC DR
+				//- li.side-navigation__item
+					a(href="/loket/loket-organenbeheer.html") Organenbeheer
+				//- li.side-navigation__item
+					a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
+				//- li.side-navigation__item
+					a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
+				li.side-navigation__item
+					a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
+
+		.sidebar__footer
+			button.button.button--block.button--alt Persoonlijke gegevens
+
+	.grid.grid--collapse
+		.col--2-12.col--3-12--m.u-hidden-mobile
+			.container-flex--contain
+				.sidebar
+					h1.u-visually-hidden Menu
+					.sidebar__content
+						nav.side-navigation
+							.side-navigation__content
+								ul.side-navigation__group
+									// li.side-navigation__item
+										a.message(href="/loket/loket-inbox.html") Inbox
+									li.side-navigation__item
+										a.active(href="/loket/loket-toezicht.html") Toezicht
+									li.side-navigation__item
+										a(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
+									li.side-navigation__item
+										a(href="/loket/loket-bbcdr.html") BBC DR
+									li.side-navigation__item
+										a(href="/loket/loket-organenbeheer.html") Organenbeheer
+									li.side-navigation__item
+										a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
+									li.side-navigation__item
+										a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
+									li.side-navigation__item
+										a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
+
+					.sidebar__footer
+						button.button.button--block.button--alt Persoonlijke gegevens
+
+		// TODO: LOGGING
+		.col--10-12.col--9-12--m.col--12-12--s.delete-me-melding-table.u-border--light--right
+			.container-flex--contain
+				.sidebar__toggle-menu.delete-me-toggle-sidebar--slide.u-visible-mobile.u-padding--tb--tiny.u-padding--rl--small.u-background--gray-lighter(type='button', title='Pas bestuur aan')
+					h2.h2.sidebar__toggle-value Menu
+				.u-border--light--bottom
+					.grid.u-padding--round--small.mandate-edit-table__header
+						.col--12-12
+							h1.h3 Besluiten Gemeente Hasselt
+
+						.col--6-12.col--12-12--s
+							.input-field-icon-container--right.u-spacer--bottom--tiny
+								input#input-field.input-field.input-field--block(type='text', placeholder='Besluit, datum, status, ...', style="min-width: 30rem;")
+								i.input-field__icon.vi.vi-magnifier(aria-hidden='true')
+						.col--6-12.col--12-12--s.u-align-right--tablet-portrait-up
+							a.button.button--narrow.delete-me-toggle-new Maak nieuwe melding
+
+				.container-flex--scroll
+					table.data-table.data-table--tight.data-table--nowrap
+						//- .data-table--zebra
+						thead
+							tr.data-table__header
+								//- th
+								th.data-table__header-title.u-hidden-mobile
+									a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+										| Orgaan
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								//- th.data-table__header-title.u-visible--desktop-up.delete-me-switch-hide-data
+									a.data-table__header-title--sortable(href='#', title='sort')
+										| Documenttype
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.data-table__header-title.u-visible--tablet-landscape-up.delete-me-switch-hide-data
+									a.data-table__header-title--sortable(href='#', title='sort')
+										| Type besluit
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.data-table__header-title
+									a.data-table__header-title--sortable(href='#', title='sort')
+										| Titel
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								//- th.data-table__header-title
+									a.data-table__header-title--sortable(href='#', title='sort')
+										| Documenten
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								//-  th.data-table__header-title.delete-me-switch-hide-data.u-visible--desktop-up
+									a.data-table__header-title--sortable(href='#', title='sort')
+										|  Gewijzigd door
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.data-table__header-title.u-hidden-mobile
+									a.data-table__header-title--sortable(href='#', title='sort')
+										|  Bewerkt op
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.data-table__header-title.u-hidden-mobile
+									a.data-table__header-title--sortable(href='#', title='sort')
+										| Status
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
+								th
+						tbody
+							tr
+								//- td
+									.js-accordion
+										// toggle
+										a.toggle.toggle--arrow-down.js-accordion__toggle
+											i.toggle__icon(aria-hidden='true')
+											span.u-visually-hidden Toon documenten
+
+								td.u-hidden-mobile Gemeenteraad
+								//- td.delete-me-switch-hide-data.u-visible--desktop-up Inzendingsplichtig besluit
+								td.u-visible--tablet-landscape-up.delete-me-switch-hide-data Meerjarenplan
+								td Meerjarenplanwijziging 2014-2018
+								td.u-hidden-mobile 28-03-2018
+								td.u-hidden-mobile
+									label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+								td
+									a.delete-me-toggle-concept Bekijk
+							//- tr.tr-expand.u-hidden
+								td.delete-me-switch-hide-data
+								td(colspan="3")
+									.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XBRL
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XBRL - 1.4 MB
+									.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XML
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XML - 1.4 MB
+								td.u-hidden-mobile Gewijzigd door Barbara Put
+								td.u-hidden-mobile Bewerkt 28-03-2018
+								td.u-visible--desktop-up.delete-me-switch-hide-data
+
+
+							tr
+								//- td
+									.js-accordion
+										// toggle
+										a.toggle.toggle--arrow-down.js-accordion__toggle
+											i.toggle__icon(aria-hidden='true')
+											span.u-visually-hidden Toon documenten
+
+								td.u-hidden-mobile College
+								//- td.delete-me-switch-hide-data.u-visible--desktop-up Besluitenlijst
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Besluitenlijst
+								td Besluitenlijst Gemeenteraad 23-04-2018
+								td.u-hidden-mobile 28-03-2018
+								td.u-hidden-mobile
+									label.pill.pill--primary-blue.pill--clickable(data-toggle='tooltip', title='Wacht op goedkeuring door Vlaamse Overheid', data-content='Wacht op goedkeuring door Vlaamse Overheid', data-placement='left', data-timer='25') Verstuurd
+												td
+													a.delete-me-toggle-sent Bekijk
+							//- tr.tr-expand.u-hidden
+								td.delete-me-switch-hide-data
+								td(colspan="3")
+									.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XBRL
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XBRL - 1.4 MB
+									.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XML
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XML - 1.4 MB
+								td.u-hidden-mobile Gewijzigd door Barbara Put
+								td.u-hidden-mobile Bewerkt 28-03-2018
+								td.u-visible--desktop-up.delete-me-switch-hide-data
+
+
+							tr
+								//- td
+									.js-accordion
+										// toggle
+										a.toggle.toggle--arrow-down.js-accordion__toggle
+											i.toggle__icon(aria-hidden='true')
+											span.u-visually-hidden Toon documenten
+
+								td.u-hidden-mobile Burgemeester
+								//- td.delete-me-switch-hide-data.u-visible--desktop-up Inzendingsplichtig besluit
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Meerjarenplan
+								td Meerjarenplanwijziging 2014-2018
+								td.u-hidden-mobile 28-03-2018
+								td.u-hidden-mobile
+									label.pill.pill--primary-yellow.pill--clickable.u-spacer--tiny(data-toggle='tooltip', title='Vereist aanpassing', data-content='Vereist aanpassing', data-placement='left', data-timer='25') Opmerking
+								td
+									a.delete-me-toggle-message Bekijk
+							//- tr.tr-expand.u-hidden
+								td.delete-me-switch-hide-data
+								td(colspan="3")
+									.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XBRL
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XBRL - 1.4 MB
+									.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XML
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XML - 1.4 MB
+								td.u-hidden-mobile Gewijzigd door Barbara Put
+								td.u-hidden-mobile Bewerkt 28-03-2018
+								td.u-visible--desktop-up.delete-me-switch-hide-data
+
+
+							tr
+								//- td
+									.js-accordion
+										// toggle
+										a.toggle.toggle--arrow-down.js-accordion__toggle
+											i.toggle__icon(aria-hidden='true')
+											span.u-visually-hidden Toon documenten
+
+								td.u-hidden-mobile OCMW
+								//- td.delete-me-switch-hide-data.u-visible--desktop-up Besluitenlijst
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Besluitenlijst
+								td Besluitenlijst Gemeenteraad 23-04-2018
+								td.u-hidden-mobile 28-03-2018
+								td.u-hidden-mobile
+									label.pill.pill--gray-dark.pill--clickable(data-toggle='tooltip', title='Opdracht voltooid', data-content='Opdracht voltooid', data-placement='left', data-timer='25') Goedgekeurd
+								td
+									a.delete-me-toggle-approved Bekijk
+							//- tr.tr-expand.u-hidden
+								td.delete-me-switch-hide-data
+								td(colspan="3")
+									.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XBRL
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XBRL - 1.4 MB
+									.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XML
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XML - 1.4 MB
+								td.u-hidden-mobile Gewijzigd door Barbara Put
+								td.u-hidden-mobile Bewerkt 28-03-2018
+								td.u-visible--desktop-up.delete-me-switch-hide-data
+
+
+							tr
+								//- td
+									.js-accordion
+										// toggle
+										a.toggle.toggle--arrow-down.js-accordion__toggle
+											i.toggle__icon(aria-hidden='true')
+											span.u-visually-hidden Toon documenten
+
+								td.u-hidden-mobile Gemeenteraad
+								//- td.delete-me-switch-hide-data.u-visible--desktop-up Inzendingsplichtig besluit
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Meerjarenplan
+								td Meerjarenplanwijziging 2014-2018
+								td.u-hidden-mobile 28-03-2018
+								td.u-hidden-mobile
+									label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+								td
+									a.delete-me-toggle-concept Bekijk
+
+							//- tr.tr-expand.u-hidden
+								td.delete-me-switch-hide-data
+								td(colspan="3")
+									.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XBRL
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XBRL - 1.4 MB
+									.document-miniature.document-miniature--tiny.delete-me-switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XML
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XML - 1.4 MB
+								td.u-visible--tablet-portrait-up Gewijzigd door Barbara Put
+								td.u-hidden-mobile Bewerkt 28-03-2018
+								td.delete-me-switch-hide-data.u-visible--desktop-up
+
+				.pager.u-padding--round--tiny.u-border--light--top
+					ul.pager__list.pager__list-right
+						li.pager__element
+							span.u-visually-hidden Rij
+							strong 11 - 20
+							|  van 673
+						li.pager__element
+							a(href='')
+								i.vi.vi-arrow.vi-u-180deg.vi-u-s(aria-hidden='true')
+								|  vorige
+								span.u-visually-hidden  10 rijen
+						li.pager__element
+							a(href='') volgende
+								span.u-visually-hidden  10 rijen
+								i.vi.vi-arrow.vi-u-s(aria-hidden='true')
+
+		.delete-me-melding-new.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3.u-spacer--tiny Nieuwe melding
+						label.pill.pill--gray-light.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+					.col--3-12.u-align-right.delete-me-toggle-new
+						a.link--icon--close.delete-me-toggle-modal(href='')
+							span.u-visually-hidden Venster sluiten
+
+			.container-flex--scroll.u-padding--round--small
+				.form__row
+					.form__label
+						label(form="orgaan").form__label Documenttype
+					.form__input
+						select#orgaan.select(name='select')
+							option(value='', disabled, selected, hidden) Selecteer een documenttype
+							option(value='Inzendingsplichtig besluit') Inzendingsplichtig besluit
+							option(value='Besluitenlijst') Besluitenlijst
+
+				.form__row
+					.form__label
+						label(form="orgaan").form__label Type besluit
+					.form__input
+						.temporary-select__wrapper.temporary-select__wrapper--block(data-content='', aria-labelledby='', data-show='true', aria-hidden='false')
+							.input-field-icon-container--right.input-field-icon-container--block
+								input#fractie.delete-me-toggle-search-besluittype.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescription', aria-haspopup='listbox"', placeholder='Zoek type besluit', onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
+								i.input-field__icon.vi.vi-arrow.vi-u-90deg(aria-hidden='true')
+								span#selectFormInputDescription.u-visually-hidden
+									| U bevindt zich in de zoekfunctie van een dropdown menu in een formulier. Navigeer door de opties met ctrl + alt + pijltjes en selecteer met enter. Gebruik escape om de dropdown te sluiten.
+
+							.select__search-results.delete-me-search-results-besluittype.u-hidden
+								.select__list-wrapper(role='listbox')
+									section.select__list(data-records='')
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='ADV', data-label='Advies eredienstbesturen', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Advies eredienstbesturen
+										.select__item
+											button.select__cta.select__cta--active(type='button', data-index='5', data-value='BBC', data-label='Andere opgevraagde documenten BBC-beleidsrapporten', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Andere opgevraagde documenten BBC-beleidsrapporten
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='BEL', data-label='Belasting of retributie', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Belasting of retributie
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='ERE', data-label='Besluit i.v.m. financieel document eredienstbestuur', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit i.v.m. financieel document eredienstbestuur
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='BAGB', data-label='Besluit over budget AGB', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over AGB
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMW', data-label='Besluit over budget(wijziging) OCMW', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over budget(wijziging) OCMW
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMWV', data-label='Besluit over budget(wijziging) OCMW-vereniging', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over budget(wijziging) OCMW-vereniging
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='JAGB', data-label='Besluit over jaarrekening AGB', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over jaarrekening AGB
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMW', data-label='Besluit over jaarrekening OCMW', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over jaarrekening OCMW
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMWV', data-label='Besluit over jaarrekening OCMW-vereniging', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over jaarrekening OCMW-vereniging
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='MJAGB', data-label='Besluit over meerjarenplan AGB', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over meerjarenplan AGB
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMW', data-label='Besluit over meerjarenplan(aanpassing) OCMW', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over meerjarenplan(aanpassing) OCMW
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMWV', data-label='Besluit over meerjarenplan(aanpassing) OCMW-vereniging', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over meerjarenplan(aanpassing) OCMW-vereniging
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OBE', data-label='Besluit overruling betaling', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit overruling betaling
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='BSA', data-label='Besluit van de gemeenteraad houdende de principiële beslissing tot samenvoeging', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit van de gemeenteraad houdende de principiële beslissing tot samenvoeging
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='VSA', data-label='Besluit van de gemeenteraad houdende de gezamenlijk voorstel tot samenvoeging', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit van de gemeenteraad houdende de gezamenlijk voorstel tot samenvoeging
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='BUD', data-label='Budget', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Budget
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='DOK', data-label='Dwingende en onvoorziene kosten', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Dwingende en onvoorziene kosten
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='GTO', data-label='Goedkeuringstoezicht overheidsopdrachten Voeren', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Goedkeuringstoezicht overheidsopdrachten Voeren
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='HEL', data-label='Herschikking leningen', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Herschikking leningen
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='JAR', data-label='Jaarrekening', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Jaarrekening
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='LSF', data-label='Lening ter sanering financiën', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Lening ter sanering financiën
+
+				.form__row
+					.form__label
+						label(form="orgaan").form__label Orgaan
+							span.text-fade dat het besluit nam
+					.form__input
+						select#orgaan.select(name='select')
+							option(value='', disabled, selected, hidden) Selecteer een orgaan
+							option(value='Gemeenteraad') Gemeenteraad
+							option(value='College') College
+							option(value='Burgemeester') Burgemeester
+							option(value='OCMW') OCMW
+
+
+				.form__row
+					.form__label
+						label.form__label(for='datepicker-besluit') Datum van het besluit
+							span.text-fade (niet van de beslissing)
+					.form__input
+						.date-range__datepicker.datepicker
+							input#datepicker-besluit.input-field(type='text', placeholder='01-01-2016', name='datepicker-besluit', data-datepicker='', data-datepicker-min='01-01-2016')
+
+				.form__row
+					.form__label
+						label(for='bestanden') Upload de relevante bestanden
+					.form__input
+						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
+							.upload__element
+								input.upload__element__input(type='file', id='files1[1]', name='files1[1]', data-upload-multiple-caption='{count} files selected', multiple='', data-upload-error-message-filesize='Het bestand mag max :maxFsz zijn.', data-upload-max-size='20000000', accept='.pdf, .txt, .doc, .docx')
+								label.upload__element__label(for='files1[1]')
+									i.vi.vi-paperclip
+									span Upload bestanden
+									small Sleep de bestanden naar hier om toe te voegen
+
+							.alert.alert--warning.u-hidden
+								.alert__icon(aria-hidden='true')
+								.alert__content
+									.alert__title Upload de juiste bestanden om uw rapport te versturen.
+
+				.form__row
+					.form__label
+						label(for='document') Dossieromschrijving
+					.form__input
+						textarea#boodschap.textarea.textarea--block.component(name='boodschap', cols='40', rows='4', placeholder='Typ hier de omschrijving')
+
+				.form__row
+					.form__label
+						label Voorbeeld radio buttons
+					.form__input
+						.grid.u-spacer--bottom--tiny
+							.col--4-12
+								label.radio
+									input.radio__toggle(type='radio', name='radio-buttons', value='1')
+									span
+									| 1
+							.col--4-12
+								label.radio
+									input.radio__toggle(type='radio', name='radio-buttons', value='2')
+									span
+									| 2
+							.col--4-12
+								label.radio
+									input.radio__toggle(type='radio', name='radio-buttons', value='3')
+									span
+									| 3
+
+				.form__row
+					.form__label
+						label Voorbeeld checkboxes
+
+					.form__input
+						label.checkbox.checkbox--block.checkbox--error
+							input.checkbox__toggle(type='checkbox', name='checkbox', value='0')
+							span
+							span Lorem ipsum dolor sit amet.
+							.form__error Dit is een foutmelding.
+						label.checkbox.checkbox--block
+							input.checkbox__toggle(type='checkbox', name='checkbox', value='1')
+							span
+							span Ik begrijp en accepteer de
+								a(href='') gebruiksvoorwaarden
+
+				.form__row
+					.form__label
+						label Voorbeeld slider
+					.form__input
+						.range.js-range
+							.range__from
+								label.u-hidden-text(for='from')
+								input#from.input-field.input-field--small.js-range__from(name='from', type='number', value='0', style="max-width: 6rem;")
+							.range__to
+								label.u-hidden-text(for='to')
+								input#to.input-field.input-field--small.js-range__to(type='number', name='to', value='999', style="max-width: 6rem;")
+							.range__slider-wrapper
+								.js-range__slider
+
+				.form__row
+					.form__label
+						label Voorbeeld input pill
+					.form__input
+						.temporary-select__wrapper.temporary-select__wrapper--block.u-spacer--bottom--tiny
+							.js-select__input.js-select__input--small.js-select__input--multi.delete-me-toggle-search-pill(data-focus='')
+								.pill.pill--closable
+									span Example
+									a.pill__close(href='#', data-value='6') verwijder optie
+							.select__search-results.delete-me-search-results-pill.u-hidden
+								.select__list-wrapper(role='listbox')
+									section.select__list.select__list--checkboxes(data-records='')
+										.select__item
+											button.select__cta.select__cta--active(type='button', data-index='5', data-value='EXA', data-label='Example', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Example
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='AEXA', data-label='Another example', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Another example
+
+				.form__row
+					.form__label
+						label Voorbeeld tabelvormige input
+
+					.form__input
+						.grid
+							form.form.col--4-10.col--1-1--s(action='')
+								.form__group.form__group--mobile-full-width.u-spacer--none
+									.double-input.js-double-input
+										.double-input__top-labels
+											.double-input__top-label(data-double-input-label='1') Ik
+											.double-input__top-label(data-double-input-label='2') Mijn partner
+										label.double-input__label(for='di-1') Row label
+										.double-input__inputs
+											.double-input__input
+												input#di-1.input-field.input-field--block(type='text', name='di-1', data-double-input-label-highlight='1', title='Row label. Ik', placeholder="placeholder")
+											.double-input__input
+												input#di-2.input-field.input-field--block(type='text', name='di-2', data-double-input-label-highlight='2', title='Row label. Mijn partner', placeholder="placeholder")
+										label.double-input__label(for='di-3') Row label
+										.double-input__inputs
+											.double-input__input
+												input#di-3.input-field.input-field--block(type='text', name='di-1', data-double-input-label-highlight='1', title='Row label Ik', placeholder="placeholder")
+											.double-input__input
+												input#di-4.input-field.input-field--block(type='text', name='di-2', data-double-input-label-highlight='2', title='Row label Mijn partner', placeholder="placeholder")
+										label.double-input__label(for='di-3') Row label
+										.double-input__inputs
+											.double-input__input
+												input#di-5.input-field.input-field--block(type='text', name='di-1', data-double-input-label-highlight='1', title='Row label. ik', placeholder="placeholder")
+											.double-input__input
+												input#di-6.input-field.input-field--block(type='text', name='di-2', data-double-input-label-highlight='2', title='Row label. Mijn partner', placeholder="placeholder")
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-new Annuleer
+				a.button.button--narrow.button--alt Bewaar als concept
+
+				a.button.button--disabled.delete-me-toggle-new.u-spacer--tiny Verstuur
+					span.button__info.button__info--below naar Vlaamse Overheid
+
+		.delete-me-melding-concept.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3 Bekijk melding concept
+					.col--3-12.u-align-right.delete-me-toggle-concept
+						a.link--icon--close.delete-me-toggle-modal(href='')
+							span.u-visually-hidden Venster sluiten
+
+				.grid.u-spacer--small
+					.col--4-12
+						.description-data__label Gewijzigd door
+						.description-data__value Barbara Put
+
+					.col--4-12
+						.description-data__label Bewerkt op
+						.description-data__value 28-03-2018
+
+					.col--4-12
+						label.pill.pill--gray-light.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+
+					.col--12-12
+						a.link--dark.smaller Bekijk alle aanpassingen
+
+			.container-flex--scroll.u-padding--round--small
+				.form__row
+					.form__label
+						label(form="orgaan").form__label Documenttype
+					.form__input
+						select#orgaan.select(name='select')
+							option(value='', disabled, hidden) Selecteer een documenttype
+							option(value='Inzendingsplichtig besluit', selected) Inzendingsplichtig besluit
+							option(value='Besluitenlijst') Besluitenlijst
+
+				.form__row
+					.form__label
+						label(form="orgaan").form__label Type besluit
+					.form__input
+						.temporary-select__wrapper.temporary-select__wrapper--block(data-content='', aria-labelledby='', data-show='true', aria-hidden='false')
+							.input-field-icon-container--right.input-field-icon-container--block
+								input#fractie.delete-me-toggle-search-besluittype.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescription', aria-haspopup='listbox"', placeholder='Zoek type besluit', value="Andere opgevraagde documenten BBC-beleidsrapporten", onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
+								i.input-field__icon.vi.vi-arrow.vi-u-90deg(aria-hidden='true')
+								span#selectFormInputDescription.u-visually-hidden
+									| U bevindt zich in de zoekfunctie van een dropdown menu in een formulier. Navigeer door de opties met ctrl + alt + pijltjes en selecteer met enter. Gebruik escape om de dropdown te sluiten.
+
+							.select__search-results.delete-me-search-results-besluittype.u-hidden
+								.select__list-wrapper(role='listbox')
+									section.select__list(data-records='')
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='ADV', data-label='Advies eredienstbesturen', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Advies eredienstbesturen
+										.select__item
+											button.select__cta.select__cta--active(type='button', data-index='5', data-value='BBC', data-label='Andere opgevraagde documenten BBC-beleidsrapporten', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Andere opgevraagde documenten BBC-beleidsrapporten
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='BEL', data-label='Belasting of retributie', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Belasting of retributie
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='ERE', data-label='Besluit i.v.m. financieel document eredienstbestuur', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit i.v.m. financieel document eredienstbestuur
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='BAGB', data-label='Besluit over budget AGB', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over AGB
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMW', data-label='Besluit over budget(wijziging) OCMW', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over budget(wijziging) OCMW
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMWV', data-label='Besluit over budget(wijziging) OCMW-vereniging', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over budget(wijziging) OCMW-vereniging
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='JAGB', data-label='Besluit over jaarrekening AGB', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over jaarrekening AGB
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMW', data-label='Besluit over jaarrekening OCMW', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over jaarrekening OCMW
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMWV', data-label='Besluit over jaarrekening OCMW-vereniging', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over jaarrekening OCMW-vereniging
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='MJAGB', data-label='Besluit over meerjarenplan AGB', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over meerjarenplan AGB
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMW', data-label='Besluit over meerjarenplan(aanpassing) OCMW', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over meerjarenplan(aanpassing) OCMW
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OCMWV', data-label='Besluit over meerjarenplan(aanpassing) OCMW-vereniging', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit over meerjarenplan(aanpassing) OCMW-vereniging
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='OBE', data-label='Besluit overruling betaling', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit overruling betaling
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='BSA', data-label='Besluit van de gemeenteraad houdende de principiële beslissing tot samenvoeging', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit van de gemeenteraad houdende de principiële beslissing tot samenvoeging
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='VSA', data-label='Besluit van de gemeenteraad houdende de gezamenlijk voorstel tot samenvoeging', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Besluit van de gemeenteraad houdende de gezamenlijk voorstel tot samenvoeging
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='BUD', data-label='Budget', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Budget
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='DOK', data-label='Dwingende en onvoorziene kosten', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Dwingende en onvoorziene kosten
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='GTO', data-label='Goedkeuringstoezicht overheidsopdrachten Voeren', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Goedkeuringstoezicht overheidsopdrachten Voeren
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='HEL', data-label='Herschikking leningen', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Herschikking leningen
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='JAR', data-label='Jaarrekening', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Jaarrekening
+										.select__item
+											button.select__cta(type='button', data-index='5', data-value='LSF', data-label='Lening ter sanering financiën', data-record='', data-focus='', role='option', tabindex='-1', data-selected='true')
+												a.select__cta__title Lening ter sanering financiën
+
+				.form__row
+					.form__label
+						label(form="orgaan").form__label Orgaan
+							span.text-fade dat het besluit nam
+					.form__input
+						select#orgaan.select(name='select')
+							option(value='', disabled, hidden) Selecteer een orgaan
+							option(value='Gemeenteraad', selected) Gemeenteraad
+							option(value='College') College
+							option(value='Burgemeester') Burgemeester
+							option(value='OCMW') OCMW
+
+				.form__row
+					.form__label
+						label.form__label(for='datepicker-besluit') Datum van het besluit
+							span.text-fade (niet van de beslissing)
+					.form__input
+						.date-range__datepicker.datepicker
+							input#datepicker-besluit.input-field(type='text', placeholder='01-01-2016', value="23-04-2018", name='datepicker-besluit', data-datepicker='', data-datepicker-min='01-01-2016')
+
+				.form__row
+					.form__label
+						label(for='bestanden') Upload bestanden
+					.form__input
+						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files2[4]')
+								a.upload__files__close.link--icon--close(href='')
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.pdf')
+										p.upload__file__name
+											| filename.pdf
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files3[3]')
+								a.upload__files__close.link--icon--close(href='')
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.pdf')
+										p.upload__file__name
+											| filename.pdf
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+							.upload__element
+								input.upload__element__input(type='file', id='files2[2]', name='files2[2]', data-upload-multiple-caption='{count} files selected', multiple='', data-upload-error-message-filesize='Het bestand mag max :maxFsz zijn.', data-upload-max-size='20000000', accept='.pdf, .txt, .doc, .docx')
+								label.upload__element__label(for='files2[2]')
+									i.vi.vi-paperclip
+									span Upload bestanden
+									small Sleep de bestanden naar hier om toe te voegen
+
+							.alert.alert--warning.u-hidden
+								.alert__icon(aria-hidden='true')
+								.alert__content
+									.alert__title Upload de juiste bestanden om uw rapport te versturen.
+
+				.form__row
+					.form__label
+						label(for='document') Dossieromschrijving
+					.form__input
+						textarea#boodschap.textarea.textarea--block.component(name='boodschap', cols='40', rows='4', placeholder='Typ hier de omschrijving') Korte omschrijving
+
+				.form__row
+					.form__label
+						label(for='inputfield') Voorbeeld inputfield
+					.form__input
+						input#inputfield.input-field.input-field--block(type='text', name='di-1', data-double-input-label-highlight='1', title='title', placeholder="placeholder", value="ja")
+
+				.form__row
+					.form__label
+						label Voorbeeld radio buttons
+					.form__input
+						.grid.u-spacer--bottom--tiny
+							.col--4-12
+								label.radio
+									input.radio__toggle(type='radio', name='radio-buttons', value='1', checked)
+									span
+									| 1
+							.col--4-12
+								label.radio
+									input.radio__toggle(type='radio', name='radio-buttons', value='2')
+									span
+									| 2
+							.col--4-12
+								label.radio
+									input.radio__toggle(type='radio', name='radio-buttons', value='3')
+									span
+									| 3
+
+				.form__row
+					.form__label
+						label Voorbeeld checkboxes
+
+					.form__input
+						label.checkbox.checkbox--block.checkbox--error
+							input.checkbox__toggle(type='checkbox', name='checkbox', value='0', checked)
+							span
+							span Lorem ipsum dolor sit amet.
+							.form__error Dit is een foutmelding.
+						label.checkbox.checkbox--block
+							input.checkbox__toggle(type='checkbox', name='checkbox', value='1', checked)
+							span
+							span Ik begrijp en accepteer de
+								a(href='') gebruiksvoorwaarden
+
+				.form__row
+					.form__label
+						label Voorbeeld tabelvormige input
+
+					.form__input
+						.grid
+							form.form.col--4-10.col--1-1--s(action='')
+								.form__group.form__group--mobile-full-width
+									.double-input.js-double-input
+										.double-input__top-labels
+											.double-input__top-label(data-double-input-label='1') Ik
+											.double-input__top-label(data-double-input-label='2') Mijn partner
+										label.double-input__label(for='di-1') Row label
+										.double-input__inputs
+											.double-input__input
+												input#di-1.input-field.input-field--block(type='text', name='di-1', data-double-input-label-highlight='1', title='Row label. Ik', placeholder="placeholder", value="ja")
+											.double-input__input
+												input#di-2.input-field.input-field--block(type='text', name='di-2', data-double-input-label-highlight='2', title='Row label. Mijn partner', placeholder="placeholder", value="nee")
+										label.double-input__label(for='di-3') Row label
+										.double-input__inputs
+											.double-input__input
+												input#di-3.input-field.input-field--block(type='text', name='di-1', data-double-input-label-highlight='1', title='Row label Ik', placeholder="placeholder", value="ja")
+											.double-input__input
+												input#di-4.input-field.input-field--block(type='text', name='di-2', data-double-input-label-highlight='2', title='Row label Mijn partner', placeholder="placeholder", value="ja")
+										label.double-input__label(for='di-3') Row label
+										.double-input__inputs
+											.double-input__input
+												input#di-5.input-field.input-field--block(type='text', name='di-1', data-double-input-label-highlight='1', title='Row label. ik', placeholder="placeholder", value="nee")
+											.double-input__input
+												input#di-6.input-field.input-field--block(type='text', name='di-2', data-double-input-label-highlight='2', title='Row label. Mijn partner', placeholder="placeholder", value="nee")
+
+				.form__row
+					.form__label
+						label Voorbeeld slider
+					.form__input
+						.range.js-range
+							.range__from
+								label.u-hidden-text(for='from')
+								input#from.input-field.input-field--small.js-range__from(name='from', type='number', value='0', style="max-width: 6rem;")
+							.range__to
+								label.u-hidden-text(for='to')
+								input#to.input-field.input-field--small.js-range__to(type='number', name='to', value='999', style="max-width: 6rem;")
+							.range__slider-wrapper
+								.js-range__slider
+
+				.form__row
+					.form__label
+						label Voorbeeld input pill
+					.form__input
+						.js-select__input.js-select__input--small.js-select__input--multi.delete-me-toggle-search-pill(data-focus='')
+							.pill.pill--closable
+								span Alfons Froidmont
+								a.pill__close(href='#', data-value='6') verwijder optie
+							.pill.pill--closable
+								span Koen Beulen
+								a.pill__close(href='#', data-value='5') verwijder optie
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-concept Annuleer
+				a.button.button--narrow.button--alt Bewaar
+
+				a.button.button--disabled.delete-me-toggle-concept.u-spacer--tiny Verstuur
+					span.button__info.button__info--below naar Vlaamse Overheid
+
+		.delete-me-melding-message.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3 Bekijk melding
+					.col--3-12.u-align-right.delete-me-toggle-message
+						a.link--icon--close.delete-me-toggle-modal(href='')
+							span.u-visually-hidden Venster sluiten
+
+
+				.grid.u-spacer--small
+					.col--4-12
+						.description-data__label Gewijzigd door
+						.description-data__value Barbara Put
+
+					.col--4-12
+						.description-data__label Bewerkt op
+						.description-data__value 28-03-2018
+
+					.col--4-12
+						label.pill.pill--primary-yellow.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Vereist aanpassing', data-content='Vereist aanpassing', data-placement='left', data-timer='25') Opmerking
+
+					.col--12-12
+						a.link--dark.smaller Bekijk alle aanpassingen
+
+			.container-flex--scroll.u-padding--round--small
+				.alert.alert--cta.alert--warning
+					.alert__content
+						.alert__title.u-spacer--small Bericht: bestand corrupt
+						.alert__message
+							//p.u-spacer--small Beste,
+							p.u-spacer--small Het bestand dat u verstuurde is corrupt. Gelieve dat bestand te vervangen.
+							//p Met vriendeljke groet
+								br
+								| Naam Achternaam
+
+						.alert__actions
+							a.button.button--alt.button--small.u-spacer--tiny(href="/loket/loket-toezicht.html") Beantwoord bericht
+							p of maak een
+								a.delete-me-toggle-message.delete-me-toggle-new nieuwe melding
+
+				.form__row
+					.description-data__label Documenttype
+					.description-data__value Inzendingsplichtig besluit
+
+				.form__row
+					.description-data__label Type besluit
+					.description-data__value Andere opgevraagde documenten BBC-beleidsrapporten
+
+				.form__row
+					.description-data__label Orgaan
+							span.text-fade dat het besluit nam
+					.description-data__value OCMW
+
+				.form__row
+					.description-data__label Datum van het besluit
+							span.text-fade (niet van de beslissing)
+					.description-data__value 23-04-2018
+
+				.form__row
+					.form__label
+						label(for='bestanden') Upload bestanden
+					.form__input
+						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files2[4]')
+								//- a.upload__files__close.link--icon--close(href='')
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.pdf')
+										p.upload__file__name
+											| filename.pdf
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files3[3]')
+								//- a.upload__files__close.link--icon--close(href='')
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.pdf')
+										p.upload__file__name
+											| filename.pdf
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+							.alert.alert--warning.u-hidden
+								.alert__icon(aria-hidden='true')
+								.alert__content
+									.alert__title Upload de juiste bestanden om uw rapport te versturen.
+
+				.form__row
+					.description-data__label Dossieromschrijving
+					.description-data__value Korte omschrijving
+
+				.form__row
+					.description-data__label Voorbeeld inputfield
+					.description-data__value Value
+
+				.form__row
+					.form__label
+						label Voorbeeld radio buttons
+					.form__input
+						.grid.u-spacer--bottom--tiny
+							.col--4-12
+								label.radio.radio--disabled
+									input.radio__toggle(type='radio', name='radio-buttons', value='1', checked)
+									span
+									| 1
+							.col--4-12
+								label.radio.radio--disabled
+									input.radio__toggle(type='radio', name='radio-buttons', value='2')
+									span
+									| 2
+							.col--4-12
+								label.radio.radio--disabled
+									input.radio__toggle(type='radio', name='radio-buttons', value='3')
+									span
+									| 3
+
+				.form__row
+					.form__label
+						label Voorbeeld checkboxes
+
+					.form__input
+						label.checkbox.checkbox--block.checkbox--error.checkbox--disabled
+							input.checkbox__toggle(type='checkbox', name='checkbox', value='0', checked)
+							span
+							span Lorem ipsum dolor sit amet.
+							.form__error Dit is een foutmelding.
+						label.checkbox.checkbox--block.checkbox--disabled
+							input.checkbox__toggle(type='checkbox', name='checkbox', value='1', checked)
+							span
+							span Ik begrijp en accepteer de
+								a(href='') gebruiksvoorwaarden
+
+				.form__row
+					.form__label
+						label Voorbeeld tabelvormige input
+
+					.form__input
+						.grid
+							form.form.col--4-10.col--1-1--s(action='').u-display--block-100
+								.form__group.form__group--mobile-full-width
+									.double-input.js-double-input
+										.double-input__top-labels
+											.double-input__top-label(data-double-input-label='1') Ik
+											.double-input__top-label(data-double-input-label='2') Mijn partner
+										label.double-input__label(for='di-1') Row label
+										.double-input__inputs
+											.double-input__input
+												.description-data__value Ja
+											.double-input__input
+												.description-data__value Nee
+										label.double-input__label(for='di-3') Row label
+										.double-input__inputs
+											.double-input__input
+												.description-data__value Ja
+											.double-input__input
+												.description-data__value Ja
+										label.double-input__label(for='di-3') Row label
+										.double-input__inputs
+											.double-input__input
+												.description-data__value Nee
+											.double-input__input
+												.description-data__value Nee
+
+				.form__row
+					.description-data__label Voorbeeld slider
+					.description-data__value Tussen 0 en 999.
+
+				.form__row
+					.description-data__label Voorbeeld input pill
+					.description-data__value
+						.pill Pill
+						.pill One more pill
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-message Sluit
+				a.button.delete-me-toggle-message.delete-me-toggle-new.u-spacer--tiny Maak nieuwe melding
+
+
+		.delete-me-melding-sent.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3 Bekijk verstuurde melding
+					.col--3-12.u-align-right.delete-me-toggle-sent
+						a.link--icon--close(href='')
+							span.u-visually-hidden Venster sluiten
+
+
+				.grid.u-spacer--small
+					.col--4-12
+						.description-data__label Gewijzigd door
+						.description-data__value Barbara Put
+
+					.col--4-12
+						.description-data__label Bewerkt op
+						.description-data__value 28-03-2018
+
+					.col--4-12
+						label.pill.pill--primary-blue.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Doorgestuurd naar Vlaamse Overheid ter goedkeuring', data-content='Doorgestuurd naar Vlaamse Overheid ter goedkeuring', data-placement='left', data-timer='25') Verstuurd
+
+					.col--12-12
+						a.link--dark.smaller Bekijk alle aanpassingen
+
+			.container-flex--scroll.u-padding--round--small
+				.form__row
+					.description-data__label Documenttype
+					.description-data__value Inzendingsplichtig besluit
+
+				.form__row
+					.description-data__label Type besluit
+					.description-data__value Andere opgevraagde documenten BBC-beleidsrapporten
+
+				.form__row
+					.description-data__label Orgaan
+							span.text-fade dat het besluit nam
+					.description-data__value OCMW
+
+				.form__row
+					.description-data__label Datum van het besluit
+							span.text-fade (niet van de beslissing)
+					.description-data__value 23-04-2018
+
+				.form__row
+					.form__label
+						label(for='bestanden') Upload bestanden
+					.form__input
+						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files2[4]')
+								//- a.upload__files__close.link--icon--close(href='')
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.pdf')
+										p.upload__file__name
+											| filename.pdf
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files3[3]')
+								//- a.upload__files__close.link--icon--close(href='')
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.pdf')
+										p.upload__file__name
+											| filename.pdf
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+							.alert.alert--warning.u-hidden
+								.alert__icon(aria-hidden='true')
+								.alert__content
+									.alert__title Upload de juiste bestanden om uw rapport te versturen.
+
+				.form__row
+					.description-data__label Dossieromschrijving
+					.description-data__value Korte omschrijving
+
+				.form__row
+					.description-data__label Voorbeeld inputfield
+					.description-data__value Value
+
+				.form__row
+					.form__label
+						label Voorbeeld radio buttons
+					.form__input
+						.grid.u-spacer--bottom--tiny
+							.col--4-12
+								label.radio.radio--disabled
+									input.radio__toggle(type='radio', name='radio-buttons', value='1', checked)
+									span
+									| 1
+							.col--4-12
+								label.radio.radio--disabled
+									input.radio__toggle(type='radio', name='radio-buttons', value='2')
+									span
+									| 2
+							.col--4-12
+								label.radio.radio--disabled
+									input.radio__toggle(type='radio', name='radio-buttons', value='3')
+									span
+									| 3
+
+				.form__row
+					.form__label
+						label Voorbeeld checkboxes
+
+					.form__input
+						label.checkbox.checkbox--block.checkbox--error.checkbox--disabled
+							input.checkbox__toggle(type='checkbox', name='checkbox', value='0', checked)
+							span
+							span Lorem ipsum dolor sit amet.
+							.form__error Dit is een foutmelding.
+						label.checkbox.checkbox--block.checkbox--disabled
+							input.checkbox__toggle(type='checkbox', name='checkbox', value='1', checked)
+							span
+							span Ik begrijp en accepteer de
+								a(href='') gebruiksvoorwaarden
+
+				.form__row
+					.form__label
+						label Voorbeeld tabelvormige input
+
+					.form__input
+						.grid
+							form.form.col--4-10.col--1-1--s(action='').u-display--block-100
+								.form__group.form__group--mobile-full-width
+									.double-input.js-double-input
+										.double-input__top-labels
+											.double-input__top-label(data-double-input-label='1') Ik
+											.double-input__top-label(data-double-input-label='2') Mijn partner
+										label.double-input__label(for='di-1') Row label
+										.double-input__inputs
+											.double-input__input
+												.description-data__value Ja
+											.double-input__input
+												.description-data__value Nee
+										label.double-input__label(for='di-3') Row label
+										.double-input__inputs
+											.double-input__input
+												.description-data__value Ja
+											.double-input__input
+												.description-data__value Ja
+										label.double-input__label(for='di-3') Row label
+										.double-input__inputs
+											.double-input__input
+												.description-data__value Nee
+											.double-input__input
+												.description-data__value Nee
+
+				.form__row
+					.description-data__label Voorbeeld slider
+					.description-data__value Tussen 0 en 999.
+
+				.form__row
+					.description-data__label Voorbeeld input pill
+					.description-data__value
+						.pill Pill
+						.pill One more pill
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-sent Sluit
+				a.button.delete-me-toggle-sent.delete-me-toggle-new.u-spacer--tiny Maak nieuwe melding
+
+		.delete-me-melding-approved.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
+			.u-padding--trl--small.u-border--light--bottom
+				.grid
+					.col--9-12
+						h2.h3 Bekijk goedgekeurde melding
+					.col--3-12.u-align-right.delete-me-toggle-approved
+						a.link--icon--close(href='')
+							span.u-visually-hidden Venster sluiten
+
+				.grid.u-spacer--small
+					.col--4-12
+						.description-data__label Gewijzigd door
+						.description-data__value Barbara Put
+
+					.col--4-12
+						.description-data__label Bewerkt op
+						.description-data__value 28-03-2018
+
+					.col--4-12
+						label.pill.pill--gray-dark.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Opdracht voltooid', data-content='Opdracht voltooid', data-placement='left', data-timer='25') Goedgekeurd
+
+					.col--12-12
+						a.link--dark.smaller Bekijk alle aanpassingen
+
+			.container-flex--scroll.u-padding--round--small
+				.form__row
+					.description-data__label Documenttype
+					.description-data__value Inzendingsplichtig besluit
+
+				.form__row
+					.description-data__label Type besluit
+					.description-data__value Andere opgevraagde documenten BBC-beleidsrapporten
+
+				.form__row
+					.description-data__label Orgaan
+							span.text-fade dat het besluit nam
+					.description-data__value OCMW
+
+				.form__row
+					.description-data__label Datum van het besluit
+							span.text-fade (niet van de beslissing)
+					.description-data__value 23-04-2018
+
+				.form__row
+					.form__label
+						label(for='bestanden') Upload bestanden
+					.form__input
+						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files2[4]')
+								//- a.upload__files__close.link--icon--close(href='')
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.pdf')
+										p.upload__file__name
+											| filename.pdf
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+
+							.upload__files.upload__files--has-files(data-upload-input-name='files3[3]')
+								//- a.upload__files__close.link--icon--close(href='')
+									span.u-visually-hidden Sluiten
+								.upload__files__container
+									.upload__file(data-filename='filename.pdf')
+										p.upload__file__name
+											| filename.pdf
+											span.upload__file__size (192 Bytes)
+										small
+											a.link--icon
+												i.fa.fa-cloud-download
+												| Download bestand
+
+							.alert.alert--warning.u-hidden
+								.alert__icon(aria-hidden='true')
+								.alert__content
+									.alert__title Upload de juiste bestanden om uw rapport te versturen.
+
+				.form__row
+					.description-data__label Dossieromschrijving
+					.description-data__value Korte omschrijving
+
+				.form__row
+					.description-data__label Voorbeeld inputfield
+					.description-data__value Value
+
+				.form__row
+					.form__label
+						label Voorbeeld radio buttons
+					.form__input
+						.grid.u-spacer--bottom--tiny
+							.col--4-12
+								label.radio.radio--disabled
+									input.radio__toggle(type='radio', name='radio-buttons', value='1', checked)
+									span
+									| 1
+							.col--4-12
+								label.radio.radio--disabled
+									input.radio__toggle(type='radio', name='radio-buttons', value='2')
+									span
+									| 2
+							.col--4-12
+								label.radio.radio--disabled
+									input.radio__toggle(type='radio', name='radio-buttons', value='3')
+									span
+									| 3
+
+				.form__row
+					.form__label
+						label Voorbeeld checkboxes
+
+					.form__input
+						label.checkbox.checkbox--block.checkbox--error.checkbox--disabled
+							input.checkbox__toggle(type='checkbox', name='checkbox', value='0', checked)
+							span
+							span Lorem ipsum dolor sit amet.
+							.form__error Dit is een foutmelding.
+						label.checkbox.checkbox--block.checkbox--disabled
+							input.checkbox__toggle(type='checkbox', name='checkbox', value='1', checked)
+							span
+							span Ik begrijp en accepteer de
+								a(href='') gebruiksvoorwaarden
+
+				.form__row
+					.form__label
+						label Voorbeeld tabelvormige input
+
+					.form__input
+						.grid
+							form.form.col--4-10.col--1-1--s(action='').u-display--block-100
+								.form__group.form__group--mobile-full-width
+									.double-input.js-double-input
+										.double-input__top-labels
+											.double-input__top-label(data-double-input-label='1') Ik
+											.double-input__top-label(data-double-input-label='2') Mijn partner
+										label.double-input__label(for='di-1') Row label
+										.double-input__inputs
+											.double-input__input
+												.description-data__value Ja
+											.double-input__input
+												.description-data__value Nee
+										label.double-input__label(for='di-3') Row label
+										.double-input__inputs
+											.double-input__input
+												.description-data__value Ja
+											.double-input__input
+												.description-data__value Ja
+										label.double-input__label(for='di-3') Row label
+										.double-input__inputs
+											.double-input__input
+												.description-data__value Nee
+											.double-input__input
+												.description-data__value Nee
+
+				.form__row
+					.description-data__label Voorbeeld slider
+					.description-data__value Tussen 0 en 999.
+
+				.form__row
+					.description-data__label Voorbeeld input pill
+					.description-data__value
+						.pill Pill
+						.pill One more pill
+
+			.u-padding--round--small.u-border--light--top.u-align-right
+				a.button.button--narrow.button--alt.delete-me-toggle-new Sluit
+				a.button.delete-me-toggle-message.delete-me-toggle-new.u-spacer--tiny Maak nieuwe melding
+
+	script.
+		$('.delete-me-toggle-new').on('click', function(e) {
+			$('.delete-me-melding-new').toggleClass("u-hidden");
+			$('.delete-me-melding-table').toggleClass("col--10-12").toggleClass("col--9-12--m").toggleClass("col--6-12").toggleClass("u-visible--tablet-landscape-up");
+			$('.delete-me-switch-hide-data').toggleClass("u-hidden");
+			$('.delete-me-switch-text-overflow-ellipsis').toggleClass("text-overflow-ellipsis--30").toggleClass("text-overflow-ellipsis");
+			e.preventDefault();
+		});
+
+		$('.delete-me-toggle-concept, .delete-me-toggle-sent, .delete-me-toggle-message, .delete-me-toggle-approved').on('click', function(e) {
+			$('.delete-me-switch-hide-data').toggleClass("u-hidden");
+			$('tr.data-table__row-active').removeClass("data-table__row-active");
+			$(this).parents("tr").toggleClass("data-table__row-active");
+			$('.delete-me-melding-table').toggleClass("col--10-12").toggleClass("col--9-12--m").toggleClass("col--6-12").toggleClass("u-visible--tablet-landscape-up");
+		});
+
+		$('.delete-me-toggle-concept').on('click', function(e) {
+			$('.delete-me-melding-concept').toggleClass("u-hidden");
+		});
+
+		$('.delete-me-toggle-sent').on('click', function(e) {
+			$('.delete-me-melding-sent').toggleClass("u-hidden");
+		});
+
+		$('.delete-me-toggle-message').on('click', function(e) {
+			$('.delete-me-melding-message').toggleClass("u-hidden");
+		});
+
+		$('.delete-me-toggle-approved').on('click', function(e) {
+			$('.delete-me-melding-approved').toggleClass("u-hidden");
+		});
+
+		$('.delete-me-toggle-search-besluittype, .delete-me-search-results-besluittype').on('click', function(e) {
+			$('.delete-me-search-results-besluittype').toggleClass("u-hidden");
+			e.preventDefault();
+		});
+
+		$('.delete-me-toggle-search-pill').on('click', function(e) {
+			$('.delete-me-search-results-pill').toggleClass("u-hidden");
+			e.preventDefault();
+		});
+
+		$('.js-accordion').on('click', function(e) {
+			$(this).parents("tr").next().toggleClass("u-hidden");
+		});
+
