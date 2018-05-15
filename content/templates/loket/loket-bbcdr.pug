@@ -20,11 +20,11 @@ block loketoverview
 					a(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
 				li.side-navigation__item
 					a.active(href="/loket/loket-bbcdr.html") BBC DR
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-organenbeheer.html") Organenbeheer
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
 				li.side-navigation__item
 					a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
@@ -47,11 +47,11 @@ block loketoverview
 										a(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
 									li.side-navigation__item
 										a.active(href="/loket/loket-bbcdr.html") BBC DR
-									li.side-navigation__item
+									//- li.side-navigation__item
 										a(href="/loket/loket-organenbeheer.html") Organenbeheer
-									li.side-navigation__item
+									//- li.side-navigation__item
 										a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
-									li.side-navigation__item
+									//- li.side-navigation__item
 										a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
 									li.side-navigation__item
 										a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
@@ -65,183 +65,210 @@ block loketoverview
 				.sidebar__toggle-menu.delete-me-toggle-sidebar--slide.u-visible-mobile.u-padding--tb--tiny.u-padding--rl--small.u-background--gray-lighter(type='button', title='Pas bestuur aan')
 					h2.h2.sidebar__toggle-value Menu
 				.u-border--light--bottom
-					.grid.u-padding--round--small.mandate-edit-table__header
-						.col--12-12.u-spacer--bottom
-							h1.h3.u-spacer--none BBC DR Gemeente Hasselt
+					.u-padding--round--small.mandate-edit-table__header
+						h1.h4.u-spacer--tiny BBC DR Gemeente Hasselt
 
-							p Één rapport kreeg een
-								span.pill.pill--primary-yellow opmerking
-								|  en vereist actie.
-							//- p Beleids- en beheerscyclus: digitale rapportering
-						.col--6-12
-							.input-field-icon-container--right
-								input#input-field.input-field.input-field--block(type='text', placeholder='Zoek op bijlage, auteur, datum of status', style="min-width: 40rem;")
+						//- p Één rapport kreeg een
+							span.pill.pill--primary-yellow opmerking
+							|  en vereist actie.
+
+						.js-accordion.u-visible-mobile
+							// toggle
+							a.toggle.toggle--arrow-down.js-accordion__toggle
+								i.toggle__icon(aria-hidden='true')
+								| Toon acties
+							.accordion__content
+								input#input-field.input-field.input-field--block.u-spacer--tb--tiny(type='text', placeholder='Zoek op bijlage, auteur, datum of status', style="max-width: 100%; width: 100%;")
 								i.input-field__icon.vi.vi-magnifier(aria-hidden='true')
-						.col--6-12.u-align-right
-							a.button.button--narrow.delete-me-toggle-new Maak nieuw rapport
 
-				.data-table__scroll
-						table.data-table
-							//- .data-table--zebra
-							thead
-								tr.data-table__header
-									//- th.data-table__header-title
-										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
-											| Orgaan
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.data-table__header-title
-										a.data-table__header-title--sortable(href='#', title='sort')
-											| Rapport
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									//- th.data-table__header-title.delete-me-switch-hide-data
-									th.data-table__header-title.delete-me-switch-hide-data.u-visible--tablet-landscape-up
-										a.data-table__header-title--sortable(href='#', title='sort')
-											|  Gewijzigd door
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.data-table__header-title.delete-me-switch-hide-data
-										a.data-table__header-title--sortable(href='#', title='sort')
-											|  Bewerkt op
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.data-table__header-title
-										a.data-table__header-title--sortable(href='#', title='sort')
-											| Status
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
-									th
-							tbody
-								tr
-									//(data-table-selectable, class="mandate-edit-data-active")
-									//- td Gemeenteraad
-									td
-										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
-											.document-miniature__type
-												span.document-miniature__type__text XBRL
-											.document-miniature__content
-												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
-												.document-miniature__metadata XBRL - 1.4 MB
-										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
-											.document-miniature__type
-												span.document-miniature__type__text XML
-											.document-miniature__content
-												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
-												.document-miniature__metadata XML - 1.4 MB
-									td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
-									td.delete-me-switch-hide-data 28-03-2018
-										//- span.text-fade 13:40
-									td
-										label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
-									td
-										a.delete-me-toggle-concept Bekijk
+								a.button.button--narrow.delete-me-toggle-new Maak nieuw rapport
 
-								tr
-									//- (data-table-selectable, class="mandate-edit-data-active")
-									//- td College
-									td
-										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
-											.document-miniature__type
-												span.document-miniature__type__text XBRL
-											.document-miniature__content
-												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
-												.document-miniature__metadata XBRL - 1.4 MB
-										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
-											.document-miniature__type
-												span.document-miniature__type__text XML
-											.document-miniature__content
-												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen Eindbudget 2017 Inclusief Interne Kredietaanpassingen Eindbudget 2017 Inclusief Interne Kredietaanpassingen
-												.document-miniature__metadata XML - 1.4 MB
-									//- td.delete-me-switch-hide-data
-									td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
-									td.delete-me-switch-hide-data 28-03-2018
-										//- span.text-fade 13:40
-									td
-										//label.pill.pill--primary-blue.pill--clickable Verstuurd naar
-											br
-											| Vlaamse overheid
-										label.pill.pill--primary-blue.pill--clickable(data-toggle='tooltip', title='Wacht op goedkeuring door Vlaamse Overheid', data-content='Wacht op goedkeuring door Vlaamse Overheid', data-placement='left', data-timer='25') Verstuurd
-									td
-										a.delete-me-toggle-sent Bekijk
+						.grid.u-hidden-mobile
+							.col--6-12.col--1-1--s
+								.input-field-icon-container--right.input-field-icon-container--block.u-spacer--tiny
+									input#input-field.input-field.input-field--block(type='text', placeholder='Zoek op bijlage, auteur, datum of status', style="max-width: 100%; width: 100%;")
+									i.input-field__icon.vi.vi-magnifier(aria-hidden='true')
+							.col--6-12.col--1-1--s.u-align-right--tablet-portrait-up
+								a.button.button--narrow.delete-me-toggle-new Maak nieuw rapport
 
-								tr
-									//- (data-table-selectable, class="mandate-edit-data-active")
-									//- td Burgemeester
-									td
-										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
-											.document-miniature__type
-												span.document-miniature__type__text XBRL
-											.document-miniature__content
-												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
-												.document-miniature__metadata XBRL - 1.4 MB
-										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
-											.document-miniature__type
-												span.document-miniature__type__text XML
-											.document-miniature__content
-												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
-												.document-miniature__metadata XML - 1.4 MB
-									//- td.delete-me-switch-hide-data
-									td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
-									td.delete-me-switch-hide-data 28-03-2018
-										//- span.text-fade 13:40
-									td
-										label.u-spacer--tiny.pill.pill--primary-yellow.pill--clickable(data-toggle='tooltip', title='Vereist aanpassing', data-content='Vereist aanpassing', data-placement='left', data-timer='25') Opmerking
-										//- a.link--icon(href="/loket/loket-toezicht.html")
-											i.vi.vi-arrow
-											| Bekijk&nbsp;bericht
-										//label.u-spacer--tiny.pill.pill--red Teruggestuurd door
-											br
-											| Vlaamse overheid
-									td
-										a.delete-me-toggle-message Bekijk
+				.container-flex--scroll
+					table.data-table.data-table--nowrap
+						//- .data-table--zebra
+						thead
+							tr.data-table__header
+								//- th.data-table__header-title
+									a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+										| Orgaan
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.data-table__header-title
+									a.data-table__header-title--sortable(href='#', title='sort')
+										| Rapport
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								//- th.data-table__header-title.delete-me-switch-hide-data
+								th.data-table__header-title.delete-me-switch-hide-data.u-visible--tablet-landscape-up
+									a.data-table__header-title--sortable(href='#', title='sort')
+										|  Gewijzigd door
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.data-table__header-title.delete-me-switch-hide-data.u-visible--tablet-landscape-up
+									a.data-table__header-title--sortable(href='#', title='sort')
+										|  Bewerkt op
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.data-table__header-title.u-hidden-mobile
+									a.data-table__header-title--sortable(href='#', title='sort')
+										| Status
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
+								th
+						tbody
+							tr
+								//(data-table-selectable, class="mandate-edit-data-active")
+								//- td Gemeenteraad
+								td
+									.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XBRL
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XBRL - 1.4 MB
+									.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XML
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XML - 1.4 MB
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up 28-03-2018
+									//- span.text-fade 13:40
+								td.u-hidden-mobile
+									label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+								td
+									a.delete-me-toggle-concept Bekijk
 
-								tr
-									//- (data-table-selectable, class="mandate-edit-data-active")
-									//- td OCMW
-									td
-										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
-											.document-miniature__type
-												span.document-miniature__type__text XBRL
-											.document-miniature__content
-												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
-												.document-miniature__metadata XBRL - 1.4 MB
-										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
-											.document-miniature__type
-												span.document-miniature__type__text XML
-											.document-miniature__content
-												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
-												.document-miniature__metadata XML - 1.4 MB
-									//- td.delete-me-switch-hide-data
-									td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
-									td.delete-me-switch-hide-data 28-03-2018
-										//- span.text-fade 13:40
-									td
-										//- label.pill.pill--green Goedgekeurd door
-											br
-											| Vlaamse overheid
-										label.pill.pill--gray-dark.pill--clickable(data-toggle='tooltip', title='Opdracht voltooid', data-content='Opdracht voltooid', data-placement='left', data-timer='25') Goedgekeurd
-									td
-										a.delete-me-toggle-approved Bekijk
+							tr
+								//- (data-table-selectable, class="mandate-edit-data-active")
+								//- td College
+								td
+									.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XBRL
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XBRL - 1.4 MB
+									.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XML
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen Eindbudget 2017 Inclusief Interne Kredietaanpassingen Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XML - 1.4 MB
+								//- td.delete-me-switch-hide-data
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up 28-03-2018
+									//- span.text-fade 13:40
+								td.u-hidden-mobile
+									//label.pill.pill--primary-blue.pill--clickable Verstuurd naar
+										br
+										| Vlaamse overheid
+									label.pill.pill--primary-blue.pill--clickable(data-toggle='tooltip', title='Wacht op goedkeuring door Vlaamse Overheid', data-content='Wacht op goedkeuring door Vlaamse Overheid', data-placement='left', data-timer='25') Verstuurd
+								td
+									a.delete-me-toggle-sent Bekijk
 
-								tr
-									//(data-table-selectable, class="mandate-edit-data-active")
-									//- td Gemeenteraad
-									td
-										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
-											.document-miniature__type
-												span.document-miniature__type__text XBRL
-											.document-miniature__content
-												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
-												.document-miniature__metadata XBRL - 1.4 MB
-										.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
-											.document-miniature__type
-												span.document-miniature__type__text XML
-											.document-miniature__content
-												p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
-												.document-miniature__metadata XML - 1.4 MB
-									td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
-									td.delete-me-switch-hide-data 28-03-2018
-										//- span.text-fade 13:40
-									td
-										label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
-									td
-										a.delete-me-toggle-concept Bekijk
+							tr
+								//- (data-table-selectable, class="mandate-edit-data-active")
+								//- td Burgemeester
+								td
+									.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XBRL
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XBRL - 1.4 MB
+									.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XML
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XML - 1.4 MB
+								//- td.delete-me-switch-hide-data
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up 28-03-2018
+									//- span.text-fade 13:40
+								td.u-hidden-mobile
+									label.u-spacer--tiny.pill.pill--primary-yellow.pill--clickable(data-toggle='tooltip', title='Vereist aanpassing', data-content='Vereist aanpassing', data-placement='left', data-timer='25') Opmerking
+									//- a.link--icon(href="/loket/loket-toezicht.html")
+										i.vi.vi-arrow
+										| Bekijk&nbsp;bericht
+									//label.u-spacer--tiny.pill.pill--red Teruggestuurd door
+										br
+										| Vlaamse overheid
+								td
+									a.delete-me-toggle-message Bekijk
+
+							tr
+								//- (data-table-selectable, class="mandate-edit-data-active")
+								//- td OCMW
+								td
+									.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XBRL
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XBRL - 1.4 MB
+									.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XML
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XML - 1.4 MB
+								//- td.delete-me-switch-hide-data
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up 28-03-2018
+									//- span.text-fade 13:40
+								td.u-hidden-mobile
+									//- label.pill.pill--green Goedgekeurd door
+										br
+										| Vlaamse overheid
+									label.pill.pill--gray-dark.pill--clickable(data-toggle='tooltip', title='Opdracht voltooid', data-content='Opdracht voltooid', data-placement='left', data-timer='25') Goedgekeurd
+								td
+									a.delete-me-toggle-approved Bekijk
+
+							tr
+								//(data-table-selectable, class="mandate-edit-data-active")
+								//- td Gemeenteraad
+								td
+									.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XBRL
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XBRL - 1.4 MB
+									.document-miniature.document-miniature--tiny.switch-text-overflow-ellipsis
+										.document-miniature__type
+											span.document-miniature__type__text XML
+										.document-miniature__content
+											p.document-miniature__title Eindbudget 2017 Inclusief Interne Kredietaanpassingen
+											.document-miniature__metadata XML - 1.4 MB
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Barbara Put
+								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up 28-03-2018
+									//- span.text-fade 13:40
+								td.u-hidden-mobile
+									label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+								td
+									a.delete-me-toggle-concept Bekijk
+
+				.pager.u-padding--round--tiny.u-border--light--top
+					ul.pager__list.pager__list-right
+						li.pager__element
+							span.u-visually-hidden Rij
+							strong 11 - 20
+							|  van 673
+						li.pager__element
+							a(href='')
+								i.vi.vi-arrow.vi-u-180deg.vi-u-s(aria-hidden='true')
+								|  vorige
+								span.u-visually-hidden  10 rijen
+						li.pager__element
+							a(href='') volgende
+								span.u-visually-hidden  10 rijen
+								i.vi.vi-arrow.vi-u-s(aria-hidden='true')
 
 		.delete-me-bbc-new.col--4-12.col--9-12--m.col--12-12--s.u-hidden.container-flex--contain
 			.u-padding--trl--small.u-border--light--bottom
@@ -346,7 +373,7 @@ block loketoverview
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
 					.col--9-12
-						h2.h3 Bekijk rapport
+						h2.h4 Bekijk rapport
 					.col--3-12.u-align-right.delete-me-toggle-concept.delete-me-toggle-modal-save
 						a.link--icon--close(href='')
 							span.u-visually-hidden Venster sluiten
