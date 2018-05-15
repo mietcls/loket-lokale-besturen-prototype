@@ -20,11 +20,11 @@ block loketoverview
 					a.active(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
 				li.side-navigation__item
 					a(href="/loket/loket-bbcdr.html") BBC DR
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-organenbeheer.html") Organenbeheer
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
 				li.side-navigation__item
 					a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
@@ -47,11 +47,11 @@ block loketoverview
 										a.active(href="/loket/loket-mandatenbeheer.html") Mandatenbeheer
 									li.side-navigation__item
 										a(href="/loket/loket-bbcdr.html") BBC DR
-									li.side-navigation__item
+									//- li.side-navigation__item
 										a(href="/loket/loket-organenbeheer.html") Organenbeheer
-									li.side-navigation__item
+									//- li.side-navigation__item
 										a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
-									li.side-navigation__item
+									//- li.side-navigation__item
 										a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
 									li.side-navigation__item
 										a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
@@ -65,11 +65,11 @@ block loketoverview
 			.container-flex--contain
 				.u-border--light--bottom
 					.grid.u-padding--round--small.delete-me-person-edit-table__header
-						.col--12-12.u-spacer--bottom
+						.col--12-12
 							//- a.link--icon.delete-me-toggle-overview-personen
 								i.vi.vi-arrow.vi-u-180deg
 								| Terug naar mandatenbeheer
-							h1.h3.u-spacer--tiny Gegevens mandatarissen Gemeente Hasselt
+							h1.h4 Gegevens mandatarissen Gemeente Hasselt
 
 							// .sidebar__toggle-wrapper.delete-me-toggle-sidebar--slide.u-visible-mobile(type='button', title='Pas bestuur aan')
 								h2.h2.sidebar__toggle-value Gegevens mandatarissen Gemeente Hasselt
@@ -83,135 +83,135 @@ block loketoverview
 							a.button.button--narrow.button--link.button--link--dark.delete-me-toggle-overview-personen.delete-me-person-edit-data Bekijk mandatenbeheer
 							a.button.button--narrow.delete-me-toggle-person-new.delete-me-toggle-person-new--person Voeg persoon toe
 
-				.data-table__scroll
-						table.data-table
-							thead
-								tr.data-table__header
-									th.data-table__header-title
-										a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
-											| Naam
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.data-table__header-title
-										a.data-table__header-title--sortable(href='#', title='sort')
-											| Familienaam
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.delete-me-person-edit-data.data-table__header-title
-										a.data-table__header-title--sortable(href='#', title='sort')
-											|  Roepnaam
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
-									th.data-table__header-title
-										a.data-table__header-title--sortable(href='#', title='sort')
-											| Rijksregisternummer
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.delete-me-person-edit-data.data-table__header-title
-										a.data-table__header-title--sortable(href='#', title='sort')
-											|  Geboortedatum
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.delete-me-person-edit-data.data-table__header-title
-										a.data-table__header-title--sortable(href='#', title='sort')
-											|  Geslacht
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.data-table__header-title
-										a.data-table__header-title--sortable(href='#', title='sort')
-											|  Bron
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
-							tbody
-								tr(data-table-selectable, class="person-edit-data-active")
-									td Joost Geert
-									td Venken
-									td.delete-me-person-edit-data Roepnaam
-									td 87.04.13-231.78
-									td.delete-me-person-edit-data 13-14-1987
-									td.delete-me-person-edit-data Man
-									td Lijst
+				.container-flex--scroll
+					table.data-table.data-table--nowrap
+						thead
+							tr.data-table__header
+								th.data-table__header-title
+									a.data-table__header-title--sortable.data-table__header-title--sortable-active(href='#', title='sort')
+										| Naam
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.data-table__header-title
+									a.data-table__header-title--sortable(href='#', title='sort')
+										| Familienaam
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.delete-me-person-edit-data.data-table__header-title
+									a.data-table__header-title--sortable(href='#', title='sort')
+										|  Roepnaam
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
+								th.data-table__header-title
+									a.data-table__header-title--sortable(href='#', title='sort')
+										| Rijksregisternummer
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.delete-me-person-edit-data.data-table__header-title
+									a.data-table__header-title--sortable(href='#', title='sort')
+										|  Geboortedatum
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.delete-me-person-edit-data.data-table__header-title
+									a.data-table__header-title--sortable(href='#', title='sort')
+										|  Geslacht
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.data-table__header-title
+									a.data-table__header-title--sortable(href='#', title='sort')
+										|  Bron
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
+						tbody
+							tr(data-table-selectable, class="person-edit-data-active")
+								td Joost Geert
+								td Venken
+								td.delete-me-person-edit-data Roepnaam
+								td 87.04.13-231.78
+								td.delete-me-person-edit-data 13-14-1987
+								td.delete-me-person-edit-data Man
+								td Lijst
 
-								tr
-									td Joost Geert
-									td Venken
-									td.delete-me-person-edit-data Roepnaam
-									td 87.04.13-231.78
-									td.delete-me-person-edit-data 13-14-1987
-									td.delete-me-person-edit-data Man
-									td Manuele ingave
-										br
-										a.delete-me-toggle-person-edit Bewerk
-								tr
-									td Nadja Emiel
-									td Vananroye
-									td.delete-me-person-edit-data Roepnaam
-									td 87.04.13-231.78
-									td.delete-me-person-edit-data 13-14-1987
-									td.delete-me-person-edit-data Vrouw
-									td Manuele ingave
-										br
-										a.delete-me-toggle-person-edit Bewerk
-								tr
-									td Tom Jozef
-									td Vandeput
-									td.delete-me-person-edit-data Roepnaam
-									td 87.04.13-231.78
-									td.delete-me-person-edit-data 13-14-1987
-									td.delete-me-person-edit-data Man
-									td Lijst
-								tr
-									td Habib
-									td El Ouakili
-									td.delete-me-person-edit-data Roepnaam
-									td 87.04.13-231.78
-									td.delete-me-person-edit-data 13-14-1987
-									td.delete-me-person-edit-data Vrouw
-									td Lijst
-								tr
-									td Alfons Michel
-									td Froidmont
-									td.delete-me-person-edit-data Roepnaam
-									td 87.04.13-231.78
-									td.delete-me-person-edit-data 13-14-1987
-									td.delete-me-person-edit-data Man
-									td Lijst
-								tr
-									td Gerald Maurice
-									td Corthouts
-									td.delete-me-person-edit-data Roepnaam
-									td 87.04.13-231.78
-									td.delete-me-person-edit-data 13-14-1987
-									td.delete-me-person-edit-data Man
-									td Lijst
+							tr
+								td Joost Geert
+								td Venken
+								td.delete-me-person-edit-data Roepnaam
+								td 87.04.13-231.78
+								td.delete-me-person-edit-data 13-14-1987
+								td.delete-me-person-edit-data Man
+								td Manuele ingave
+									br
+									a.delete-me-toggle-person-edit Bewerk
+							tr
+								td Nadja Emiel
+								td Vananroye
+								td.delete-me-person-edit-data Roepnaam
+								td 87.04.13-231.78
+								td.delete-me-person-edit-data 13-14-1987
+								td.delete-me-person-edit-data Vrouw
+								td Manuele ingave
+									br
+									a.delete-me-toggle-person-edit Bewerk
+							tr
+								td Tom Jozef
+								td Vandeput
+								td.delete-me-person-edit-data Roepnaam
+								td 87.04.13-231.78
+								td.delete-me-person-edit-data 13-14-1987
+								td.delete-me-person-edit-data Man
+								td Lijst
+							tr
+								td Habib
+								td El Ouakili
+								td.delete-me-person-edit-data Roepnaam
+								td 87.04.13-231.78
+								td.delete-me-person-edit-data 13-14-1987
+								td.delete-me-person-edit-data Vrouw
+								td Lijst
+							tr
+								td Alfons Michel
+								td Froidmont
+								td.delete-me-person-edit-data Roepnaam
+								td 87.04.13-231.78
+								td.delete-me-person-edit-data 13-14-1987
+								td.delete-me-person-edit-data Man
+								td Lijst
+							tr
+								td Gerald Maurice
+								td Corthouts
+								td.delete-me-person-edit-data Roepnaam
+								td 87.04.13-231.78
+								td.delete-me-person-edit-data 13-14-1987
+								td.delete-me-person-edit-data Man
+								td Lijst
 
-								tr
-									td Brigitte Marie
-									td Smets
-									td.delete-me-person-edit-data Roepnaam
-									td 87.04.13-231.78
-									td.delete-me-person-edit-data 13-14-1987
-									td.delete-me-person-edit-data Vrouw
-									td Lijst
-								tr
-									td Karolien Louis
-									td Mondelaers
-									td.delete-me-person-edit-data Roepnaam
-									td 87.04.13-231.78
-									td.delete-me-person-edit-data 13-14-1987
-									td.delete-me-person-edit-data Vrouw
-									td Lijst
-								tr
-									td Kevin
-									td Schouterden
-									td.delete-me-person-edit-data Roepnaam
-									td 87.04.13-231.78
-									td.delete-me-person-edit-data 13-14-1987
-									td.delete-me-person-edit-data Man
-									td Lijst
-								tr
-									td Valerie An
-									td Del Re
-									td.delete-me-person-edit-data Roepnaam
-									td 87.04.13-231.78
-									td.delete-me-person-edit-data 13-14-1987
-									td.delete-me-person-edit-data Vrouw
-									td Manuele ingave
-										br
-										a.delete-me-toggle-person-edit Bewerk
+							tr
+								td Brigitte Marie
+								td Smets
+								td.delete-me-person-edit-data Roepnaam
+								td 87.04.13-231.78
+								td.delete-me-person-edit-data 13-14-1987
+								td.delete-me-person-edit-data Vrouw
+								td Lijst
+							tr
+								td Karolien Louis
+								td Mondelaers
+								td.delete-me-person-edit-data Roepnaam
+								td 87.04.13-231.78
+								td.delete-me-person-edit-data 13-14-1987
+								td.delete-me-person-edit-data Vrouw
+								td Lijst
+							tr
+								td Kevin
+								td Schouterden
+								td.delete-me-person-edit-data Roepnaam
+								td 87.04.13-231.78
+								td.delete-me-person-edit-data 13-14-1987
+								td.delete-me-person-edit-data Man
+								td Lijst
+							tr
+								td Valerie An
+								td Del Re
+								td.delete-me-person-edit-data Roepnaam
+								td 87.04.13-231.78
+								td.delete-me-person-edit-data 13-14-1987
+								td.delete-me-person-edit-data Vrouw
+								td Manuele ingave
+									br
+									a.delete-me-toggle-person-edit Bewerk
 
 				.pager.u-padding--round--tiny.u-border--light--top
 					ul.pager__list.pager__list-right
@@ -240,9 +240,9 @@ block loketoverview
 					h2.h2.sidebar__toggle-value Menu
 				.u-border--light--bottom
 					.grid.u-padding--round--small.delete-me-mandate-edit-table__header
-						.col--12-12.u-spacer--bottom
+						.col--12-12
 
-							h1.h3.u-spacer--tiny.u-hidden-mobile Mandatenbeheer Gemeente Hasselt
+							h1.h4.u-spacer--tiny.u-hidden-mobile Mandatenbeheer Gemeente Hasselt
 
 							//.sidebar__toggle-wrapper.delete-me-toggle-sidebar--slide.u-visible-mobile(type='button', title='Pas bestuur aan')
 								h2.h2.sidebar__toggle-value Mandatenbeheer Gemeente Hasselt
@@ -296,17 +296,17 @@ block loketoverview
 										a.data-table__header-title--sortable(href='#', title='sort')
 											|  Mandaat
 											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
-									th.delete-me-mandate-edit-data.data-table__header-title
+									th.delete-me-mandate-edit-data.data-table__header-title.u-visible--tablet-landscape-up
+										a.data-table__header-title--sortable(href='#', title='sort')
+											|  Status
+											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
+									th.delete-me-mandate-edit-data.data-table__header-title.u-visible--tablet-landscape-up
 										a.data-table__header-title--sortable(href='#', title='sort')
 											|  Start
 											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
 									th.delete-me-mandate-edit-data.data-table__header-title
 										a.data-table__header-title--sortable(href='#', title='sort')
 											|  Einde
-											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
-									th.delete-me-mandate-edit-data.data-table__header-title
-										a.data-table__header-title--sortable(href='#', title='sort')
-											|  Status
 											i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow.vi-u-180deg
 									th
 							tbody
@@ -315,9 +315,9 @@ block loketoverview
 									td Venken
 									td HELEMAAL HASSELT
 									td Schepen
-									td.delete-me-mandate-edit-data 25-02-2014
-									td.delete-me-mandate-edit-data 31-12-2018
 									td.delete-me-mandate-edit-data Titelvoerend
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 25-02-2014
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 31-12-2018
 									td
 										a.delete-me-toggle-mandate-edit Bewerk
 
@@ -326,9 +326,9 @@ block loketoverview
 									td Venken
 									td HELEMAAL HASSELT
 									td Gemeenteraadslid
-									td.delete-me-mandate-edit-data 25-02-2014
-									td.delete-me-mandate-edit-data 31-12-2018
 									td.delete-me-mandate-edit-data Effectief
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 25-02-2014
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 31-12-2018
 									td
 										a.delete-me-toggle-mandate-edit Bewerk
 								tr
@@ -336,9 +336,9 @@ block loketoverview
 									td Vananroye
 									td CD&V
 									td Burgemeester
-									td.delete-me-mandate-edit-data 25-10-2016
-									td.delete-me-mandate-edit-data 31-12-2018
 									td.delete-me-mandate-edit-data Titelvoerend
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 25-10-2016
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 31-12-2018
 									//- td
 										i(data-toggle="tooltip", title="Titelvoerend", data-content="Titelvoerend", data-placement="right").vi.vi-u-badge.vi-u-badge--xxsmall.vi-u-badge--action.vi-tag
 									td
@@ -348,9 +348,9 @@ block loketoverview
 									td Vandeput
 									td CD&V
 									td Schepen
-									td.delete-me-mandate-edit-data 01-01-2013
-									td.delete-me-mandate-edit-data 31-12-2018
 									td.delete-me-mandate-edit-data Effectief
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 01-01-2013
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 31-12-2018
 									td
 										a.delete-me-toggle-mandate-edit Bewerk
 								tr
@@ -358,9 +358,9 @@ block loketoverview
 									td El Ouakili
 									td HELEMAAL HASSELT
 									td Schepen
-									td.delete-me-mandate-edit-data 28-01-2015
-									td.delete-me-mandate-edit-data 31-12-2018
 									td.delete-me-mandate-edit-data Effectief
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 28-01-2015
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 31-12-2018
 									td
 										a.delete-me-toggle-mandate-edit Bewerk
 								tr
@@ -368,9 +368,9 @@ block loketoverview
 									td Froidmont
 									td HELEMAAL HASSELT
 									td Schepen
-									td.delete-me-mandate-edit-data 01-01-2015
-									td.delete-me-mandate-edit-data 31-12-2018
 									td.delete-me-mandate-edit-data Effectief
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 01-01-2015
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 31-12-2018
 									td
 										a.delete-me-toggle-mandate-edit Bewerk
 								tr
@@ -378,9 +378,9 @@ block loketoverview
 									td Corthouts
 									td CD&V
 									td Schepen
-									td.delete-me-mandate-edit-data 01-01-2013
-									td.delete-me-mandate-edit-data 31-12-2018
 									td.delete-me-mandate-edit-data Effectief
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 01-01-2013
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 31-12-2018
 									td
 										a.delete-me-toggle-mandate-edit Bewerk
 
@@ -389,9 +389,9 @@ block loketoverview
 									td Smets
 									td HELEMAAL HASSELT
 									td Schepen
-									td.delete-me-mandate-edit-data 07-11-2016
-									td.delete-me-mandate-edit-data 31-12-2018
 									td.delete-me-mandate-edit-data Effectief
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 07-11-2016
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 31-12-2018
 									td
 										a.delete-me-toggle-mandate-edit Bewerk
 								tr
@@ -399,9 +399,9 @@ block loketoverview
 									td Mondelaers
 									td CD&V
 									td Schepen
-									td.delete-me-mandate-edit-data 01-01-2013
-									td.delete-me-mandate-edit-data 31-12-2018
 									td.delete-me-mandate-edit-data Effectief
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 01-01-2013
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 31-12-2018
 									td
 										a.delete-me-toggle-mandate-edit Bewerk
 								tr
@@ -409,9 +409,9 @@ block loketoverview
 									td Schouterden
 									td HELEMAAL HASSELT
 									td Schepen
-									td.delete-me-mandate-edit-data 26-10-2016
-									td.delete-me-mandate-edit-data 31-12-2018
 									td.delete-me-mandate-edit-data Effectief
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 26-10-2016
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 31-12-2018
 									td
 										a.delete-me-toggle-mandate-edit Bewerk
 								tr
@@ -419,9 +419,9 @@ block loketoverview
 									td Del Re
 									td HELEMAAL HASSELT
 									td Schepen
-									td.delete-me-mandate-edit-data 01-01-2013
-									td.delete-me-mandate-edit-data 31-12-2018
 									td.delete-me-mandate-edit-data Effectief
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 01-01-2013
+									td.delete-me-mandate-edit-data.u-visible--tablet-landscape-up 31-12-2018
 									td
 										a.delete-me-toggle-mandate-edit Bewerk
 
@@ -441,7 +441,7 @@ block loketoverview
 								span.u-visually-hidden  10 rijen
 								i.vi.vi-arrow.vi-u-s(aria-hidden='true')
 
-		.col--4-12.u-hidden.delete-me-mandate-edit-detail.container-flex--contain
+		.col--4-12.col--9-12--m.col--1-1--s.u-hidden.u-hidden.delete-me-mandate-edit-detail.container-flex--contain
 			// mandaat edit
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
@@ -696,7 +696,7 @@ block loketoverview
 
 
 
-		.col--4-12.u-hidden.delete-me-mandate-edit-new.container-flex--contain
+		.col--4-12.col--9-12--m.col--1-1--s.u-hidden.delete-me-mandate-edit-new.container-flex--contain
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
 					.col--9-12
@@ -814,7 +814,7 @@ block loketoverview
 			.u-padding--round--small.u-border--light--top.u-align-right
 				a.button.button--narrow.button--alt.toggle-mandate-new Annuleer
 
-		.col--4-12.u-hidden.delete-me-mandate-edit-new-next.container-flex--contain
+		.col--4-12.col--9-12--m.col--1-1--s.u-hidden.delete-me-mandate-edit-new-next.container-flex--contain
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
 					.col--9-12
@@ -1074,7 +1074,7 @@ block loketoverview
 				a.button.button--narrow.button--alt.delete-me-toggle-mandate-new-previous Vorige stap
 				//- a.button.button--narrow.button--disabled.mandate-new-info-button.delete-me-toggle-mandate-new-close Voeg toe
 
-		.col--4-12.u-hidden.delete-me-person-new.container-flex--contain
+		.col--4-12.col--9-12--m.col--1-1--s.u-hidden.delete-me-person-new.container-flex--contain
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
 					.col--9-12
@@ -1127,7 +1127,7 @@ block loketoverview
 				a.button.button--narrow.button--alt.delete-me-toggle-person-new Annuleer
 				a.button.button--narrow.delete-me-show-mandate-edit-new-next Voeg persoon toe
 
-		.col--4-12.u-hidden.delete-me-person-edit.container-flex--contain
+		.col--4-12.col--9-12--m.col--1-1--s.u-hidden.delete-me-person-edit.container-flex--contain
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
 					.col--9-12
@@ -1193,7 +1193,7 @@ block loketoverview
 
 	script.
 		$('.delete-me-toggle-mandate-edit').on('click', function(e) {
-			$('.delete-me-mandate-edit-table').toggleClass("col--10-12").toggleClass("col--6-12");
+			$('.delete-me-mandate-edit-table').toggleClass("col--10-12").toggleClass("col--6-12").toggleClass("u-visible--tablet-landscape-up");
 			$('.delete-me-mandate-edit-detail').toggleClass("u-hidden");
 			$('.delete-me-mandate-edit-data').toggleClass("u-hidden");
 			$('.delete-me-mandate-edit-data-active').toggleClass("data-table__row-active");
@@ -1201,7 +1201,7 @@ block loketoverview
 		});
 
 		$('.toggle-mandate-new').on('click', function(e) {
-			$('.delete-me-mandate-edit-table').toggleClass("col--10-12").toggleClass("col--6-12");
+			$('.delete-me-mandate-edit-table').toggleClass("col--10-12").toggleClass("col--6-12").toggleClass("u-visible--tablet-landscape-up");
 			$('.delete-me-mandate-edit-data').toggleClass("u-hidden");
 			$('.delete-me-mandate-edit-new').toggleClass("u-hidden");
 			$('.delete-me-mandate-edit-new-next').addClass("u-hidden");
@@ -1215,7 +1215,7 @@ block loketoverview
 		});
 
 		$('.delete-me-toggle-mandate-new-close').on('click', function(e) {
-			$('.delete-me-mandate-edit-table').toggleClass("col--10-12").toggleClass("col--6-12");
+			$('.delete-me-mandate-edit-table').toggleClass("col--10-12").toggleClass("col--6-12").toggleClass("u-visible--tablet-landscape-up");
 			$('.delete-me-mandate-edit-data').toggleClass("u-hidden");
 			$('.delete-me-mandate-edit-new').addClass("u-hidden");
 			$('.delete-me-mandate-edit-new-next').addClass("u-hidden");
@@ -1265,7 +1265,7 @@ block loketoverview
 		});
 
 		$('.delete-me-toggle-person-new').on('click', function(e) {
-			$('.delete-me-person-edit-table').toggleClass("col--10-12").toggleClass("col--6-12");
+			$('.delete-me-person-edit-table').toggleClass("col--10-12").toggleClass("col--6-12").toggleClass("u-visible--tablet-landscape-up");
 			$('.delete-me-person-edit-data').toggleClass("u-hidden");
 			$('.delete-me-person-edit-data-active').toggleClass("data-table__row-active");
 			$('.delete-me-person-new').toggleClass("u-hidden");
@@ -1294,7 +1294,7 @@ block loketoverview
 		});
 
 		$('.delete-me-toggle-person-edit').on('click', function(e) {
-			$('.delete-me-person-edit-table').toggleClass("col--10-12").toggleClass("col--6-12");
+			$('.delete-me-person-edit-table').toggleClass("col--10-12").toggleClass("col--6-12").toggleClass("u-visible--tablet-landscape-up");
 			$('.delete-me-person-edit-data').toggleClass("u-hidden");
 			$('.delete-me-person-edit-data-active').toggleClass("data-table__row-active");
 			$('.delete-me-person-edit').toggleClass("u-hidden");
