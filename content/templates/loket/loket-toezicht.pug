@@ -26,7 +26,7 @@ block loketoverview
 					a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
 				//- li.side-navigation__item
 					a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
 
 		.sidebar__footer
@@ -55,7 +55,7 @@ block loketoverview
 										a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
 									//- li.side-navigation__item
 										a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
-									li.side-navigation__item
+									//- li.side-navigation__item
 										a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
 
 					.sidebar__footer
@@ -67,8 +67,8 @@ block loketoverview
 				.sidebar__toggle-menu.delete-me-toggle-sidebar--slide.u-visible-mobile.u-padding--tb--tiny.u-padding--rl--small.u-background--gray-lighter(type='button', title='Pas bestuur aan')
 					h2.h2.sidebar__toggle-value Menu
 				.u-border--light--bottom
-					.u-padding--round--small.mandate-edit-table__header
-						h1.h4.u-spacer--tiny Besluiten Gemeente Hasselt
+					.u-padding--round--small.mandate-edit-table__header(id="main", itemprop="mainContentOfPage", role="main", tabindex="-1", class="main-content")
+						h1.h4.u-spacer--tiny Toezicht Gemeente Hasselt
 
 						.js-accordion.u-visible-mobile
 							// toggle
@@ -100,15 +100,19 @@ block loketoverview
 										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
 								th.data-table__header-title.u-visible--tablet-landscape-up.delete-me-switch-hide-data
 									a.data-table__header-title--sortable(href='#', title='sort')
-										| Type besluit
+										| Type
 										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
 								th.data-table__header-title
 									a.data-table__header-title--sortable(href='#', title='sort')
 										| Titel
 										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
+								th.data-table__header-title.u-hidden-mobile.u-visible--tablet-landscape-up
+									a.data-table__header-title--sortable(href='#', title='sort')
+										|  Bewerkt
+										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
 								th.data-table__header-title.u-hidden-mobile
 									a.data-table__header-title--sortable(href='#', title='sort')
-										|  Bewerkt op
+										|  Verstuurd
 										i.data-table__header-title__sort-icon.vi.vi-u-link-after.vi-long-arrow
 								th.data-table__header-title.u-hidden-mobile
 									a.data-table__header-title--sortable(href='#', title='sort')
@@ -120,7 +124,8 @@ block loketoverview
 								td.delete-me-switch-hide-data.u-hidden-mobile Gemeenteraad
 								td.u-visible--tablet-landscape-up.delete-me-switch-hide-data Meerjarenplan
 								td Meerjarenplanwijziging 2014-2018
-								td.u-hidden-mobile 28-03-2018
+								td.u-visible--tablet-landscape-up 28-03-2018
+								td.u-hidden-mobile -
 								td.u-hidden-mobile
 									label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
 								td
@@ -129,10 +134,11 @@ block loketoverview
 							tr
 								td.delete-me-switch-hide-data.u-hidden-mobile College
 								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Besluitenlijst
-								td Besluitenlijst Gemeenteraad 23-04-2018
+								td Besluitenlijst college 23-04-2018
+								td.u-visible--tablet-landscape-up 28-03-2018
 								td.u-hidden-mobile 28-03-2018
 								td.u-hidden-mobile
-									label.pill.pill--primary-blue.pill--clickable(data-toggle='tooltip', title='Wacht op goedkeuring door Vlaamse Overheid', data-content='Wacht op goedkeuring door Vlaamse Overheid', data-placement='left', data-timer='25') Verstuurd
+									label.pill.pill--primary-blue.pill--clickable(data-toggle='tooltip', title='Wacht op afhandeling door Vlaamse Overheid', data-content='Wacht op afhandeling door Vlaamse Overheid', data-placement='left', data-timer='25') Verstuurd
 								td
 									a.delete-me-toggle-sent Bekijk
 
@@ -140,19 +146,21 @@ block loketoverview
 								td.delete-me-switch-hide-data.u-hidden-mobile Burgemeester
 								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Meerjarenplan
 								td Meerjarenplanwijziging 2014-2018
+								td.u-visible--tablet-landscape-up 28-03-2018
 								td.u-hidden-mobile 28-03-2018
 								td.u-hidden-mobile
-									label.pill.pill--primary-yellow.pill--clickable.u-spacer--tiny(data-toggle='tooltip', title='Vereist aanpassing', data-content='Vereist aanpassing', data-placement='left', data-timer='25') Opmerking
+									label.pill.pill--primary-yellow.pill--clickable.u-spacer--tiny(data-toggle='tooltip', title='Opmerking ontvangen, vereist actie', data-content='Opmerking ontvangen, vereist actie', data-placement='left', data-timer='25') Actie vereist
 								td
 									a.delete-me-toggle-message Bekijk
 
 							tr
 								td.delete-me-switch-hide-data.u-hidden-mobile OCMW
 								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Besluitenlijst
-								td Besluitenlijst Gemeenteraad 23-04-2018
+								td Besluitenlijst OCMW 23-04-2018
+								td.u-visible--tablet-landscape-up 28-03-2018
 								td.u-hidden-mobile 28-03-2018
 								td.u-hidden-mobile
-									label.pill.pill--gray-dark.pill--clickable(data-toggle='tooltip', title='Opdracht voltooid', data-content='Opdracht voltooid', data-placement='left', data-timer='25') Goedgekeurd
+									label.pill.pill--gray-dark.pill--clickable(data-toggle='tooltip', title='Afgehandeld door Vlaamse overheid', data-content='Afgehandeld door Vlaamse overheid', data-placement='left', data-timer='25') Afgehandeld
 								td
 									a.delete-me-toggle-approved Bekijk
 
@@ -160,7 +168,8 @@ block loketoverview
 								td.delete-me-switch-hide-data.u-hidden-mobile Gemeenteraad
 								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up Meerjarenplan
 								td Meerjarenplanwijziging 2014-2018
-								td.u-hidden-mobile 28-03-2018
+								td.u-visible--tablet-landscape-up 28-03-2018
+								td.u-hidden-mobile -
 								td.u-hidden-mobile
 									label.pill.pill--gray-light.pill--clickable(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
 								td
@@ -173,12 +182,12 @@ block loketoverview
 							strong 11 - 20
 							|  van 673
 						li.pager__element
-							a(href='')
+							a(href='#')
 								i.vi.vi-arrow.vi-u-180deg.vi-u-s(aria-hidden='true')
 								|  vorige
 								span.u-visually-hidden  10 rijen
 						li.pager__element
-							a(href='') volgende
+							a(href='#') volgende
 								span.u-visually-hidden  10 rijen
 								i.vi.vi-arrow.vi-u-s(aria-hidden='true')
 
@@ -186,13 +195,19 @@ block loketoverview
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
 					.col--9-12
+						label.pill.pill--gray-light.pill--clickable.u-spacer--tiny(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
 						h2.h3.u-spacer--tiny Nieuwe melding
-						label.pill.pill--gray-light.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
 					.col--3-12.u-align-right.delete-me-toggle-new
-						a.link--icon--close.delete-me-toggle-modal(href='')
+						a.link--icon--close.delete-me-toggle-modal(href='#')
 							span.u-visually-hidden Venster sluiten
 
 			.container-flex--scroll.u-padding--round--small
+				.form__row
+					.form__label
+						label(form="titel").form__label Titel
+					.form__input
+						input.input-field.input-field--block.input-field--disabled(type='text', placeholder='Automatisch gegenereerd door formulier', name='titel', disabled)
+
 				.form__row
 					.form__label
 						label(form="orgaan").form__label Documenttype
@@ -204,11 +219,11 @@ block loketoverview
 
 				.form__row
 					.form__label
-						label(form="orgaan").form__label Type besluit
+						label(form="orgaan").form__label Type document
 					.form__input
 						.temporary-select__wrapper.temporary-select__wrapper--block(data-content='', aria-labelledby='', data-show='true', aria-hidden='false')
 							.input-field-icon-container--right.input-field-icon-container--block
-								input#fractie.delete-me-toggle-search-besluittype.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescription', aria-haspopup='listbox"', placeholder='Zoek type besluit', onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
+								input#fractie.delete-me-toggle-search-besluittype.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescription', aria-haspopup='listbox"', placeholder='Zoek type document', onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
 								i.input-field__icon.vi.vi-arrow.vi-u-90deg(aria-hidden='true')
 								span#selectFormInputDescription.u-visually-hidden
 									| U bevindt zich in de zoekfunctie van een dropdown menu in een formulier. Navigeer door de opties met ctrl + alt + pijltjes en selecteer met enter. Gebruik escape om de dropdown te sluiten.
@@ -304,6 +319,36 @@ block loketoverview
 						.date-range__datepicker.datepicker
 							input#datepicker-besluit.input-field(type='text', placeholder='01-01-2016', name='datepicker-besluit', data-datepicker='', data-datepicker-min='01-01-2016')
 
+				.form__row.u-spacer--tiny
+					.form__label
+						label.form__label(for='datepicker-besluit') URL
+					.form__input
+						.grid.grid--collapse.form-group
+							.col--3-12
+								input.input-field.input-field--block.input-field--disabled(type='text', placeholder='https://', name='URL-besluit-beschrijving')
+							.col--9-12
+								input.input-field.input-field--block(type='text', placeholder='wwww.besluiten.be/besluit', name='URL-besluit-URL')
+
+				.js-accordion
+					// toggle
+					.form__row.u-spacer--tiny
+						.accordion__content
+							.form__label
+								label.form__label(for='datepicker-besluit') URL
+							.form__input
+								.grid.grid--collapse.form-group
+									.col--3-12
+										input.input-field.input-field--block.input-field--disabled(type='text', placeholder='https://', name='URL-besluit-beschrijving')
+									.col--9-12
+										input.input-field.input-field--block(type='text', placeholder='wwww.besluiten.be/besluit', name='URL-besluit-URL')
+
+						a.toggle.js-accordion__toggle.small.link--icon.u-spacer--bottom--small
+							i.vi.vi-plus(aria-hidden='true')
+							| Voeg nog een url toe
+
+
+
+
 				.form__row
 					.form__label
 						label(for='bestanden') Upload de relevante bestanden
@@ -320,6 +365,7 @@ block loketoverview
 								.alert__icon(aria-hidden='true')
 								.alert__content
 									.alert__title Upload de juiste bestanden om uw rapport te versturen.
+						p.small PDF, txt, word files en geluids- en video bestanden kunnen opgeladen worden. De maximum bestandsgrootte is 1kb.
 
 				.form__row
 					.form__label
@@ -362,7 +408,7 @@ block loketoverview
 							input.checkbox__toggle(type='checkbox', name='checkbox', value='1')
 							span
 							span Ik begrijp en accepteer de
-								a(href='') gebruiksvoorwaarden
+								a(href='#') gebruiksvoorwaarden
 
 				.form__row
 					.form__label
@@ -439,9 +485,10 @@ block loketoverview
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
 					.col--9-12
-						h2.h3 Bekijk melding concept
+						label.pill.pill--gray-light.pill--clickable.u-spacer--tiny(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+						h2.h3 Bekijk melding
 					.col--3-12.u-align-right.delete-me-toggle-concept
-						a.link--icon--close.delete-me-toggle-modal(href='')
+						a.link--icon--close.delete-me-toggle-modal(href='#')
 							span.u-visually-hidden Venster sluiten
 
 				.grid.u-spacer--small
@@ -450,16 +497,23 @@ block loketoverview
 						.description-data__value Barbara Put
 
 					.col--4-12
-						.description-data__label Bewerkt op
+						.description-data__label Bewerkt
 						.description-data__value 28-03-2018
 
 					.col--4-12
-						label.pill.pill--gray-light.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Nog niet verstuurd', data-content='Nog niet verstuurd', data-placement='left', data-timer='25') Concept
+						.description-data__label Verstuurd
+						.description-data__value -
 
-					.col--12-12
+					//- .col--12-12
 						a.link--dark.smaller Bekijk alle aanpassingen
 
 			.container-flex--scroll.u-padding--round--small
+				.form__row
+					.form__label
+						label(form="titel").form__label Titel
+					.form__input
+						input.input-field.input-field--block.input-field--disabled(type='text', placeholder='Automatisch gegenereerd door formulier', value='Besluitenlijst college 23-04-2018', name='titel', disabled)
+
 				.form__row
 					.form__label
 						label(form="orgaan").form__label Documenttype
@@ -471,11 +525,11 @@ block loketoverview
 
 				.form__row
 					.form__label
-						label(form="orgaan").form__label Type besluit
+						label(form="orgaan").form__label Type document
 					.form__input
 						.temporary-select__wrapper.temporary-select__wrapper--block(data-content='', aria-labelledby='', data-show='true', aria-hidden='false')
 							.input-field-icon-container--right.input-field-icon-container--block
-								input#fractie.delete-me-toggle-search-besluittype.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescription', aria-haspopup='listbox"', placeholder='Zoek type besluit', value="Andere opgevraagde documenten BBC-beleidsrapporten", onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
+								input#fractie.delete-me-toggle-search-besluittype.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescription', aria-haspopup='listbox"', placeholder='Zoek type document', value="Andere opgevraagde documenten BBC-beleidsrapporten", onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
 								i.input-field__icon.vi.vi-arrow.vi-u-90deg(aria-hidden='true')
 								span#selectFormInputDescription.u-visually-hidden
 									| U bevindt zich in de zoekfunctie van een dropdown menu in een formulier. Navigeer door de opties met ctrl + alt + pijltjes en selecteer met enter. Gebruik escape om de dropdown te sluiten.
@@ -577,7 +631,7 @@ block loketoverview
 						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
 
 							.upload__files.upload__files--has-files(data-upload-input-name='files2[4]')
-								a.upload__files__close.link--icon--close(href='')
+								a.upload__files__close.link--icon--close(href='#')
 									span.u-visually-hidden Sluiten
 								.upload__files__container
 									.upload__file(data-filename='filename.pdf')
@@ -591,7 +645,7 @@ block loketoverview
 
 
 							.upload__files.upload__files--has-files(data-upload-input-name='files3[3]')
-								a.upload__files__close.link--icon--close(href='')
+								a.upload__files__close.link--icon--close(href='#')
 									span.u-visually-hidden Sluiten
 								.upload__files__container
 									.upload__file(data-filename='filename.pdf')
@@ -662,7 +716,7 @@ block loketoverview
 							input.checkbox__toggle(type='checkbox', name='checkbox', value='1', checked)
 							span
 							span Ik begrijp en accepteer de
-								a(href='') gebruiksvoorwaarden
+								a(href='#') gebruiksvoorwaarden
 
 				.form__row
 					.form__label
@@ -722,7 +776,8 @@ block loketoverview
 								a.pill__close(href='#', data-value='5') verwijder optie
 
 			.u-padding--round--small.u-border--light--top.u-align-right
-				a.button.button--narrow.button--alt.delete-me-toggle-concept Annuleer
+				a.button.button--narrow.button--alt.delete-me-toggle-concept Sluit
+				a.button.button--narrow.button--alt.button--alt--warning.delete-me-toggle-concept.delete-me-toggle-modal-delete-concept Verwijder
 				a.button.button--narrow.button--alt Bewaar
 
 				a.button.button--disabled.delete-me-toggle-concept.u-spacer--tiny Verstuur
@@ -732,9 +787,10 @@ block loketoverview
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
 					.col--9-12
+						label.pill.pill--primary-yellow.pill--clickable.u-spacer--tiny(data-toggle='tooltip', title='Opmerking ontvangen, vereist actie', data-content='Opmerking ontvangen, vereist actie', data-placement='left', data-timer='25') Actie vereist
 						h2.h3 Bekijk melding
 					.col--3-12.u-align-right.delete-me-toggle-message
-						a.link--icon--close.delete-me-toggle-modal(href='')
+						a.link--icon--close.delete-me-toggle-modal(href='#')
 							span.u-visually-hidden Venster sluiten
 
 
@@ -744,13 +800,14 @@ block loketoverview
 						.description-data__value Barbara Put
 
 					.col--4-12
-						.description-data__label Bewerkt op
+						.description-data__label Bewerkt
 						.description-data__value 28-03-2018
 
 					.col--4-12
-						label.pill.pill--primary-yellow.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Vereist aanpassing', data-content='Vereist aanpassing', data-placement='left', data-timer='25') Opmerking
+						.description-data__label Verstuurd
+						.description-data__value 28-03-2018
 
-					.col--12-12
+					//- .col--12-12
 						a.link--dark.smaller Bekijk alle aanpassingen
 
 			.container-flex--scroll.u-padding--round--small
@@ -770,11 +827,15 @@ block loketoverview
 								a.delete-me-toggle-message.delete-me-toggle-new nieuwe melding
 
 				.form__row
+					.description-data__label Titel
+					.description-data__value Besluitenlijst college 23-04-2018
+
+				.form__row
 					.description-data__label Documenttype
 					.description-data__value Inzendingsplichtig besluit
 
 				.form__row
-					.description-data__label Type besluit
+					.description-data__label Type document
 					.description-data__value Andere opgevraagde documenten BBC-beleidsrapporten
 
 				.form__row
@@ -794,7 +855,7 @@ block loketoverview
 						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
 
 							.upload__files.upload__files--has-files(data-upload-input-name='files2[4]')
-								//- a.upload__files__close.link--icon--close(href='')
+								//- a.upload__files__close.link--icon--close(href='#')
 									span.u-visually-hidden Sluiten
 								.upload__files__container
 									.upload__file(data-filename='filename.pdf')
@@ -808,7 +869,7 @@ block loketoverview
 
 
 							.upload__files.upload__files--has-files(data-upload-input-name='files3[3]')
-								//- a.upload__files__close.link--icon--close(href='')
+								//- a.upload__files__close.link--icon--close(href='#')
 									span.u-visually-hidden Sluiten
 								.upload__files__container
 									.upload__file(data-filename='filename.pdf')
@@ -868,7 +929,7 @@ block loketoverview
 							input.checkbox__toggle(type='checkbox', name='checkbox', value='1', checked)
 							span
 							span Ik begrijp en accepteer de
-								a(href='') gebruiksvoorwaarden
+								a(href='#') gebruiksvoorwaarden
 
 				.form__row
 					.form__label
@@ -920,9 +981,10 @@ block loketoverview
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
 					.col--9-12
-						h2.h3 Bekijk verstuurde melding
+						label.pill.pill--primary-blue.pill--clickable.u-spacer--tiny(data-toggle='tooltip', title='Doorgestuurd naar Vlaamse Overheid ter behandeling', data-content='Doorgestuurd naar Vlaamse Overheid ter behandeling', data-placement='left', data-timer='25') Verstuurd
+						h2.h3 Bekijk melding
 					.col--3-12.u-align-right.delete-me-toggle-sent
-						a.link--icon--close(href='')
+						a.link--icon--close(href='#')
 							span.u-visually-hidden Venster sluiten
 
 
@@ -932,22 +994,27 @@ block loketoverview
 						.description-data__value Barbara Put
 
 					.col--4-12
-						.description-data__label Bewerkt op
+						.description-data__label Bewerkt
 						.description-data__value 28-03-2018
 
 					.col--4-12
-						label.pill.pill--primary-blue.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Doorgestuurd naar Vlaamse Overheid ter goedkeuring', data-content='Doorgestuurd naar Vlaamse Overheid ter goedkeuring', data-placement='left', data-timer='25') Verstuurd
+						.description-data__label Verstuurd
+						.description-data__value 28-03-2018
 
-					.col--12-12
+					//- .col--12-12
 						a.link--dark.smaller Bekijk alle aanpassingen
 
 			.container-flex--scroll.u-padding--round--small
+				.form__row
+					.description-data__label Titel
+					.description-data__value Besluitenlijst college 23-04-2018
+
 				.form__row
 					.description-data__label Documenttype
 					.description-data__value Inzendingsplichtig besluit
 
 				.form__row
-					.description-data__label Type besluit
+					.description-data__label Type document
 					.description-data__value Andere opgevraagde documenten BBC-beleidsrapporten
 
 				.form__row
@@ -967,7 +1034,7 @@ block loketoverview
 						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
 
 							.upload__files.upload__files--has-files(data-upload-input-name='files2[4]')
-								//- a.upload__files__close.link--icon--close(href='')
+								//- a.upload__files__close.link--icon--close(href='#')
 									span.u-visually-hidden Sluiten
 								.upload__files__container
 									.upload__file(data-filename='filename.pdf')
@@ -981,7 +1048,7 @@ block loketoverview
 
 
 							.upload__files.upload__files--has-files(data-upload-input-name='files3[3]')
-								//- a.upload__files__close.link--icon--close(href='')
+								//- a.upload__files__close.link--icon--close(href='#')
 									span.u-visually-hidden Sluiten
 								.upload__files__container
 									.upload__file(data-filename='filename.pdf')
@@ -1041,7 +1108,7 @@ block loketoverview
 							input.checkbox__toggle(type='checkbox', name='checkbox', value='1', checked)
 							span
 							span Ik begrijp en accepteer de
-								a(href='') gebruiksvoorwaarden
+								a(href='#') gebruiksvoorwaarden
 
 				.form__row
 					.form__label
@@ -1092,9 +1159,10 @@ block loketoverview
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
 					.col--9-12
-						h2.h3 Bekijk goedgekeurde melding
+						label.pill.pill--gray-dark.pill--clickable.u-spacer--tiny(data-toggle='tooltip', title='Afgehandeld door Vlaamse overheid', data-content='Afgehandeld door Vlaamse overheid', data-placement='left', data-timer='25') Afgehandeld
+						h2.h3 Bekijk melding
 					.col--3-12.u-align-right.delete-me-toggle-approved
-						a.link--icon--close(href='')
+						a.link--icon--close(href='#')
 							span.u-visually-hidden Venster sluiten
 
 				.grid.u-spacer--small
@@ -1103,22 +1171,27 @@ block loketoverview
 						.description-data__value Barbara Put
 
 					.col--4-12
-						.description-data__label Bewerkt op
+						.description-data__label Bewerkt
 						.description-data__value 28-03-2018
 
 					.col--4-12
-						label.pill.pill--gray-dark.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Opdracht voltooid', data-content='Opdracht voltooid', data-placement='left', data-timer='25') Goedgekeurd
+						.description-data__label Verstuurd
+						.description-data__value 28-03-2018
 
-					.col--12-12
+					//- .col--12-12
 						a.link--dark.smaller Bekijk alle aanpassingen
 
 			.container-flex--scroll.u-padding--round--small
+				.form__row
+					.description-data__label Titel
+					.description-data__value Besluitenlijst college 23-04-2018
+
 				.form__row
 					.description-data__label Documenttype
 					.description-data__value Inzendingsplichtig besluit
 
 				.form__row
-					.description-data__label Type besluit
+					.description-data__label Type document
 					.description-data__value Andere opgevraagde documenten BBC-beleidsrapporten
 
 				.form__row
@@ -1138,7 +1211,7 @@ block loketoverview
 						.upload.js-upload(data-upload-t-close='Sluiten', data-upload-t-drop='Laat de bestanden hier los om op te laden', data-upload-allow-drop='')
 
 							.upload__files.upload__files--has-files(data-upload-input-name='files2[4]')
-								//- a.upload__files__close.link--icon--close(href='')
+								//- a.upload__files__close.link--icon--close(href='#')
 									span.u-visually-hidden Sluiten
 								.upload__files__container
 									.upload__file(data-filename='filename.pdf')
@@ -1152,7 +1225,7 @@ block loketoverview
 
 
 							.upload__files.upload__files--has-files(data-upload-input-name='files3[3]')
-								//- a.upload__files__close.link--icon--close(href='')
+								//- a.upload__files__close.link--icon--close(href='#')
 									span.u-visually-hidden Sluiten
 								.upload__files__container
 									.upload__file(data-filename='filename.pdf')
@@ -1212,7 +1285,7 @@ block loketoverview
 							input.checkbox__toggle(type='checkbox', name='checkbox', value='1', checked)
 							span
 							span Ik begrijp en accepteer de
-								a(href='') gebruiksvoorwaarden
+								a(href='#') gebruiksvoorwaarden
 
 				.form__row
 					.form__label

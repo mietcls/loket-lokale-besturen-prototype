@@ -26,7 +26,7 @@ block loketoverview
 					a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
 				//- li.side-navigation__item
 					a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
 
 		.sidebar__footer
@@ -53,7 +53,7 @@ block loketoverview
 										a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
 									//- li.side-navigation__item
 										a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
-									li.side-navigation__item
+									//- li.side-navigation__item
 										a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
 
 					.sidebar__footer
@@ -65,11 +65,11 @@ block loketoverview
 				.sidebar__toggle-menu.delete-me-toggle-sidebar--slide.u-visible-mobile.u-padding--tb--tiny.u-padding--rl--small.u-background--gray-lighter(type='button', title='Pas bestuur aan')
 					h2.h2.sidebar__toggle-value Menu
 				.u-border--light--bottom
-					.u-padding--round--small.mandate-edit-table__header
+					.u-padding--round--small.mandate-edit-table__header(id="main", itemprop="mainContentOfPage", role="main", tabindex="-1", class="main-content")
 						h1.h4.u-spacer--tiny BBC DR Gemeente Hasselt
 
 						//- p Één rapport kreeg een
-							span.pill.pill--primary-yellow opmerking
+							span.pill.pill--primary-yellow Actie vereist
 							|  en vereist actie.
 
 						.js-accordion.u-visible-mobile
@@ -167,7 +167,7 @@ block loketoverview
 									//label.pill.pill--primary-blue.pill--clickable Verstuurd naar
 										br
 										| Vlaamse overheid
-									label.pill.pill--primary-blue.pill--clickable(data-toggle='tooltip', title='Wacht op goedkeuring door Vlaamse Overheid', data-content='Wacht op goedkeuring door Vlaamse Overheid', data-placement='left', data-timer='25') Verstuurd
+									label.pill.pill--primary-blue.pill--clickable(data-toggle='tooltip', title='Wacht op afhandeling door Vlaamse Overheid', data-content='Wacht op afhandeling door Vlaamse Overheid', data-placement='left', data-timer='25') Verstuurd
 								td
 									a.delete-me-toggle-sent Bekijk
 
@@ -192,7 +192,7 @@ block loketoverview
 								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up 28-03-2018
 									//- span.text-fade 13:40
 								td.u-hidden-mobile
-									label.u-spacer--tiny.pill.pill--primary-yellow.pill--clickable(data-toggle='tooltip', title='Vereist aanpassing', data-content='Vereist aanpassing', data-placement='left', data-timer='25') Opmerking
+									label.u-spacer--tiny.pill.pill--primary-yellow.pill--clickable(data-toggle='tooltip', title='Opmerking ontvangen, vereist actie', data-content='Opmerking ontvangen, vereist actie', data-placement='left', data-timer='25') Actie vereist
 									//- a.link--icon(href="/loket/loket-toezicht.html")
 										i.vi.vi-arrow
 										| Bekijk&nbsp;bericht
@@ -223,10 +223,10 @@ block loketoverview
 								td.delete-me-switch-hide-data.u-visible--tablet-landscape-up 28-03-2018
 									//- span.text-fade 13:40
 								td.u-hidden-mobile
-									//- label.pill.pill--green Goedgekeurd door
+									//- label.pill.pill--green Afgehandeld door
 										br
 										| Vlaamse overheid
-									label.pill.pill--gray-dark.pill--clickable(data-toggle='tooltip', title='Opdracht voltooid', data-content='Opdracht voltooid', data-placement='left', data-timer='25') Goedgekeurd
+									label.pill.pill--gray-dark.pill--clickable(data-toggle='tooltip', title='Afgehandeld door Vlaamse overheid', data-content='Afgehandeld door Vlaamse overheid', data-placement='left', data-timer='25') Afgehandeld
 								td
 									a.delete-me-toggle-approved Bekijk
 
@@ -477,7 +477,7 @@ block loketoverview
 						.description-data__value 28-03-2018
 
 					.col--4-12
-						label.pill.pill--primary-yellow.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Vereist aanpassing', data-content='Vereist aanpassing', data-placement='left', data-timer='25') Opmerking
+						label.pill.pill--primary-yellow.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Opmerking ontvangen, vereist actie', data-content='Opmerking ontvangen, vereist actie', data-placement='left', data-timer='25') Actie vereist
 
 					.col--12-12
 						a.link--dark.smaller Bekijk alle aanpassingen
@@ -587,7 +587,7 @@ block loketoverview
 						.description-data__value 28-03-2018
 
 					.col--4-12
-						label.pill.pill--primary-blue.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Doorgestuurd naar Vlaamse Overheid ter goedkeuring', data-content='Doorgestuurd naar Vlaamse Overheid ter goedkeuring', data-placement='left', data-timer='25') Verstuurd
+						label.pill.pill--primary-blue.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Doorgestuurd naar Vlaamse Overheid ter afhandeling', data-content='Doorgestuurd naar Vlaamse Overheid ter afhandeling', data-placement='left', data-timer='25') Verstuurd
 
 					.col--12-12
 						a.link--dark.smaller Bekijk alle aanpassingen
@@ -595,8 +595,8 @@ block loketoverview
 			.container-flex--scroll.u-padding--round--small
 
 				//.alert.alert--small
-					p Dit rapport staat in de wachtrij om goedgekeurd te worden door de Vlaamse Overheid.
-					// U kan nog aanpassingen doorvoeren tot deze goedgekeurd wordt.
+					p Dit rapport staat in de wachtrij om afgehandeld te worden door de Vlaamse Overheid.
+					// U kan nog aanpassingen doorvoeren tot deze afgehandeld wordt.
 
 				//.form__row.u-spacer--tiny
 					//- .form__label
@@ -669,7 +669,7 @@ block loketoverview
 			.u-padding--trl--small.u-border--light--bottom
 				.grid
 					.col--9-12
-						h2.h3 Bekijk goedgekeurd rapport
+						h2.h3 Bekijk afgehandeld rapport
 					.col--3-12.u-align-right.delete-me-toggle-approved
 						a.link--icon--close(href='')
 							span.u-visually-hidden Venster sluiten
@@ -685,7 +685,7 @@ block loketoverview
 						.description-data__value 28-03-2018
 
 					.col--4-12
-						label.pill.pill--gray-dark.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Opdracht voltooid', data-content='Opdracht voltooid', data-placement='left', data-timer='25') Goedgekeurd
+						label.pill.pill--gray-dark.pill--clickable.u-spacer--small(data-toggle='tooltip', title='Afgehandeld door Vlaamse overheid', data-content='Afgehandeld door Vlaamse overheid', data-placement='left', data-timer='25') Afgehandeld
 
 					.col--12-12
 						a.link--dark.smaller Bekijk alle aanpassingen

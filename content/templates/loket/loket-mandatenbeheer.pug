@@ -26,7 +26,7 @@ block loketoverview
 					a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
 				//- li.side-navigation__item
 					a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
-				li.side-navigation__item
+				//- li.side-navigation__item
 					a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
 
 		.sidebar__footer
@@ -53,7 +53,7 @@ block loketoverview
 										a(href="/loket/loket-leidinggevenden.html") Leidinggevenden
 									//- li.side-navigation__item
 										a(href="/loket/loket-personeelsaantallen.html") Personeelsaantallen
-									li.side-navigation__item
+									//- li.side-navigation__item
 										a(href="/loket/loket-administratievegegevens.html") Administratieve gegevens
 
 					.sidebar__footer
@@ -64,24 +64,18 @@ block loketoverview
 		.col--10-12.col--9-12--m.col--1-1--s.delete-me-person-edit-table.u-border--light--right.delete-me-overview-personen.u-hidden
 			.container-flex--contain
 				.u-border--light--bottom
-					.grid.u-padding--round--small.delete-me-person-edit-table__header
-						.col--12-12
-							//- a.link--icon.delete-me-toggle-overview-personen
-								i.vi.vi-arrow.vi-u-180deg
-								| Terug naar mandatenbeheer
-							h1.h4 Gegevens mandatarissen Gemeente Hasselt
+					.u-padding--round--small.delete-me-person-edit-table__header(id="main", itemprop="mainContentOfPage", role="main", tabindex="-1", class="main-content")
 
-							// .sidebar__toggle-wrapper.delete-me-toggle-sidebar--slide.u-visible-mobile(type='button', title='Pas bestuur aan')
-								h2.h2.sidebar__toggle-value Gegevens mandatarissen Gemeente Hasselt
-								span.u-visually-hidden Pas bestuur aan
+						h1.h4 Gegevens mandatarissen Gemeente Hasselt
 
-						.col--6-12
-							.input-field-icon-container--right
-								input#input-field.input-field.input-field--block(type='text', placeholder='Naam, familienaam, roepnaam, rijksregisternummer ', style="min-width: 35rem;")
-								i.input-field__icon.vi.vi-magnifier(aria-hidden='true')
-						.col--6-12.u-align-right
-							a.button.button--narrow.button--link.button--link--dark.delete-me-toggle-overview-personen.delete-me-person-edit-data Bekijk mandatenbeheer
-							a.button.button--narrow.delete-me-toggle-person-new.delete-me-toggle-person-new--person Voeg persoon toe
+						.grid
+							.col--6-12
+								.input-field-icon-container--right
+									input#input-field.input-field.input-field--block(type='text', placeholder='Naam, familienaam, roepnaam, rijksregisternummer ', style="min-width: 35rem;")
+									i.input-field__icon.vi.vi-magnifier(aria-hidden='true')
+							.col--6-12.u-align-right
+								a.button.button--narrow.button--link.button--link--dark.delete-me-toggle-overview-personen.delete-me-person-edit-data Bekijk mandatenbeheer
+								a.button.button--narrow.delete-me-toggle-person-new.delete-me-toggle-person-new--person Voeg persoon toe
 
 				.container-flex--scroll
 					table.data-table.data-table--nowrap
@@ -575,7 +569,7 @@ block loketoverview
 							label.form__label Mandaat
 							.temporary-select__wrapper.temporary-select__wrapper--block.u-spacer--bottom--small(data-content='', aria-labelledby='', data-show='true', aria-hidden='false')
 								.input-field-icon-container--right.input-field-icon-container--block
-									input#mandaat.delete-me-toggle-search-mandaat.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescriptionselecterken', aria-haspopup='listbox"', placeholder='Zoek mandaat', autofocus, onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
+									input#mandaat.delete-me-toggle-search-mandaat.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescriptionselecterken', aria-haspopup='listbox"', placeholder='Zoek mandaat', onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
 									i.input-field__icon.vi.vi-arrow.vi-u-90deg(aria-hidden='true')
 									span#selectFormInputDescriptionselecterken.u-visually-hidden
 										| U bevindt zich in de zoekfunctie van een dropdown menu in een formulier. Navigeer door de opties met ctrl + alt + pijltjes en selecteer met enter. Gebruik escape om de dropdown te sluiten.
@@ -711,7 +705,7 @@ block loketoverview
 						.grid
 							.col--6-12
 								label(for='mandataris-pattern') Naam
-								input#mandataris-pattern.delete-me-toggle-mandate-new-search.input-field.input-field--block.u-spacer--tiny(name='mandataris-pattern', placeholder='Naam', autofocus)
+								input#mandataris-pattern.delete-me-toggle-mandate-new-search.input-field.input-field--block.u-spacer--tiny(name='mandataris-pattern', placeholder='Naam')
 							.col--6-12
 								label(for='mandataris-pattern') Familienaam
 								input#mandataris-pattern.delete-me-toggle-mandate-new-found.input-field.input-field--block.u-spacer--tiny(name='mandataris-pattern', placeholder='Familienaam')
@@ -848,7 +842,7 @@ block loketoverview
 					label.form__label Mandaat
 					.temporary-select__wrapper.temporary-select__wrapper--block.u-spacer--bottom--small(data-content='', aria-labelledby='', data-show='true', aria-hidden='false')
 						.input-field-icon-container--right.input-field-icon-container--block
-							input#mandaat.delete-me-toggle-search-mandaat.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescriptionselecterken', aria-haspopup='listbox"', placeholder='Zoek mandaat', autofocus, onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
+							input#mandaat.delete-me-toggle-search-mandaat.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescriptionselecterken', aria-haspopup='listbox"', placeholder='Zoek mandaat', onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
 							i.input-field__icon.vi.vi-arrow.vi-u-90deg(aria-hidden='true')
 							span#selectFormInputDescriptionselecterken.u-visually-hidden
 								| U bevindt zich in de zoekfunctie van een dropdown menu in een formulier. Navigeer door de opties met ctrl + alt + pijltjes en selecteer met enter. Gebruik escape om de dropdown te sluiten.
@@ -956,7 +950,7 @@ block loketoverview
 							label.form__label Mandaat
 							.temporary-select__wrapper.temporary-select__wrapper--block.u-spacer--bottom--small(data-content='', aria-labelledby='', data-show='true', aria-hidden='false')
 								.input-field-icon-container--right.input-field-icon-container--block
-									input#mandaat.delete-me-toggle-search-mandaat.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescriptionselecterken', aria-haspopup='listbox"', placeholder='Zoek mandaat', autofocus, onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
+									input#mandaat.delete-me-toggle-search-mandaat.input-field.input-field--block(type='text', autocomplete='off', data-input='', data-focus='', tabindex='-1', aria-describedby='selectFormInputDescriptionselecterken', aria-haspopup='listbox"', placeholder='Zoek mandaat', onfocus="var temp_value=this.value; this.value=''; this.value=temp_value")
 									i.input-field__icon.vi.vi-arrow.vi-u-90deg(aria-hidden='true')
 									span#selectFormInputDescriptionselecterken.u-visually-hidden
 										| U bevindt zich in de zoekfunctie van een dropdown menu in een formulier. Navigeer door de opties met ctrl + alt + pijltjes en selecteer met enter. Gebruik escape om de dropdown te sluiten.
@@ -1089,7 +1083,7 @@ block loketoverview
 					.grid.grid-collapse
 						.col--6-12
 							label(for='mandataris-naam') Naam
-							input#mandataris-naam.input-field.input-field--block.u-spacer--tiny(name='mandataris-naam', placeholder='Naam', autofocus)
+							input#mandataris-naam.input-field.input-field--block.u-spacer--tiny(name='mandataris-naam', placeholder='Naam')
 
 						.col--6-12
 							label(for='mandataris-familienaam') Familienaam
@@ -1150,7 +1144,7 @@ block loketoverview
 					.grid.grid-collapse
 						.col--6-12
 							label(for='mandataris-naam') Naam
-							input#mandataris-naam.input-field.input-field--block.u-spacer--tiny(name='mandataris-naam', placeholder='Naam', value="Joost Geert", autofocus)
+							input#mandataris-naam.input-field.input-field--block.u-spacer--tiny(name='mandataris-naam', placeholder='Naam', value="Joost Geert")
 
 						.col--6-12
 							label(for='mandataris-familienaam') Familienaam
