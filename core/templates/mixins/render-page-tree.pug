@@ -6,7 +6,7 @@ mixin renderPage(entry)
             - basePage = entry;
             - isActive = true;
         li.br-tree-dir
-            a(href=entry.href, class=isActive ? 'br-bordered-list__link--active' : null)
+            a(href=entry.href, tabindex=-1, class=isActive ? 'br-bordered-list__link--active' : null)
                 = entry.name
                 if (entry.states)
                     .br-tree-dir-state-count= entry.states.length
