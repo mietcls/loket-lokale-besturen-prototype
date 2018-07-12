@@ -1,0 +1,87 @@
+extends /templates/_templates/header-loket
+
+block loketoverview
+
+	.container-flex--scroll
+		#main.main-content(itemprop='mainContentOfPage', role='main', tabindex='-1')
+			header.content-header.content-header--small.content-header--has-logo.content-header--no-image.u-spacer--large
+				.content-header__wrapper
+					.layout.layout--wide
+						.content-header__content
+							.content-header__logo-wrapper
+								.content-header__logo
+									.content-header__logo__img
+										svg#leeuw(data-name='leeuw', xmlns='http://www.w3.org/2000/svg', viewbox='0 0 19.61 31.05')
+											title logo Vlaamse overheid
+											path#Logo_Vlaanderen(data-name='Logo Vlaanderen', d='M19.61,16c-1.08-.82-1.59,0-2.27,0s-1.12-1-1.56-.75c-0.85.43,0.34,2,.86,2.27a12.51,12.51,0,0,0,1.18.59,1.72,1.72,0,0,1,1,1.55,3,3,0,0,1,0,.75c-0.31,1.32-2.64,2.52-4,1.61a3,3,0,0,1-1.4-2c-0.36-1.73-1.62-3-2-4.7-0.25-1-.43-2.12-0.7-3.15S10.17,10,9.94,9A27.44,27.44,0,0,0,9,5.92C7.71,2.61,7.14,2.85,7.14,2.85s0.46,0.92,2.15,9A47.8,47.8,0,0,0,10.42,17c0.16,0.42.44,1.32,0.62,1.72,0.54,1.16,2,2.92,2.05,4.51,0.05,0.92.16,1.68,0.18,2.37a7.37,7.37,0,0,0,.24,1.4c0.35,1,3.14,4.09,6.1,4.09V28.68a10.88,10.88,0,0,1-5.79-1.82,6.37,6.37,0,0,1,.35-1.7,2.78,2.78,0,0,1,2.39-1.94,17.91,17.91,0,0,1,3,.31V16ZM6.82,7.36c-0.11,1.77-2.87,4.2-3.73,5.75A11.43,11.43,0,0,0,2,15.95a7.53,7.53,0,0,0,.62,4.67c0.91,2.18-.12,3,0.59,2.54,0.88-.72.75-2.39,0.68-3.43a14.77,14.77,0,0,1,0-2.82A13.29,13.29,0,0,1,6.3,11.58a4.84,4.84,0,0,0,.52-4.22m0.56,5s0.29,1.4-1,5c-3.26,9.45,3,10.34,4.74,12.56,0,0,.69-1-2.14-4-1-1.12-2-3.6-1.15-7.15,1.17-5.13-.5-6.39-0.5-6.39M1.21,6.2A4.53,4.53,0,0,1,1,4.7C1.2,2.48,3.23,1.58,3.73,1.25A2.7,2.7,0,0,0,4.76,0,3,3,0,0,1,3.55,3.67,6.06,6.06,0,0,0,1.21,6.2M6.32,4.05c0.11,0.23,1,1.45-2.48,4.27s-2.36,4.84-2.36,4.84-3.66-2,.56-5.53S5.39,3.43,5.39,3.43a1.05,1.05,0,0,1,.93.63m4.46,1.08c0.59,0.08,1,1.92,2.35,2.32,1,0.29,2.08.13,2.32,0.74a0.52,0.52,0,0,0,.37.92C16.21,8,16.4,3.88,10.79,5.14ZM12.64,6c0-.13.12,0,0.27-0.12a1.66,1.66,0,0,1,.59-0.48,1,1,0,0,1,.62,0c0.12,0,0,.33,0,0.4s-0.74-.09-0.74.32c0,0.67.91,0,1.38,0,0.23,1.64-2.48,1.19-2.08-.16h0Z')
+									h1.content-header__logo__text
+										.content-header__logo__title Vlaanderen
+										.content-header__logo__tagline Loket
+
+		.layout.layout--wide
+			// page title
+			h1.h1 Contact
+
+
+			form.u-spacer--large(action='', data-validate-form='', data-form-validation-type='change')
+				.form__row
+					label.form__label.form__label--large.form__label--block(for='field-1') Uw naam en familienaam
+					input#field-1.input-field.input-field--large(name='test-validation', data-required='true', data-error-class='input-field--error', data-error-message='Geef uw volledige naam op', data-error-placeholder='test-validation-error', type='text', placeholder='Naam Familienaam')
+					.form__error(data-error-id='test-validation-error')
+				.form__row
+					label.form__label.form__label--large.form__label--block(for='field-2') Uw emailadres
+					input#field-2.input-field.input-field--large(name='email-validation', data-required='true', data-validation-type='email', data-error-class='input-field--error', data-error-message='Gelieve een geldig email adres op te geven', data-error-placeholder='email-validation-error', type='email', placeholder='mail@adres.com')
+					.form__error(data-error-id='email-validation-error')
+				.form__row
+					label.form__label.form__label--large.form__label--block(for='select') Waar gaat uw bericht over?
+					//- select#select-demo.select.select--large(name='select')
+					//- 	option(value='', disabled, selected) -- Selecteer een optie --
+					//- 	option(value='1') Een vraag over de functionaliteit van de applicatie
+					//- 	option(value='1') Een vraag over de inhoud van de meldingen
+					//- 	option(value='1') Iets anders
+
+					label.radio.radio--block.radio--error
+						input.radio__toggle(type='radio', name='radio-buttons', value='1')
+						span
+						|  De functionaliteit van de applicatie
+						// digitaalABB@bz.vlaanderen.be
+
+					label.radio.radio--block.radio--error
+						input.radio__toggle(type='radio', name='radio-buttons', value='2')
+						span
+						|  Een bug of probleem met de applicatie
+						// digitaalABB@bz.vlaanderen.be
+
+					label.radio.radio--block.radio--error
+						input.radio__toggle(type='radio', name='radio-buttons', value='3')
+						span
+						|  Een vraag over de inhoud van administratieve gegevens, BBC DR of toezicht
+						// binnenland@vlaanderen.be
+
+					label.radio.radio--block.radio--error
+						input.radio__toggle(type='radio', name='radio-buttons', value='3')
+						span
+						|  Een vraag over de inhoud van het mandatenbeheer
+						// Naar mandaten@vlaanderen.be
+
+					.form__error(data-error-id='test-validation-error', aria-describedby='radio-buttons') Gelieve een optie te kiezen
+					//- label.radio.radio--block
+					//- 	input.radio__toggle(type='radio', name='radio-buttons', value='3')
+					//- 	span
+					//- 	|  Een andere vraag
+
+
+				.form__row
+					label.form__label.form__label--large.form__label--block(for='field-3') Onderwerp
+					input#field-3.input-field.input-field--large.input-field--block(name='test-validation', data-required='true', data-error-class='input-field--error', data-error-message='Dit veld is ongeldig', data-error-placeholder='test-validation-error', type='text', placeholder='')
+					.form__error(data-error-id='test-validation-error')
+				.form__row
+					label.form__label.form__label--large.form__label--block(for='textarea') Uw bericht
+					// textarea--error component
+					textarea#textarea.textarea.textarea--error.textarea--block(name='text-area-demo', cols='40', rows='4')
+					.form__error Gelieve een bericht mee te geven, van minimum 4 karakters.
+
+				button.button.button--large(type='button') Bericht versturen
+
+		script(type='text/javascript', src='//widgets.vlaanderen.be/widget/live/36cb38a7d97d4ea29cde109aa0994201')
+
