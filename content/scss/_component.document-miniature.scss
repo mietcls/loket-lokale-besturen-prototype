@@ -115,4 +115,10 @@
 			display: inline-block;
 		}
 	}
+
+	@include for-phone-only	{
+		.document-miniature__type {
+			display: none;
+		}
+	}
 }
