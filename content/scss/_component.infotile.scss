@@ -28,3 +28,13 @@
 	background-color: $blue-gray-lightest;
 	transition: all 200ms;
 }
+
+
+/* make sure buttons don't overflow when in info-tiles */
+
+.info-tile__footer .button.button--block {
+  padding: 0 0.5rem;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
