@@ -6,6 +6,10 @@
 /* Small switch checkbox
  ========================================================================== */
 
+.checkbox--switch__wrapper {
+	display: inline-block;
+}
+
 .checkbox--switch__wrapper.checkbox--switch--small {
 	font-size: 0.8em;
 
@@ -40,4 +44,11 @@
 	.checkbox__toggle:checked + span {
 		color: darken($primary-yellow, 12%);
 	}
+}
+
+// /* Z-index switch trigger
+//  ========================================================================== */
+
+.checkbox--switch+.checkbox--switch__label:after {
+	z-index: 1;
 }
