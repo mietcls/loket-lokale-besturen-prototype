@@ -82,6 +82,14 @@ label.label--subtle {
 	color: $gray;
 }
 
+.form__label--block {
+	display: block;
+}
+
+.form__label--large {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
 
 /* Icons
  ========================================================================== */
@@ -477,9 +485,31 @@ i.input-field__icon {
 	}
 }
 
+.grid.form-group {
+	[class^="col--"]:first-child {
+		.form-group__item,
+		.input-field,
+		select,
+		.button {
+			border-right: none;
+		}
+	}
+}
+
 /* Errors
  ========================================================================== */
 
 .form__error {
 	margin-bottom: 1.5rem;
+}
+
+
+/* Double input
+ ========================================================================== */
+
+.form__group--mobile-full-width {
+	@include for-phone-only {
+		width: 100% !important;
+		margin-left: 0;
+	}
 }
