@@ -65,7 +65,7 @@ body {
     }
   }
 
-  &.tab__pane {
+  &.tab__pane[data-show=false] {
     display: none;
   }
 

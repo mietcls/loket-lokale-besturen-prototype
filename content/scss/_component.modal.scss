@@ -3,6 +3,20 @@
   Style modals here.
  ========================================================================== */
 
+.modal-dialog {
+	z-index: 1005;
+}
+
+/* small modal
+ ========================================================================== */
+
+.modal-dialog.modal-dialog--small {
+	width: 35rem;
+	padding: 2rem 2rem 2.2rem;
+}
+
+// TODO: put in styleguide
+
 /* modal overlay
  ========================================================================== */
 
@@ -12,13 +26,17 @@
 	top: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 800;
+	z-index: 1010;
 	background-color: rgba($white, 0.8);
 }
 
 .modal-dialog.modal-dialog--wide {
-	width: 80vw;
+	width: 90vw;
 	max-width: none;
+
+	&.modal-dialog--sectioned .modal-dialog__content > *{
+		max-height: 60vh;
+	}
 }
 
 .modal-overlay-hidden {
@@ -31,7 +49,7 @@
 	top: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 800;
+	z-index: 1000;
 }
 
 /* Sectioned modal
@@ -60,16 +78,20 @@
 	}
 
 	.modal-dialog__content {
-		padding: 1rem 1rem 1rem 1.5rem;
-		border-top: 1px solid $blue-gray-lighter;
-		overflow-y: auto;
-		min-height: 10rem;
-		max-height: 60vh;
+		border-top: 1px solid $blue-gray-light;
+		padding: 1.5rem;
+		max-height: 25rem;
+		overflow: auto;
+	}
+
+	.modal-dialog__content.modal-dialog__content--sectioned {
+		padding: 0;
+		max-height: none;
 	}
 
 	.modal-dialog__footer {
-		padding: 1.5rem 1.5rem 2rem;
-		border-top: 1px solid $blue-gray-lighter;
+		padding: 1.5rem 1.5rem 2.5rem;
+		border-top: 1px solid $blue-gray-light;
 	}
 
 	button.button,
@@ -78,20 +100,72 @@
 	}
 }
 
+.modal-dialog--sectioned .pager {
+	background-color: $blue-gray-lighter;
+	padding: 0.5rem 0;
+}
+
 .modal-dialog,
 .modal-dialog.modal-dialog--sectioned {
 
 	@include for-phone-only {
-		max-height: none;
-		height: calc(100vh - 2rem);
+		height: auto;
+		max-height: calc(100vh - 2rem);
 		max-width: calc(100vw - 2rem);
-		max-height: none;
 
 		.modal-dialog__content {
-			height: calc(100vh - 14rem);
-			max-height: none;
+			max-height: calc(100vh - 20rem);
+			height: auto;
 			min-height: none;
 		}
 	}
 }
 
+
+
+/* input fields
+ ========================================================================== */
+
+
+.modal-dialog__content__search input.input-field{
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: rgba($primary-yellow, 0.15);
+}
+
+
+/* modal lists
+ ========================================================================== */
+
+
+.modal-dialog ul.preview-list {
+	min-height: 30rem;
+	overflow-y: auto;
+	overflow-x: none;
+	padding: 3rem 1.5rem;
+}
+
+.modal-dialog__content--sectioned > * {
+	max-height: 20rem;
+	overflow: auto;
+}
+
+.modal-dialog__content li.link-list__item {
+  margin: 0;
+  padding: 0;
+
+  &:last-child {
+  	border-bottom: none;
+  }
+}
+
+.modal-dialog__content li.link-list__item a {
+  display: block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+
+  &:hover {
+  	background-color: $blue-gray-lightest;
+  }
+}
