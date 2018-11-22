@@ -30,6 +30,26 @@ button.button.button--disabled {
 	}
 }
 
+
+// TODO: put in styleguide
+// TODO: review CSS, too many importants
+a,
+button {
+	&.button.button--overflow-hidden,
+	&.button.button--alt.button--overflow-hidden,
+	&.button.button--small.button--overflow-hidden,
+	&.button.button--tiny.button--overflow-hidden {
+	  white-space: nowrap;
+	  overflow: hidden !important;
+	  text-overflow: ellipsis;
+
+		&.button--block {
+		  padding: 0 0.5rem;
+		}
+	}
+}
+
+
 button.button--link,
 button,
 a {
@@ -58,6 +78,10 @@ button {
 /* Link icon
  ========================================================================== */
 
+a[class^="link--icon--"]:before {
+  overflow: visible;
+}
+
 .link--icon .fa {
 	font-size: 1.7rem;
 	position: absolute;
@@ -66,6 +90,33 @@ button {
 	top: -.2rem;
 	line-height: 1;
 	overflow: hidden;
+}
+
+.link-group.link-group--tiny .link--icon {
+	font-size: 1.4rem;
+	line-height: 1;
+	padding: 0.5rem 1rem 0.5rem 2rem;
+	margin-right: 0.4rem;
+}
+
+.link-group.link-group--tiny.link-group--dark .link--icon {
+	color: $gray;
+}
+
+.link-group.link-group--tiny .link--icon i {
+	color: $primary-blue;
+	padding-left: 0.15rem;
+}
+
+.link--disabled {
+	opacity: 0.8;
+}
+
+.link--icon.link--icon--tiny.link--disabled i,
+.link--icon.link--icon--tiny.link--disabled i.vi,
+.link--icon.link--icon--tiny.link--disabled i.fa {
+	color: $gray;
+	top: 0.5rem;
 }
 
 /* Other sizes
@@ -346,7 +397,7 @@ button.button.button--alt.button--alt--fancy {
 
 a.button.button--link,
 button.button.button--link {
-	background-color: $white;
+	background-color: transparent;
 	color: $primary-blue;
 	border: none;
 	text-decoration: underline;
@@ -420,6 +471,24 @@ a.link--dark--light i.vi {
 // TODO: double check where link-dark is used, with one dash
 
 
+.link--edit {
+  position: relative;
+  display: inline-block;
+  padding-right: 3rem;
+}
+
+.link--edit:after {
+  content:"\E014";
+  font-family: vlaanderen_iconfont !important;
+  font-size: 70%;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  color: $primary-blue;
+  top: 15%;
+}
+
+
 // /* Extra info inside or below button
 //  ========================================================================== */
 
@@ -427,7 +496,7 @@ a.link--dark--light i.vi {
 	font-size: 75%;
 }
 
-.button.button--tuny .button__info {
+.button.button--tiny .button__info {
 	font-size: 1rem;
 }
 
@@ -459,6 +528,10 @@ a.link--dark--light i.vi {
 
 .button.button--tiny {
 
+	i {
+		padding-right: 0.2rem;
+	}
+
 	.button__info--below {
 		bottom: -17px;
 		font-size: 1rem;
@@ -466,6 +539,10 @@ a.link--dark--light i.vi {
 }
 
 .button.button--small {
+
+	i {
+		padding-right: 0.5rem;
+	}
 
 	.button__info--below {
 		bottom: -20px;
