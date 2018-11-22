@@ -1,8 +1,10 @@
+# Loket Lokale Besturen
+
+This is a prototype for a project of the Flemish Government called "Loket Lokale Besturen". It has been built wit Bedrock (see next point) and based on the css of Webuniversum, a component library of the Flesmish Government https://overheid.vlaanderen.be/webuniversum/alle-front-end-componenten.
+
 # Bedrock
 
 Welcome to Bedrock.
-
-<img src="https://img.shields.io/github/release/mono-company/bedrock.svg">
 
 Bedrock is a static site generator to easily make HTML prototypes. For more information, please check out [the Bedrock website](http://bedrock.mono.company/).
 
@@ -29,7 +31,7 @@ The configuration lives in `bedrock.config.js`. Available options are:
 
 * `styleguide`
     * `snippetLanguage`
-        * This modifies the language snippets shown in the styleguide. 
+        * This modifies the language snippets shown in the styleguide.
         * `jade` or `html`
     * `colors`
         * path to the SCSS file specifying colors (for the color feature in the styleguide which shows the project's colors in a visual way)
