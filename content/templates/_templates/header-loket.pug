@@ -89,6 +89,40 @@ block body
 					a.button.modal-dialog__button.delete-me-toggle-modal-delete-concept.delete-me-toggle-save-toasters Verwijder
 					a.button.button--narrow.button--alt.modal-dialog__button.delete-me-toggle-modal-delete-concept Annuleer
 
+		// - modal berichtencentrum settings
+
+		.modal-overlay.modal-overlay-configure-berichtencentrum.u-hidden
+			.modal-dialog.modal-dialog--sectioned
+				.modal-dialog__header
+					.grid
+						.col--10-12
+							h2.h3 Configureer berichtencentrum
+						.col--2-12.u-align-right
+							a.link--icon--close.modal-overlay-configure-berichtencentrum(href="#")
+								span.u-visually-hidden Venster sluiten
+				.modal-dialog__content
+					h3.h4.u-spacer--small Mail instellingen
+
+					.form__row
+						.form__label
+							label.checkbox.checkbox--block
+								input.checkbox__toggle(type='checkbox', name='checkbox', value='1', checked)
+								span
+								span Ontvang mails bij nieuwe berichten
+
+					.form__row
+						.form__label
+							label Mailadres
+							input#input-field.input-field.input-field--block(type='text', placeholder='mail@adres.com', value='mail@adres.com')
+							//- Disabled when checkbox is unchecked: .input-field--disabled + "disabled"
+
+				.modal-dialog__footer
+					a.button.modal-dialog__button.delete-me-toggle-configure-berichtencentrum.delete-me-toggle-save-toasters Bewaar
+					a.button.button--narrow.button--alt.modal-dialog__button.delete-me-toggle-configure-berichtencentrum Annuleer
+					a.modal-dialog__button.delete-me-toggle-configure-berichtencentrum
+						i.vi.vi-cross.vi-u-link
+						| Verwerp wijzigingen
+
 	script.
 		$('.delete-me-toggle-sidebar--slide').on('click', function(e) {
 			$('.sidebar--slide').toggleClass("sidebar--slide--in");
@@ -116,4 +150,8 @@ block body
 
 		$(".delete-me-toggle-modal-delete-concept").click(function(){
 			$(".modal-overlay-delete-concept").toggleClass("u-hidden");
+		});
+
+		$(".delete-me-toggle-configure-berichtencentrum").click(function(){
+			$(".modal-overlay-configure-berichtencentrum").toggleClass("u-hidden");
 		});

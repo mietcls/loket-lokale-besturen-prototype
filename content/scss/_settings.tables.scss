@@ -23,6 +23,12 @@ table.data-table.data-table--gray-head {
 	}
 }
 
+table.data-table tr.message-new {
+	td {
+		font-weight: 500 !important;
+	}
+}
+
 // /* Tighter tables
 //  ========================================================================== */
 
@@ -123,11 +129,6 @@ tr.tr-expand {
 // 	margin-top: 1rem;
 // 	border: 1px solid $gray-lighter;
 // 	width: 100%;
-
-// 	tbody,
-// 	thead,
-// 	tr {
-// 	}
 
 // 	thead tr.data-table__header {
 // 		width: 100%;
