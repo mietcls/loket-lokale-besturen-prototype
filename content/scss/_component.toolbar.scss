@@ -3,9 +3,11 @@
   Style the toolbar here.
  ========================================================================== */
 
+ /* TODO: make styling editor specific */
+
 .toolbar {
 	border-bottom: 1px solid $blue-gray-light;
-	padding: 1rem 1.5rem 0;
+	padding: 0.9rem 1.5rem 0;
 	height: 55px;
 
 	button.button {
@@ -16,7 +18,6 @@
 		&.active,
 		&:hover {
 			background-color: $blue-gray-lighter;
-			border-radius: 5px;
 			color: $black;
 		}
 
@@ -41,6 +42,10 @@
 				margin: 0 0 0 0.5em;
 			}
 		}
+	}
+
+	.button i {
+	  padding: 0;
 	}
 
  	.col*:first-child .button-group {
