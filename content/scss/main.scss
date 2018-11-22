@@ -9,7 +9,6 @@
 @import "settings.checkbox";
 @import "settings.forms";
 @import "settings.grid";
-// @import "settings.lists";
 @import "settings.tables";
 @import "settings.typography";
 
@@ -37,9 +36,6 @@
 @import "component.steps";
 @import "component.tabs";
 @import "component.toaster";
-// @import "component.toolbar";
 
 @import "shame";
 @import "settings.helpers"; // import this one last or to respect cascading effects
-
-// @import "component.toolbar";
