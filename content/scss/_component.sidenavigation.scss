@@ -34,6 +34,15 @@
 	border: none;
 }
 
+.side-navigation__item ul.side-navigation__group {
+	display: block;
+	font-size: 95%;
+}
+
+.side-navigation__item ul.side-navigation__group .side-navigation__item:first-child a {
+	padding-top: 0;
+}
+
 .side-navigation__item {
 	padding: 0;
 }
@@ -43,7 +52,7 @@
 	line-height: 1.2;
 }
 
-.side-navigation__item a.active {
+.side-navigation__item a.active:not(.link--icon) {
 	background-color: $blue-gray-lightest;
 	color: $black;
 	font-weight: 500;
@@ -61,7 +70,6 @@
 		width: 0.6rem;
 		height: 0.6rem;
 		border-radius: 1rem;
-		// top: 0.7rem;
 		background-color: $primary-blue;
 		left: 0.8rem;
 	}
@@ -70,7 +78,42 @@
 .side-navigation--large li.side-navigation__item a {
 	font-size: 1.8rem;
 
-	&.active {
+	&.active:not(.link--icon) {
 		box-shadow: inset 5px 0 0 $primary-blue;
 	}
+}
+
+
+
+
+/* Side navigation block layout
+ ========================================================================== */
+
+
+.side-navigation--blocks .side-navigation__group {
+	padding: 0;
+}
+
+.side-navigation--blocks .link-group {
+	margin-left: 1.5rem;
+}
+
+.side-navigation--blocks li {
+	border-bottom: 1px solid $gray-lighter;
+	padding: 1rem 0 1.5rem;
+}
+
+.side-navigation--blocks li.active {
+	box-shadow: inset 0.5rem 0 0 $primary-blue;
+}
+
+.side-navigation--blocks li:hover {
+	box-shadow: inset 0.5rem 0 0 $primary-blue;
+	background: $blue-gray-lightest;
+	cursor: pointer;
+}
+
+.side-navigation--blocks a {
+	text-decoration: none !important;
+	color: $gray-dark;
 }
