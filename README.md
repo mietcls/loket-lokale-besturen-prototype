@@ -1,6 +1,6 @@
 # Loket Lokale Besturen
 
-This is a prototype for a project of the Flemish Government called "Loket Lokale Besturen". It has been built wit Bedrock (see next point) and based on the css of Webuniversum, a component library of the Flesmish Government https://overheid.vlaanderen.be/webuniversum/alle-front-end-componenten.
+This is a prototype for a project of the Flemish Government called "Loket Lokale Besturen". It has been built wit Bedrock (see next point) and based on the css of Webuniversum, a component library of the Flemish Government https://overheid.vlaanderen.be/webuniversum/alle-front-end-componenten.
 
 # Bedrock
 
